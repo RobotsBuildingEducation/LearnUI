@@ -92,6 +92,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
   };
 
   return (
+    // this form is no longer needed.
     <form
       onSubmit={handleSubmit}
       style={{
@@ -101,123 +102,168 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         color: "white",
       }}
     >
-      <div style={{ width: "100%", display: "flex" }}>&#129417;</div>
-      <div
-        style={{
-          backgroundColor: "#8e8e93",
-          color: "white",
-          borderRadius: "10px",
-          display: "flex",
-          flexDirection: "column",
-          textAlign: "left",
-          padding: 10,
-        }}
-      >
-        {/* {
+      {/* <div style={{ maxWidth: "75%", minWidth: "75%", display: "flex" }}>
+        &#129417;
+      </div> */}
+      {/* <img
+        width="125px"
+        // height="100px"
+        src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674131250/unnamed_qee3gg.jpg"
+      /> */}
+      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+        <div
+          style={{
+            backgroundColor: "#0C84FF",
+            color: "white",
+            borderRadius: "10px",
+            display: "flex",
+            flexDirection: "column",
+            textAlign: "left",
+            padding: 10,
+            maxWidth: "75%",
+            minWidth: "75%",
+          }}
+        >
+          {/* {
           displayMessages.map(item =>(<><br/><div>{item}</div></>))
         } */}
 
-        {displayMessages.length > 0
-          ? displayMessages[displayMessages.length - 1]
-          : "..."}
+          {displayMessages.length > 0
+            ? displayMessages[displayMessages.length - 1]
+            : "..."}
+        </div>
       </div>
       <br />
-      <div style={{ width: "100%", display: "flex" }}>RO.B.E &#128054;</div>
+      {/* <div style={{ width: "100%", display: "flex" }}>roxana &#128054;</div> */}
+
       <div
         style={{
-          backgroundColor: "#147efb",
+          backgroundColor: loadingMessage ? "black" : "#2C2C2E",
           color: "white",
           borderRadius: "10px",
           display: "flex",
           justifyContent: "flex-end",
-          textAlign: "right",
+          textAlign: "left",
           padding: 10,
           overflow: "auto",
           // maxWidth: 300,
-          minWidth: "100%",
+          maxWidth: "75%",
+          minWidth: "75%",
         }}
       >
-        {loadingMessage
-          ? loadingMessage
-          : aiResponse
-          ? ""
-          : "Use the prompts so ChatGPT can help :)"}
-
-        {loadingMessage.length < 1 && aiResponse && loadingStates.studyGuide ? (
-          <ul style={{ listStyleType: "none" }}>
-            {aiResponse
-              .match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
-              ?.map((item) => (
-                <li style={{ paddingBottom: 24 }}>{item}</li>
-              ))}
-          </ul>
-        ) : loadingMessage.length < 1 &&
-          ((aiResponse && loadingStates.summarize) ||
-            (aiResponse && loadingStates.anything)) ? (
-          <div>{aiResponse}</div>
-        ) : (
-          ""
-        )}
+        <div style={{ width: "100%", display: "flex" }}>
+          {loadingMessage ? (
+            <img
+              width="150px"
+              src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674214037/27a54381577040049f440eaffe1fc901_1_hjbczg.gif"
+            /> // ? loadingMessage
+          ) : aiResponse ? (
+            ""
+          ) : (
+            "Use the prompts so ms. roxana can help :)"
+          )}
+          {loadingMessage.length < 1 &&
+          aiResponse &&
+          loadingStates.studyGuide ? (
+            <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+              {aiResponse
+                .match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
+                ?.map((item) => (
+                  <li style={{ paddingBottom: 24 }}>{item}</li>
+                ))}
+            </ul>
+          ) : loadingMessage.length < 1 &&
+            ((aiResponse && loadingStates.summarize) ||
+              (aiResponse && loadingStates.anything)) ? (
+            <div>{aiResponse}</div>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
 
       <br />
 
       <div
         style={{
-          backgroundColor: "#5fc9f8",
-          color: "white",
-          borderRadius: "10px",
-          textAlign: "left",
-          padding: 10,
-          minWidth: "100%",
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "flex-end",
+          flexDirection: "column",
         }}
-        onClick={(event) =>
-          handleSubmit(event, patreonObject.summarizePrompt, "summarize")
-        }
       >
-        summarize &#128218;
-      </div>
-      <br />
-
-      <div
-        style={{
-          backgroundColor: "#5fc9f8",
-          color: "white",
-          borderRadius: "10px",
-          textAlign: "left",
-          padding: 10,
-          minWidth: "100%",
-        }}
-        onClick={(event) =>
-          handleSubmit(event, patreonObject.studyGuidePrompt, "studyGuide")
-        }
-      >
-        study guide &#129309;
-      </div>
-
-      <br />
-
-      {aiResponse ? (
         <div
           style={{
-            backgroundColor: "#5fc9f8",
+            backgroundColor: loadingMessage ? "#48484A" : "black",
+            cursor: loadingMessage ? "not-allowed" : "grab",
+            color: "white",
+            border: "2px solid #48484A",
+            borderRadius: "10px",
+            textAlign: "left",
+            padding: 10,
+            maxWidth: "75%",
+            minWidth: "75%",
+          }}
+          onClick={(event) => {
+            if (loadingMessage) {
+            } else {
+              handleSubmit(event, patreonObject.summarizePrompt, "summarize");
+            }
+          }}
+        >
+          summarize &#128218;
+        </div>
+        <br />
+
+        <div
+          style={{
+            backgroundColor: loadingMessage ? "#48484A" : "black",
+            border: "2px solid #48484A",
+            cursor: loadingMessage ? "not-allowed" : "grab",
             color: "white",
             borderRadius: "10px",
             textAlign: "left",
             padding: 10,
-            minWidth: "100%",
+            maxWidth: "75%",
+            minWidth: "75%",
           }}
-          onClick={(event) =>
-            handleSubmit(
-              event,
-              `RO.B.E, can you translate your response to spanish? ${aiResponse}`
-            )
-          }
+          onClick={(event) => {
+            if (loadingMessage) {
+            } else {
+            }
+            handleSubmit(event, patreonObject.studyGuidePrompt, "studyGuide");
+          }}
         >
-          en español &#127758;
+          study guide &#129309;
         </div>
-      ) : null}
-
+        <br />
+        {aiResponse ? (
+          <div
+            style={{
+              backgroundColor: loadingMessage ? "#48484A" : "black",
+              border: "2px solid #48484A",
+              cursor: loadingMessage ? "not-allowed" : "grab",
+              color: "white",
+              borderRadius: "10px",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            onClick={(event) => {
+              if (loadingMessage) {
+              } else {
+                handleSubmit(
+                  event,
+                  `ms. roxana, can you please translate your response to spanish? ${aiResponse}`
+                );
+              }
+            }}
+          >
+            en español &#127758;
+          </div>
+        ) : null}
+      </div>
       <br />
       <div
         style={{
@@ -231,7 +277,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
           onChange={(event) => setMessage(event.target.value)}
         /> */}
 
-        {/* <button style={{        backgroundColor: '#147efb',
+        {/* <button style={{        backgroundColor: '#0C84FF',
         color: 'white',
         fontSize: '32px',
         fontWeight: 'bolder',
