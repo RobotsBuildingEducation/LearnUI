@@ -15,8 +15,10 @@ import { CourseMap } from "./common/commonElements";
 function App() {
   const [count, setCount] = useState(0);
   const [patreonObject, setPatreonObject] = useState({});
+  const [currentSubject, setCurrentSubject] = useState("");
 
-  console.log("patreon object", patreonObject);
+  // console.log("patreon object", patreonObject);
+  console.log("Subject", currentSubject);
   return (
     <div className="App">
       <div>
@@ -29,35 +31,91 @@ function App() {
       </div>
       <div>
         {/* list of subjects */}
-        <StyledNavigationContainer>
-          <StyledSubject active={true}>Coding</StyledSubject>
+        <StyledNavigationContainer
+          onClick={(event) => {
+            console.log("event.target", event.target);
+            console.log("event current target", event.currentTarget);
+            console.log("ID", event.target.id);
+            setCurrentSubject(event.target.id);
+            setPatreonObject("");
+          }}
+        >
+          <StyledSubject id={"Coding"} active={true}>
+            Coding
+          </StyledSubject>
 
-          <StyledSubject active={false}>Social Media&#128679;</StyledSubject>
+          <StyledSubject id={"Social Media"} active={true}>
+            Social Media
+          </StyledSubject>
 
-          <StyledSubject active={false}>
+          <StyledSubject id={"Dinero"} active={false}>
             Dinero
             <br />
             &#128679;
           </StyledSubject>
         </StyledNavigationContainer>
 
-        <StyledTopicContainer>
-          {Object.keys(CourseMap["Coding"]).map((item) => (
-            <StyledTopic
-              key={CourseMap["Coding"][item].button}
-              onClick={() => setPatreonObject(CourseMap["Coding"][item])}
-            >
-              {CourseMap["Coding"][item].button}
-            </StyledTopic>
-          ))}
-        </StyledTopicContainer>
+        {/* If it's rendering coding lesson */}
+        {currentSubject === "Coding" ? (
+          <StyledTopicContainer>
+            <h3>Crash Course</h3>
+            {Object.keys(CourseMap["Coding"]).map((item) => (
+              <StyledTopic
+                key={CourseMap["Coding"][item].button}
+                onClick={() => setPatreonObject(CourseMap["Coding"][item])}
+              >
+                {CourseMap["Coding"][item].button}
+              </StyledTopic>
+            ))}
+          </StyledTopicContainer>
+        ) : null}
+
+        {currentSubject === "Coding" ? (
+          <StyledTopicContainer>
+            <h3>Projects x Experience</h3>
+            {Object.keys(CourseMap["Projects x Experience"]).map((item) => (
+              <StyledTopic
+                key={CourseMap["Projects x Experience"][item].button}
+                onClick={() =>
+                  setPatreonObject(CourseMap["Projects x Experience"][item])
+                }
+              >
+                {CourseMap["Projects x Experience"][item].button}
+              </StyledTopic>
+            ))}
+          </StyledTopicContainer>
+        ) : null}
+
+        {currentSubject === "Social Media" ? (
+          <StyledTopicContainer>
+            {Object.keys(CourseMap["Social Media"]).map((item) => (
+              <StyledTopic
+                key={CourseMap["Social Media"][item].button}
+                onClick={() =>
+                  setPatreonObject(CourseMap["Social Media"][item])
+                }
+              >
+                {CourseMap["Social Media"][item].button}
+              </StyledTopic>
+            ))}
+          </StyledTopicContainer>
+        ) : null}
+
+        {/* if it's rendering social media information */}
 
         {isEmpty(patreonObject) ? null : (
           <>
-            <Patreon patreonObject={patreonObject} />
-            <ChatGPT patreonObject={patreonObject} />
+            <Patreon
+              patreonObject={patreonObject}
+              currentSubject={currentSubject}
+            />
+            <ChatGPT
+              patreonObject={patreonObject}
+              currentSubject={currentSubject}
+            />
           </>
         )}
+
         {/* <Patreon />
         <ChatGPT /> */}
       </div>

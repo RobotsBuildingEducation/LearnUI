@@ -21,8 +21,6 @@ let ChatGptMessageInput = ({ patreonObject }) => {
   const handleSubmit = async (event, prompt = null, promptType = null) => {
     event.preventDefault();
 
-    console.log("PROMPT", prompt);
-
     if (promptType === "summarize") {
       setLoadingStates({
         summarize: true,
@@ -68,10 +66,8 @@ let ChatGptMessageInput = ({ patreonObject }) => {
       console.log("err", { error });
     });
 
-    console.log("responding", response);
-
     let data = await response.json();
-    console.log("data", response);
+
     let parsedData = data.bot.trim();
 
     setAiResponse(parsedData);

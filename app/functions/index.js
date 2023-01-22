@@ -23,7 +23,7 @@ const bodyParser = require("body-parser");
 
 const configuration = new Configuration({
   // apiKey: process.env.OPENAI_API_KEY,
-  apiKey: "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",
+  apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
@@ -40,9 +40,6 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/prompt", async (req, res) => {
-  console.log("req", req);
-  console.log("res", res);
-
   try {
     const prompt = req.body.prompt;
     const response = await openai.createCompletion({
@@ -56,7 +53,6 @@ app.post("/prompt", async (req, res) => {
       stop: ['"""'],
     });
 
-    console.log("hello", response);
     res.status(200).send({
       bot: response.data.choices[0].text,
     });

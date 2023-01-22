@@ -37,8 +37,8 @@ export const StyledTopic = styled.div`
   border: 1px solid #636366;
   background-color: black;
   margin: 12px;
-  width: 105px;
-  height: 105px;
+  width: 125px;
+  height: 125px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
