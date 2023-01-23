@@ -48,10 +48,10 @@ function App() {
             Social Media
           </StyledSubject>
 
-          <StyledSubject id={"Dinero"} active={false}>
+          <StyledSubject id={"Dinero"} active={true}>
             Dinero
             <br />
-            &#128679;
+            {/* &#128679; */}
           </StyledSubject>
         </StyledNavigationContainer>
 
@@ -101,15 +101,29 @@ function App() {
           </StyledTopicContainer>
         ) : null}
 
+        {currentSubject === "Dinero" ? (
+          <StyledTopicContainer>
+            {Object.keys(CourseMap["Dinero"]).map((item) => (
+              <StyledTopic
+                key={CourseMap["Dinero"][item].button}
+                onClick={() => setPatreonObject(CourseMap["Dinero"][item])}
+              >
+                {CourseMap["Dinero"][item].button}
+              </StyledTopic>
+            ))}
+          </StyledTopicContainer>
+        ) : null}
+
         {/* if it's rendering social media information */}
 
         {isEmpty(patreonObject) ? null : (
           <>
-            <Patreon
+            <br />
+            <ChatGPT
               patreonObject={patreonObject}
               currentSubject={currentSubject}
             />
-            <ChatGPT
+            <Patreon
               patreonObject={patreonObject}
               currentSubject={currentSubject}
             />

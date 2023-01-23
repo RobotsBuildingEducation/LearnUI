@@ -8,13 +8,17 @@ let Patreon = ({ patreonObject, currentSubject }) => {
   let determineFileView = (patreonObject) => {
     if (patreonObject.sourceType === "video") {
       return (
-        <video controls autoPlay>
+        <video controls>
           <source src={patreonObject.fileSource} type="video/mp4" />
         </video>
       );
     }
 
-    return <MarkdownRenderer file={patreonObject.fileSource} />;
+    return (
+      <div style={{ textAlign: "justify" }}>
+        <MarkdownRenderer file={patreonObject.fileSource} />
+      </div>
+    );
   };
 
   return (
