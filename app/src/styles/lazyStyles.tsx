@@ -37,11 +37,11 @@ export const StyledTopic = styled.div`
   border: 1px solid #636366;
   background-color: black;
   margin: 12px;
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   /* border-radius: 46%; */

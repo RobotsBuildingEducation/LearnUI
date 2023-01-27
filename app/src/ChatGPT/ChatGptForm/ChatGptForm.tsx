@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { useState, useEffect } from "react";
+import { CodeBlock, dracula } from "react-code-blocks";
 import axios from "axios";
 
 let ChatGptMessageInput = ({ patreonObject }) => {
@@ -14,6 +15,8 @@ let ChatGptMessageInput = ({ patreonObject }) => {
     //i guess spanish
     anything: false,
     quick: false,
+    demonstrate: false,
+    faq: false,
   });
 
   const [loadingMessage, setLoadingMessage] = useState("");
@@ -30,6 +33,8 @@ let ChatGptMessageInput = ({ patreonObject }) => {
       //i guess spanish. Now i know. This used to handle general translations to spanish and "anything" from an text input field that was later disabled because we can't trust users not to break the rules lol
       anything: false,
       quick: false,
+      faq: false,
+      demonstrate: false,
       inspireCuriousity: false,
     });
     setAiResponse("");
@@ -44,42 +49,72 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         studyGuide: false,
         anything: false,
         quick: false,
+        faq: false,
+        demonstrate: false,
         inspireCuriousity: false,
       });
 
-      setLoadingMessage(
-        "Generating a summary, don't tell your teacher lol pls wait"
-      );
+      setLoadingMessage("summarizing...");
     } else if (promptType === "studyGuide") {
       setLoadingStates({
         summarize: false,
         quick: false,
         studyGuide: true,
         anything: false,
+        faq: false,
+        demonstrate: false,
         inspireCuriousity: false,
       });
 
-      setLoadingMessage("Generating a Pinterest level study guide, pls wait");
+      setLoadingMessage("organizing...");
     } else if (promptType === "quick") {
       setLoadingStates({
         summarize: false,
         quick: true,
         studyGuide: false,
         anything: false,
+        faq: false,
+        demonstrate: false,
         inspireCuriousity: false,
       });
 
-      setLoadingMessage("Generating a quick answer, pls wait or be destroyed");
+      setLoadingMessage("defining...");
     } else if (promptType === "inspireCuriousity") {
       setLoadingStates({
         summarize: false,
         quick: false,
         studyGuide: false,
         anything: false,
+        faq: false,
+        demonstrate: false,
         inspireCuriousity: true,
       });
 
-      setLoadingMessage("Generating an awesome thing for you 100 100 lol");
+      setLoadingMessage("discovering...");
+    } else if (promptType === "demonstrate") {
+      setLoadingStates({
+        summarize: false,
+        quick: false,
+        studyGuide: false,
+        anything: false,
+        faq: false,
+        demonstrate: true,
+        inspireCuriousity: false,
+      });
+
+      setLoadingMessage("creating...");
+    } else if (promptType === "faq") {
+      setLoadingStates({
+        summarize: false,
+        quick: false,
+        studyGuide: false,
+        anything: false,
+        faq: true,
+        demonstrate: false,
+        inspireCuriousity: false,
+      });
+
+      setLoadingMessage("curating...");
     } else {
       // loads in spanish. See context about "anything"
       setLoadingStates({
@@ -87,9 +122,11 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         studyGuide: false,
         anything: true,
         quick: false,
+        demonstrate: false,
+        faq: false,
         inspireCuriousity: false,
       });
-      setLoadingMessage("no mms aright vamanos");
+      setLoadingMessage("no mms...");
     }
 
     setDisplayMessages([...displayMessages, prompt || message]);
@@ -114,7 +151,11 @@ let ChatGptMessageInput = ({ patreonObject }) => {
 
     let parsedData = data.bot.trim();
 
-    setAiResponse(parsedData);
+    if (promptType === "demonstrate") {
+      setAiResponse(parsedData);
+    } else {
+      setAiResponse(parsedData);
+    }
 
     // If the request was successful, clear the input field
     if (response.status === 200) {
@@ -130,6 +171,13 @@ let ChatGptMessageInput = ({ patreonObject }) => {
 
     setLoadingMessage("");
   };
+
+  console.log("patreon", patreonObject);
+
+  console.log(
+    "SPLIT",
+    aiResponse?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
+  );
 
   return (
     // this form is no longer needed.
@@ -170,7 +218,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
 
           {displayMessages.length > 0
             ? displayMessages[displayMessages.length - 1]
-            : "..."}
+            : "hola! i'm ms. roxana, an AI built with GPT-3. I help Sheilfer build RO.B.E by helping you learn more with helpful prompts 😊"}
         </div>
       </div>
       <br />
@@ -193,26 +241,43 @@ let ChatGptMessageInput = ({ patreonObject }) => {
       >
         <div style={{ width: "100%", display: "flex" }}>
           {loadingMessage ? (
-            <img
-              width="150px"
-              src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674214037/27a54381577040049f440eaffe1fc901_1_hjbczg.gif"
-            /> // ? loadingMessage
+            <div>
+              <img
+                width="150px"
+                src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674214037/27a54381577040049f440eaffe1fc901_1_hjbczg.gif"
+              />
+              {loadingMessage}
+            </div> // ? loadingMessage
           ) : aiResponse ? (
             ""
           ) : (
-            "Use the prompts so ms. roxana can help :)"
+            "..."
           )}
           {/* handle no state or loading -> handle study guide formatting -> handle general case (summarize, spanish "anything", quick) */}
           {loadingMessage.length < 1 &&
           aiResponse &&
-          loadingStates.studyGuide ? (
+          (loadingStates.studyGuide || loadingStates.faq) ? (
             <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
               {aiResponse
                 .match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
                 ?.map((item) => (
-                  <li style={{ paddingBottom: 24 }}>{item}</li>
+                  <>
+                    <li style={{ paddingBottom: 24 }}>{item}</li>
+                    <br />
+                  </>
                 ))}
             </ul>
+          ) : loadingMessage.length < 1 &&
+            aiResponse &&
+            loadingStates.demonstrate ? (
+            <div>
+              <CodeBlock
+                text={aiResponse}
+                language={"javascript"}
+                showLineNumbers={true}
+                theme={dracula}
+              />
+            </div>
           ) : loadingMessage.length < 1 &&
             ((aiResponse && loadingStates.summarize) ||
               (aiResponse && loadingStates.quick) ||
@@ -250,11 +315,33 @@ let ChatGptMessageInput = ({ patreonObject }) => {
           onClick={(event) => {
             if (loadingMessage) {
             } else {
+              handleSubmit(event, patreonObject.faqPrompt, "faq");
+            }
+          }}
+        >
+          🔮 ask
+        </div>
+        <br />
+        <div
+          style={{
+            backgroundColor: loadingMessage ? "#48484A" : "black",
+            cursor: loadingMessage ? "not-allowed" : "grab",
+            color: "white",
+            border: "2px solid #48484A",
+            borderRadius: "10px",
+            textAlign: "left",
+            padding: 10,
+            maxWidth: "75%",
+            minWidth: "75%",
+          }}
+          onClick={(event) => {
+            if (loadingMessage) {
+            } else {
               handleSubmit(event, patreonObject.quickPrompt, "quick");
             }
           }}
         >
-          &#128644; be quick
+          👾 define
         </div>
         <br />
 
@@ -300,7 +387,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
             handleSubmit(event, patreonObject.studyGuidePrompt, "studyGuide");
           }}
         >
-          &#129309; study guide
+          &#129309; guide
         </div>
         <br />
 
@@ -322,12 +409,39 @@ let ChatGptMessageInput = ({ patreonObject }) => {
             }
             handleSubmit(
               event,
-              patreonObject.inspireCuriousity,
+              patreonObject.inspireCuriousityPrompt,
               "inspireCuriousity"
             );
           }}
         >
-          ⚡ inspire curiousity
+          ⚡ inspire
+        </div>
+        <br />
+
+        <div
+          style={{
+            backgroundColor: loadingMessage ? "#48484A" : "black",
+            cursor: loadingMessage ? "not-allowed" : "grab",
+            color: "white",
+            border: "2px solid #48484A",
+            borderRadius: "10px",
+            textAlign: "left",
+            padding: 10,
+            maxWidth: "75%",
+            minWidth: "75%",
+          }}
+          onClick={(event) => {
+            if (loadingMessage) {
+            } else {
+              handleSubmit(
+                event,
+                patreonObject.demonstratePrompt,
+                "demonstrate"
+              );
+            }
+          }}
+        >
+          🧿 demonstrate
         </div>
         <br />
 
