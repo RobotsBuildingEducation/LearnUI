@@ -34,6 +34,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
       anything: false,
       quick: false,
       faq: false,
+      quiz: false,
       demonstrate: false,
       inspireCuriousity: false,
     });
@@ -51,6 +52,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         quick: false,
         faq: false,
         demonstrate: false,
+        quiz: false,
         inspireCuriousity: false,
       });
 
@@ -63,6 +65,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         anything: false,
         faq: false,
         demonstrate: false,
+        quiz: false,
         inspireCuriousity: false,
       });
 
@@ -75,6 +78,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         anything: false,
         faq: false,
         demonstrate: false,
+        quiz: false,
         inspireCuriousity: false,
       });
 
@@ -87,6 +91,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         anything: false,
         faq: false,
         demonstrate: false,
+        quiz: false,
         inspireCuriousity: true,
       });
 
@@ -99,6 +104,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         anything: false,
         faq: false,
         demonstrate: true,
+        quiz: false,
         inspireCuriousity: false,
       });
 
@@ -111,10 +117,24 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         anything: false,
         faq: true,
         demonstrate: false,
+        quiz: false,
         inspireCuriousity: false,
       });
 
       setLoadingMessage("curating...");
+    } else if (promptType === "quiz") {
+      setLoadingStates({
+        summarize: false,
+        quick: false,
+        studyGuide: false,
+        anything: false,
+        faq: true,
+        demonstrate: false,
+        quiz: true,
+        inspireCuriousity: false,
+      });
+
+      setLoadingMessage("testing...");
     } else {
       // loads in spanish. See context about "anything"
       setLoadingStates({
@@ -123,6 +143,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         anything: true,
         quick: false,
         demonstrate: false,
+        quiz: false,
         faq: false,
         inspireCuriousity: false,
       });
@@ -177,6 +198,11 @@ let ChatGptMessageInput = ({ patreonObject }) => {
   console.log(
     "SPLIT",
     aiResponse?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
+  );
+
+  console.log(
+    "demo",
+    patreonObject["demonstratePrompt"].split(" ").slice(-1)[0]?.slice(0, -1)
   );
 
   return (
@@ -235,8 +261,8 @@ let ChatGptMessageInput = ({ patreonObject }) => {
           padding: 10,
           overflow: "auto",
           // maxWidth: 300,
-          maxWidth: "75%",
-          minWidth: "75%",
+          maxWidth: loadingStates.demonstrate ? "100%" : "75%",
+          minWidth: loadingStates.demonstrate ? "100%" : "75%",
         }}
       >
         <div style={{ width: "100%", display: "flex" }}>
@@ -261,10 +287,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
               {aiResponse
                 .match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
                 ?.map((item) => (
-                  <>
-                    <li style={{ paddingBottom: 24 }}>{item}</li>
-                    <br />
-                  </>
+                  <li style={{ paddingBottom: 24 }}>{item}</li>
                 ))}
             </ul>
           ) : loadingMessage.length < 1 &&
@@ -273,7 +296,10 @@ let ChatGptMessageInput = ({ patreonObject }) => {
             <div>
               <CodeBlock
                 text={aiResponse}
-                language={"javascript"}
+                language={patreonObject["demonstratePrompt"]
+                  .split(" ")
+                  .slice(-1)[0]
+                  ?.slice(0, -1)}
                 showLineNumbers={true}
                 theme={dracula}
               />
@@ -442,6 +468,28 @@ let ChatGptMessageInput = ({ patreonObject }) => {
           }}
         >
           🧿 demonstrate
+        </div>
+        <br />
+        <div
+          style={{
+            backgroundColor: loadingMessage ? "#48484A" : "black",
+            cursor: loadingMessage ? "not-allowed" : "grab",
+            color: "white",
+            border: "2px solid #48484A",
+            borderRadius: "10px",
+            textAlign: "left",
+            padding: 10,
+            maxWidth: "75%",
+            minWidth: "75%",
+          }}
+          onClick={(event) => {
+            if (loadingMessage) {
+            } else {
+              handleSubmit(event, patreonObject.quizPrompt, "quiz");
+            }
+          }}
+        >
+          🧪 quiz
         </div>
         <br />
 

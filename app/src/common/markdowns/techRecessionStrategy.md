@@ -34,3 +34,17 @@ Current:
 
 When patreon is available:
 <img width="75%" src="https://c10.patreonusercontent.com/4/patreon-media/p/post/77404043/11708bde7c094e4ebedb5d368d53ea9f/eyJ3Ijo4MjB9/1.png?token-time=1675641600&token-hash=v2-_HOcJRYxXWWhMTq62KbxDIrj0uEp8mFHpgOawits%3D" />
+
+# Tech Recession Thinking
+
+---
+
+I’m not gonna lie. I find writing about this subject to be hilariously difficult. Learning about picking stocks and focus investing was one of the most, if not the most, difficult things I have ever learned, let alone talk about. It was fucking hard. It still is.
+
+In this case, I’m going to allow myself to ramble in various directions in the honest attempt to connect different models required to do something like this. Selecting business investments is a lot like being a designer. There is something wrong with talking about it, because like design and art, much of it can be left to opinion. Something that may work in one period of time may not work in the next. Things change because it’s driven by human behavior. That is really difficult to approximate. At times, it even feels like a fool’s errand and there are many investors that will loudly proclaim that it is. They are not unreasonable for believing so. It is just a position. Many amateurs fail to understand why reasonable things seemingly don’t matter in the market. A common example of this is an investor getting excited over some new company update that apparently makes them more competitive, only for it to have a minor or nonexistent impact in the market.
+
+So get used to thinking in positions. Have an idea, test it, defend it and expand your knowledge. The thing about stock investing is that it’s ultimately down to what you believe is reasonable. It’s an identity problem of sorts. It’s how you view the world and how you model your understanding of how it works. You may have heard about this to an extent before, as people being risk-adverse or risk-friendly. That’s part of it.
+
+It all boils down to what you believe is reasonable in relation to the state of the market. So I can tell you to invest in the next big thing, and you may reject it on some premise, and I may not, or vice versa. There’s no controlling that. One way or another, if you remain humble in your thoughts, it will take you a long way.
+
+One of the golden rules in this game is to invest in what you know. It gives you an advantage when it comes to addressing bias in the quality of your thoughts. One of my biggest challenges here was asking myself “What do I really know and what do I think I know? Is this true or do I want it to be true?”. I still ask myself this often. It’s one of the great lessons I’ve learned from doing this and I’m grateful for that.
