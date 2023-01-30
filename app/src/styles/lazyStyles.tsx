@@ -5,7 +5,9 @@ export const StyledNavigationContainer = styled.div`
   justify-content: center;
   align-items: center;
   justify-content: center;
-  margin: 12px;
+  margin: auto;
+  max-width: 400px;
+  min-width: 400px;
   transition: 0.2s all ease-in-out;
   padding: 12px;
   border-radius: 2px;

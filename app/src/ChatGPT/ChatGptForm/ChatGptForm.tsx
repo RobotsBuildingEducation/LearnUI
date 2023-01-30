@@ -1,6 +1,7 @@
 // @ts-nocheck
 import { useState, useEffect } from "react";
 import { CodeBlock, dracula } from "react-code-blocks";
+import Form from "react-bootstrap/Form";
 import axios from "axios";
 
 let ChatGptMessageInput = ({ patreonObject }) => {
@@ -207,332 +208,334 @@ let ChatGptMessageInput = ({ patreonObject }) => {
 
   return (
     // this form is no longer needed.
-    <form
-      onSubmit={handleSubmit}
-      style={{
-        maxWidth: "400px",
-        transition: "0.3s all ease-in-out",
-        margin: "auto",
-        color: "white",
-      }}
-    >
-      {/* <div style={{ maxWidth: "75%", minWidth: "75%", display: "flex" }}>
-        &#129417;
-      </div> */}
-      {/* <img
-        width="125px"
-        // height="100px"
-        src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674131250/unnamed_qee3gg.jpg"
-      /> */}
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
-        <div
-          style={{
-            backgroundColor: "#0C84FF",
-            color: "white",
-            borderRadius: "10px",
-            display: "flex",
-            flexDirection: "column",
-            textAlign: "left",
-            padding: 10,
-            maxWidth: "75%",
-            minWidth: "75%",
-          }}
-        >
-          {/* {
+    <>
+      {/* <Form>
+        <Form.Check
+          type="switch"
+          id="custom-switch"
+          label="Dragging Mode"
+          onChange={() => }
+        />
+      </Form> */}
+
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          maxWidth: "400px",
+          transition: "0.3s all ease-in-out",
+          margin: "auto",
+          color: "white",
+        }}
+      >
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <div
+            style={{
+              backgroundColor: "#0C84FF",
+              color: "white",
+              borderRadius: "10px",
+              display: "flex",
+              flexDirection: "column",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            id={"scrollPoint"}
+          >
+            {/* {
           displayMessages.map(item =>(<><br/><div>{item}</div></>))
         } */}
 
-          {displayMessages.length > 0
-            ? displayMessages[displayMessages.length - 1]
-            : "hola! i'm ms. roxana, an AI built with GPT-3. I help Sheilfer build RO.B.E by helping you learn more with helpful prompts 😊"}
+            {displayMessages.length > 0
+              ? displayMessages[displayMessages.length - 1]
+              : "hola! i'm ms. roxana, an AI built with GPT-3. I help Sheilfer build RO.B.E by helping you learn more with helpful prompts 😊"}
+          </div>
         </div>
-      </div>
-      <br />
-      {/* <div style={{ width: "100%", display: "flex" }}>roxana &#128054;</div> */}
+        <br />
 
-      <div
-        style={{
-          backgroundColor: loadingMessage ? "black" : "#2C2C2E",
-          color: "white",
-          borderRadius: "10px",
-          display: "flex",
-          justifyContent: "flex-end",
-          textAlign: "left",
-          padding: 10,
-          overflow: "auto",
-          // maxWidth: 300,
-          maxWidth: loadingStates.demonstrate ? "100%" : "75%",
-          minWidth: loadingStates.demonstrate ? "100%" : "75%",
-        }}
-      >
-        <div style={{ width: "100%", display: "flex" }}>
-          {loadingMessage ? (
-            <div>
-              <img
-                width="150px"
-                src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674214037/27a54381577040049f440eaffe1fc901_1_hjbczg.gif"
-              />
-              {loadingMessage}
-            </div> // ? loadingMessage
-          ) : aiResponse ? (
-            ""
-          ) : (
-            "..."
-          )}
-          {/* handle no state or loading -> handle study guide formatting -> handle general case (summarize, spanish "anything", quick) */}
-          {loadingMessage.length < 1 &&
-          aiResponse &&
-          (loadingStates.studyGuide || loadingStates.faq) ? (
-            <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
-              {aiResponse
-                .match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
-                ?.map((item) => (
-                  <li style={{ paddingBottom: 24 }}>{item}</li>
-                ))}
-            </ul>
-          ) : loadingMessage.length < 1 &&
+        <div
+          style={{
+            backgroundColor: loadingMessage ? "black" : "#2C2C2E",
+            color: "white",
+            borderRadius: "10px",
+            display: "flex",
+            justifyContent: "flex-end",
+            textAlign: "left",
+            padding: 10,
+            overflow: "auto",
+            // maxWidth: 300,
+            maxWidth: loadingStates.demonstrate ? "100%" : "75%",
+            minWidth: loadingStates.demonstrate ? "100%" : "75%",
+          }}
+        >
+          <div style={{ width: "100%", display: "flex" }}>
+            {loadingMessage ? (
+              <div>
+                <img
+                  width="150px"
+                  src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674214037/27a54381577040049f440eaffe1fc901_1_hjbczg.gif"
+                />
+                {loadingMessage}
+              </div> // ? loadingMessage
+            ) : aiResponse ? (
+              ""
+            ) : (
+              "..."
+            )}
+            {/* handle no state or loading -> handle study guide formatting -> handle general case (summarize, spanish "anything", quick) */}
+            {loadingMessage.length < 1 &&
             aiResponse &&
-            loadingStates.demonstrate ? (
-            <div>
-              <CodeBlock
-                text={aiResponse}
-                language={patreonObject["demonstratePrompt"]
-                  .split(" ")
-                  .slice(-1)[0]
-                  ?.slice(0, -1)}
-                showLineNumbers={true}
-                theme={dracula}
-              />
-            </div>
-          ) : loadingMessage.length < 1 &&
-            ((aiResponse && loadingStates.summarize) ||
-              (aiResponse && loadingStates.quick) ||
-              (aiResponse && loadingStates.inspireCuriousity) ||
-              (aiResponse && loadingStates.anything)) ? (
-            <div>{aiResponse}</div>
-          ) : (
-            ""
-          )}
+            (loadingStates.studyGuide || loadingStates.faq) ? (
+              <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+                {aiResponse
+                  .match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
+                  ?.map((item) => (
+                    <li style={{ paddingBottom: 24 }}>{item}</li>
+                  ))}
+              </ul>
+            ) : loadingMessage.length < 1 &&
+              aiResponse &&
+              loadingStates.demonstrate ? (
+              <div>
+                <CodeBlock
+                  text={aiResponse}
+                  language={patreonObject["demonstratePrompt"]
+                    .split(" ")
+                    .slice(-1)[0]
+                    ?.slice(0, -1)}
+                  showLineNumbers={true}
+                  theme={dracula}
+                />
+              </div>
+            ) : loadingMessage.length < 1 &&
+              ((aiResponse && loadingStates.summarize) ||
+                (aiResponse && loadingStates.quick) ||
+                (aiResponse && loadingStates.inspireCuriousity) ||
+                (aiResponse && loadingStates.anything)) ? (
+              <div>{aiResponse}</div>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
-      </div>
 
-      <br />
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          alignItems: "flex-end",
-          flexDirection: "column",
-        }}
-      >
+        <br />
+        {/* actions */}
         <div
           style={{
-            backgroundColor: loadingMessage ? "#48484A" : "black",
-            cursor: loadingMessage ? "not-allowed" : "grab",
-            color: "white",
-            border: "2px solid #48484A",
-            borderRadius: "10px",
-            textAlign: "left",
-            padding: 10,
-            maxWidth: "75%",
-            minWidth: "75%",
-          }}
-          onClick={(event) => {
-            if (loadingMessage) {
-            } else {
-              handleSubmit(event, patreonObject.faqPrompt, "faq");
-            }
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "flex-end",
+            flexDirection: "column",
           }}
         >
-          🔮 ask
-        </div>
-        <br />
-        <div
-          style={{
-            backgroundColor: loadingMessage ? "#48484A" : "black",
-            cursor: loadingMessage ? "not-allowed" : "grab",
-            color: "white",
-            border: "2px solid #48484A",
-            borderRadius: "10px",
-            textAlign: "left",
-            padding: 10,
-            maxWidth: "75%",
-            minWidth: "75%",
-          }}
-          onClick={(event) => {
-            if (loadingMessage) {
-            } else {
-              handleSubmit(event, patreonObject.quickPrompt, "quick");
-            }
-          }}
-        >
-          👾 define
-        </div>
-        <br />
+          <div
+            style={{
+              backgroundColor: loadingMessage ? "#48484A" : "black",
+              cursor: loadingMessage ? "not-allowed" : "grab",
+              color: "white",
+              border: "2px solid #48484A",
+              borderRadius: "10px",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            onClick={(event) => {
+              if (loadingMessage) {
+              } else {
+                handleSubmit(event, patreonObject.faqPrompt, "faq");
+              }
+            }}
+          >
+            🔮 ask
+          </div>
+          <br />
+          <div
+            style={{
+              backgroundColor: loadingMessage ? "#48484A" : "black",
+              cursor: loadingMessage ? "not-allowed" : "grab",
+              color: "white",
+              border: "2px solid #48484A",
+              borderRadius: "10px",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            onClick={(event) => {
+              if (loadingMessage) {
+              } else {
+                handleSubmit(event, patreonObject.quickPrompt, "quick");
+              }
+            }}
+          >
+            👾 define
+          </div>
+          <br />
 
-        <div
-          style={{
-            backgroundColor: loadingMessage ? "#48484A" : "black",
-            cursor: loadingMessage ? "not-allowed" : "grab",
-            color: "white",
-            border: "2px solid #48484A",
-            borderRadius: "10px",
-            textAlign: "left",
-            padding: 10,
-            maxWidth: "75%",
-            minWidth: "75%",
-          }}
-          onClick={(event) => {
-            if (loadingMessage) {
-            } else {
-              handleSubmit(event, patreonObject.summarizePrompt, "summarize");
-            }
-          }}
-        >
-          &#128218; summarize
-        </div>
-        <br />
+          <div
+            style={{
+              backgroundColor: loadingMessage ? "#48484A" : "black",
+              cursor: loadingMessage ? "not-allowed" : "grab",
+              color: "white",
+              border: "2px solid #48484A",
+              borderRadius: "10px",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            onClick={(event) => {
+              if (loadingMessage) {
+              } else {
+                handleSubmit(event, patreonObject.summarizePrompt, "summarize");
+              }
+            }}
+          >
+            &#128218; summarize
+          </div>
+          <br />
 
-        <div
-          style={{
-            backgroundColor: loadingMessage ? "#48484A" : "black",
-            border: "2px solid #48484A",
-            cursor: loadingMessage ? "not-allowed" : "grab",
-            color: "white",
-            borderRadius: "10px",
-            textAlign: "left",
-            padding: 10,
-            maxWidth: "75%",
-            minWidth: "75%",
-          }}
-          onClick={(event) => {
-            if (loadingMessage) {
-            } else {
-            }
-            handleSubmit(event, patreonObject.studyGuidePrompt, "studyGuide");
-          }}
-        >
-          &#129309; guide
-        </div>
-        <br />
+          <div
+            style={{
+              backgroundColor: loadingMessage ? "#48484A" : "black",
+              border: "2px solid #48484A",
+              cursor: loadingMessage ? "not-allowed" : "grab",
+              color: "white",
+              borderRadius: "10px",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            onClick={(event) => {
+              if (loadingMessage) {
+              } else {
+              }
+              handleSubmit(event, patreonObject.studyGuidePrompt, "studyGuide");
+            }}
+          >
+            &#129309; guide
+          </div>
+          <br />
 
-        <div
-          style={{
-            backgroundColor: loadingMessage ? "#48484A" : "black",
-            border: "2px solid #48484A",
-            cursor: loadingMessage ? "not-allowed" : "grab",
-            color: "white",
-            borderRadius: "10px",
-            textAlign: "left",
-            padding: 10,
-            maxWidth: "75%",
-            minWidth: "75%",
-          }}
-          onClick={(event) => {
-            if (loadingMessage) {
-            } else {
-            }
-            handleSubmit(
-              event,
-              patreonObject.inspireCuriousityPrompt,
-              "inspireCuriousity"
-            );
-          }}
-        >
-          ⚡ inspire
-        </div>
-        <br />
-
-        <div
-          style={{
-            backgroundColor: loadingMessage ? "#48484A" : "black",
-            cursor: loadingMessage ? "not-allowed" : "grab",
-            color: "white",
-            border: "2px solid #48484A",
-            borderRadius: "10px",
-            textAlign: "left",
-            padding: 10,
-            maxWidth: "75%",
-            minWidth: "75%",
-          }}
-          onClick={(event) => {
-            if (loadingMessage) {
-            } else {
+          <div
+            style={{
+              backgroundColor: loadingMessage ? "#48484A" : "black",
+              border: "2px solid #48484A",
+              cursor: loadingMessage ? "not-allowed" : "grab",
+              color: "white",
+              borderRadius: "10px",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            onClick={(event) => {
+              if (loadingMessage) {
+              } else {
+              }
               handleSubmit(
                 event,
-                patreonObject.demonstratePrompt,
-                "demonstrate"
+                patreonObject.inspireCuriousityPrompt,
+                "inspireCuriousity"
               );
-            }
-          }}
-        >
-          🧿 demonstrate
-        </div>
-        <br />
-        <div
-          style={{
-            backgroundColor: loadingMessage ? "#48484A" : "black",
-            cursor: loadingMessage ? "not-allowed" : "grab",
-            color: "white",
-            border: "2px solid #48484A",
-            borderRadius: "10px",
-            textAlign: "left",
-            padding: 10,
-            maxWidth: "75%",
-            minWidth: "75%",
-          }}
-          onClick={(event) => {
-            if (loadingMessage) {
-            } else {
-              handleSubmit(event, patreonObject.quizPrompt, "quiz");
-            }
-          }}
-        >
-          🧪 quiz
-        </div>
-        <br />
+            }}
+          >
+            ⚡ inspire
+          </div>
+          <br />
 
+          <div
+            style={{
+              backgroundColor: loadingMessage ? "#48484A" : "black",
+              cursor: loadingMessage ? "not-allowed" : "grab",
+              color: "white",
+              border: "2px solid #48484A",
+              borderRadius: "10px",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            onClick={(event) => {
+              if (loadingMessage) {
+              } else {
+                handleSubmit(
+                  event,
+                  patreonObject.demonstratePrompt,
+                  "demonstrate"
+                );
+              }
+            }}
+          >
+            🧿 demonstrate
+          </div>
+          <br />
+          <div
+            style={{
+              backgroundColor: loadingMessage ? "#48484A" : "black",
+              cursor: loadingMessage ? "not-allowed" : "grab",
+              color: "white",
+              border: "2px solid #48484A",
+              borderRadius: "10px",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            onClick={(event) => {
+              if (loadingMessage) {
+              } else {
+                handleSubmit(event, patreonObject.quizPrompt, "quiz");
+              }
+            }}
+          >
+            🧪 quiz
+          </div>
+          <br />
+
+          <div
+            style={{
+              backgroundColor:
+                loadingMessage || !aiResponse ? "#48484A" : "black",
+              border: "2px solid #48484A",
+              cursor: loadingMessage || !aiResponse ? "not-allowed" : "grab",
+              color: "white",
+              borderRadius: "10px",
+              textAlign: "left",
+              padding: 10,
+              maxWidth: "75%",
+              minWidth: "75%",
+            }}
+            onClick={(event) => {
+              if (loadingMessage || !aiResponse) {
+              } else {
+                handleSubmit(
+                  event,
+                  `ms. roxana, can you please translate your response to spanish? ${aiResponse}`
+                );
+              }
+            }}
+          >
+            &#127758; en español
+          </div>
+        </div>
+        <br />
         <div
           style={{
-            backgroundColor:
-              loadingMessage || !aiResponse ? "#48484A" : "black",
-            border: "2px solid #48484A",
-            cursor: loadingMessage || !aiResponse ? "not-allowed" : "grab",
-            color: "white",
-            borderRadius: "10px",
-            textAlign: "left",
-            padding: 10,
-            maxWidth: "75%",
-            minWidth: "75%",
-          }}
-          onClick={(event) => {
-            if (loadingMessage || !aiResponse) {
-            } else {
-              handleSubmit(
-                event,
-                `ms. roxana, can you please translate your response to spanish? ${aiResponse}`
-              );
-            }
+            display: "flex",
           }}
         >
-          &#127758; en español
-        </div>
-      </div>
-      <br />
-      <div
-        style={{
-          display: "flex",
-        }}
-      >
-        {/* <textarea
+          {/* <textarea
           style={{width: '100%', marginRight: 10 }}
 
           value={message}
           onChange={(event) => setMessage(event.target.value)}
         /> */}
 
-        {/* <button style={{        backgroundColor: '#0C84FF',
+          {/* <button style={{        backgroundColor: '#0C84FF',
         color: 'white',
         fontSize: '32px',
         fontWeight: 'bolder',
@@ -540,8 +543,9 @@ let ChatGptMessageInput = ({ patreonObject }) => {
         display: 'flex',}}type="submit">&#42779;
  &#9889;
 </button> */}
-      </div>
-    </form>
+        </div>
+      </form>
+    </>
   );
 };
 

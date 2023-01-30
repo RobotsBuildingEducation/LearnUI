@@ -2,31 +2,39 @@
 import { useEffect, useState } from "react";
 import MarkdownRenderer from "./MarkdownRenderer/MarkdownRenderer";
 
-let Patreon = ({ patreonObject, currentSubject }) => {
+let Patreon = ({ patreonObject }) => {
   console.log("patreon obj", patreonObject);
 
   let determineFileView = (patreonObject) => {
     if (patreonObject.sourceType === "video") {
       return (
-        <video controls>
+        <video controls style={{ maxWidth: "400px" }} draggable>
           <source src={patreonObject.fileSource} type="video/mp4" />
         </video>
       );
     }
 
     return (
-      <div style={{ textAlign: "justify" }}>
+      <div style={{ textAlign: "left" }}>
         <MarkdownRenderer file={patreonObject.fileSource} />
       </div>
     );
   };
 
   return (
-    <>
-      <h2 style={{ color: "white" }}>{patreonObject.button}</h2>
+    <div
+      style={{
+        maxWidth: "400px",
+        minWidth: "400px",
+        transition: "0.3s all ease-in-out",
+        margin: "auto",
+        color: "white",
+        width: "100%",
+      }}
+    >
       <br />
       <div key={patreonObject.button}>{determineFileView(patreonObject)}</div>
-    </>
+    </div>
   );
 };
 

@@ -9,6 +9,14 @@ export default defineConfig({
   },
 
   define: {
-    global: {},
+    // global: {},
+    "process.env": {},
+  },
+
+  resolve: {
+    alias: {
+      url: "url",
+      os: "os-browserify",
+    },
   },
 });
