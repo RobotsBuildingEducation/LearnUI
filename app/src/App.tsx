@@ -69,7 +69,6 @@ function App() {
   const handleZeroKnowledgePassword = (event) => {
     if (event.target.value === import.meta.env.VITE_PATREON_PASSCODE) {
       setIsZeroKnowledgeUser(true);
-      localStorage.setItem("patreonPasscode", event.target.value);
     }
   };
   return (
@@ -81,17 +80,26 @@ function App() {
       />
 
       <br />
-      <div>⚠️ some prompts are not up to date for newer content</div>
 
       {!isZeroKnowledgeUser ? (
         <div>
           <h2>Enter Passcode</h2>
           <input onChange={handleZeroKnowledgePassword} />
+          <br />
+          <br />
+          <a
+            href="https://www.patreon.com/posts/77944323"
+            target="_blank"
+            style={{ textDecoration: "underline", color: "white" }}
+          >
+            Don't know the passcode?
+          </a>
         </div>
       ) : null}
 
       {isZeroKnowledgeUser ? (
         <>
+          <div>⚠️ some prompts are not up to date for newer content</div>
           <div
             style={{
               display: "flex",
