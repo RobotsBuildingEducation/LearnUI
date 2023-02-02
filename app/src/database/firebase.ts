@@ -1,9 +1,10 @@
 import { getAnalytics } from "firebase/analytics";
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 
-
+// junk db feel free to create your own copy
+// if you're building a product, put this key in an .env file similar to what exists in .env and vite-env.d.ts
 const firebaseConfig = {
   apiKey: "AIzaSyByci0j0u36PaK_2RNpOoC2QHq_Yi2pVhY",
   authDomain: "learn-robotsbuildingeducation.firebaseapp.com",
@@ -11,7 +12,7 @@ const firebaseConfig = {
   storageBucket: "learn-robotsbuildingeducation.appspot.com",
   messagingSenderId: "1016937880040",
   appId: "1:1016937880040:web:e9b478e361cafc4e61ec5d",
-  measurementId: "G-N0MK759NHN"
+  measurementId: "G-N0MK759NHN",
 };
 
 // Initialize Firebase

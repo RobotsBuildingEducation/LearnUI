@@ -167,6 +167,7 @@ let ChatGptMessageInput = ({ patreonObject }) => {
     ).catch((error) => {
       console.log("error", error);
       console.log("err", { error });
+      setMessage("");
     });
 
     let data = await response.json();
@@ -184,27 +185,8 @@ let ChatGptMessageInput = ({ patreonObject }) => {
       setMessage("");
     }
 
-    // }catch(error){
-    //   console.log("error", error);
-    //   console.log("{error}", {error});
-    // }finally{
-    //     setLoadingMessage('');
-    // }
-
     setLoadingMessage("");
   };
-
-  console.log("patreon", patreonObject);
-
-  console.log(
-    "SPLIT",
-    aiResponse?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
-  );
-
-  console.log(
-    "demo",
-    patreonObject["demonstratePrompt"].split(" ").slice(-1)[0]?.slice(0, -1)
-  );
 
   return (
     // this form is no longer needed.
@@ -246,9 +228,27 @@ let ChatGptMessageInput = ({ patreonObject }) => {
           displayMessages.map(item =>(<><br/><div>{item}</div></>))
         } */}
 
-            {displayMessages.length > 0
-              ? displayMessages[displayMessages.length - 1]
-              : "hola! i'm ms. roxana, an AI built with GPT-3. I help Sheilfer build RO.B.E by helping you learn more with helpful prompts 😊"}
+            {displayMessages.length > 0 ? (
+              displayMessages[displayMessages.length - 1]
+            ) : (
+              <div>
+                hola! i'm ms. roxana, a teacher built with OpenAI. I help
+                Sheilfer build RO.B.E by helping you learn more with useful
+                prompts 😊
+                <br />
+                <br />
+                Check out our latest sponsors:{" "}
+                <a
+                  onClick={() => {
+                    window.open("https://www.google.com");
+                  }}
+                  target="_blank"
+                  style={{ color: "white", textDecoration: "underline" }}
+                >
+                  RO.B.E
+                </a>
+              </div>
+            )}
           </div>
         </div>
         <br />

@@ -1508,4 +1508,37 @@ export const CourseMap = {
         "ms. roxana, can you please create a study guide to understand how how trading options works in the stock market?",
     },
   },
+  ["26th Street"]: {
+    ["Robots Building Education"]: {
+      sourceType: "markdown",
+      lesson: "RO.B.E",
+      parent: "26th Street",
+      name: "",
+      button: "Robots Building Education",
+      fileSource: await import("./markdowns/drugWarBitcoin.md?raw"),
+      responseCollection: {
+        faqPrompt: "",
+        inspireCuriousityPrompt: "",
+        quickPrompt: "",
+        summarizePrompt: "",
+        demonstratePrompt: "",
+        studyGuidePrompt: "",
+        quizPrompt: "",
+      },
+      quizPrompt:
+        "ms. roxana, can you please write a 3 question quiz for beginners that's challenging about coding and logic?",
+      faqPrompt:
+        "ms. roxana, can you please show me three frequently asked beginner questions about coding and logic with one sentence answers?",
+      inspireCuriousityPrompt:
+        "ms. roxana, can you please talk about Renassaince Capital and how they found success using algorithms in the stock market?",
+      quickPrompt:
+        "ms. roxana, can you please summarize why trading options is probably not a good idea?",
+      summarizePrompt:
+        "ms. roxana, can you please summarize how trading options works in the stock market?",
+      demonstratePrompt:
+        "ms. roxana, can you please show me an example of basic coding logic with no other text in javascript?",
+      studyGuidePrompt:
+        "ms. roxana, can you please create a study guide to understand how how trading options works in the stock market?",
+    },
+  },
 };

@@ -6,8 +6,8 @@ export const StyledNavigationContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
-  max-width: 400px;
-  min-width: 400px;
+  max-width: 100%;
+  min-width: 100%;
   transition: 0.2s all ease-in-out;
   padding: 12px;
   border-radius: 2px;
@@ -59,8 +59,8 @@ export const StyledTopic = styled.div`
 export const StyledSubject = styled.div`
   background-color: #2c2c2e;
 
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   display: flex;
   justify-content: center;
   align-items: center;

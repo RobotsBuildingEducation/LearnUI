@@ -3,12 +3,10 @@ import { useEffect, useState } from "react";
 import MarkdownRenderer from "./MarkdownRenderer/MarkdownRenderer";
 
 let Patreon = ({ patreonObject }) => {
-  console.log("patreon obj", patreonObject);
-
   let determineFileView = (patreonObject) => {
     if (patreonObject.sourceType === "video") {
       return (
-        <video controls style={{ maxWidth: "400px" }} draggable>
+        <video controls style={{ maxWidth: "400px" }}>
           <source src={patreonObject.fileSource} type="video/mp4" />
         </video>
       );
