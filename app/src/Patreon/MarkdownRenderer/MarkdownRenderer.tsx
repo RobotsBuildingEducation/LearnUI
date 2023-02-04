@@ -6,10 +6,6 @@ const MarkdownRenderer = ({ file }) => {
 
   useEffect(() => {
     setMarkdown(file.default);
-    // fetch(file.default)
-    //   .then((response) => response.text())
-    //   .then((text) => setMarkdown(text))
-    //   .catch((error) => console.error(error));
   }, [file]);
 
   return (

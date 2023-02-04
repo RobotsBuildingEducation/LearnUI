@@ -3,8 +3,6 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
-// junk db feel free to create your own copy
-// if you're building a product, put this key in an .env file similar to what exists in .env and vite-env.d.ts
 const firebaseConfig = {
   apiKey: "AIzaSyByci0j0u36PaK_2RNpOoC2QHq_Yi2pVhY",
   authDomain: "learn-robotsbuildingeducation.firebaseapp.com",

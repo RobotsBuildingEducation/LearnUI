@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useEffect, useState } from "react";
+
 import MarkdownRenderer from "./MarkdownRenderer/MarkdownRenderer";
 
 let Patreon = ({ patreonObject }) => {

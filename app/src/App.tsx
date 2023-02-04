@@ -5,59 +5,42 @@ import "./App.css";
 import Patreon from "./Patreon/Patreon";
 import ChatGPT from "./ChatGPT/ChatGPT";
 
-import { CourseMap } from "./common/commonElements";
-
-import { Subjects } from "./Subjects/Subjects";
-import { Chapters } from "./Chapters/Chapters";
+import { Paths } from "./Paths/Paths";
+import { controlPathVisibilityMap, ui } from "./common/uiSchema";
+import { Collections } from "./Paths/Collections/Collections";
+import { Header } from "./Header/Header";
+import { Passcode } from "./Passcode/Passcode";
 
 function App() {
   const [patreonObject, setPatreonObject] = useState<Record<string, any>>({});
-  const [currentSubject, setCurrentSubject] = useState("");
-  const [isCodingVisible, setIsCodingVisible] = useState(false);
-  const [isSocialMediaVisible, setIsSocialMediaVisible] = useState(false);
-  const [isDineroVisible, setIsDineroVisible] = useState(false);
-  const [is26thStreetVisible, setIs26thStreetVisible] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
+
   const [isZeroKnowledgeUser, setIsZeroKnowledgeUser] = useState(false);
-  // console.log("patreon object", patreonObject);
 
-  const handleChapterSelection = (course, item) => {
-    console.log("Topic");
-    setPatreonObject(CourseMap[course][item]);
-    setIsCodingVisible(false);
-    setIsSocialMediaVisible(false);
-    setIsDineroVisible(false);
-    setCurrentSubject("");
-  };
+  const [visibilityMap, setVisibilityMap] = useState({
+    Engineer: false,
+    "26th Street": false,
+    Creator: false,
+    Business: false,
+  });
 
-  const handleSubjectSelection = (event) => {
-    console.log("");
-    if (event.target.id === "Coding") {
-      setIsCodingVisible(true);
-      setIsSocialMediaVisible(false);
-      setIs26thStreetVisible(false);
-      setIsDineroVisible(false);
-      setCurrentSubject(event.target.id);
-    } else if (event.target.id === "Social Media") {
-      setIsCodingVisible(false);
-      setIsSocialMediaVisible(true);
-      setIs26thStreetVisible(false);
-      setIsDineroVisible(false);
-      setCurrentSubject(event.target.id);
-    } else if (event.target.id === "Dinero") {
-      setIsCodingVisible(false);
-      setIsSocialMediaVisible(false);
-      setIs26thStreetVisible(false);
-      setIsDineroVisible(true);
-      setCurrentSubject(event.target.id);
-    } else if (event.target.id === "26th Street") {
-      setIsCodingVisible(false);
-      setIsSocialMediaVisible(false);
-      setIsDineroVisible(false);
-      setIs26thStreetVisible(true);
-      setCurrentSubject(event.target.id);
-    }
+  const handlePathSelection = (event) => {
+    setVisibilityMap(controlPathVisibilityMap(visibilityMap, event.target.id));
+    setCurrentPath(event.target.id);
 
     setPatreonObject({});
+  };
+
+  const handleModuleSelection = (module) => {
+    // can redefine this as module object rather than patreon object. low priority
+    setPatreonObject(module);
+    setCurrentPath("");
+    setVisibilityMap({
+      Engineer: false,
+      "26th Street": false,
+      Creator: false,
+      Business: false,
+    });
   };
 
   const handleZeroKnowledgePassword = (event) => {
@@ -81,55 +64,25 @@ function App() {
 
   return (
     <div className="App">
-      <h3 style={{ color: "white" }}>Robots Building Education</h3>
-      <img
-        width="400px"
-        src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674212147/Screen_Shot_2023-01-20_at_2.55.21_AM_ipay84.png"
-      />
-
-      <br />
+      <Header />
 
       {!isZeroKnowledgeUser ? (
-        <div>
-          <h2>Enter Passcode</h2>
-          <input onChange={handleZeroKnowledgePassword} />
-          <br />
-          <br />
-          <a
-            href="https://www.patreon.com/posts/77944323"
-            target="_blank"
-            style={{ textDecoration: "underline", color: "white" }}
-          >
-            Don't know the passcode?
-          </a>
-        </div>
+        <Passcode handleZeroKnowledgePassword={handleZeroKnowledgePassword} />
       ) : null}
 
       {isZeroKnowledgeUser ? (
         <>
           <div>⚠️ OpenAI's chatGPT feature is currently disabled.</div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            {/* navigate */}
-            <div>
-              <Subjects handleSubjectSelection={handleSubjectSelection} />
 
-              <Chapters
-                handleChapterSelection={handleChapterSelection}
-                isCodingVisible={isCodingVisible}
-                isSocialMediaVisible={isSocialMediaVisible}
-                isDineroVisible={isDineroVisible}
-                is26thStreetVisible={is26thStreetVisible}
-                currentSubject={currentSubject}
-              />
-            </div>
+          {/* navigate */}
 
-            <br />
-          </div>
+          <Paths handlePathSelection={handlePathSelection} />
+
+          <Collections
+            visibilityMap={visibilityMap}
+            handleModuleSelection={handleModuleSelection}
+            currentPath={currentPath}
+          />
 
           {/* selected header */}
           {!isEmpty(patreonObject.button) ? (
@@ -137,15 +90,12 @@ function App() {
           ) : null}
 
           {/* render chatbot */}
-
           <div style={{ border: "1px solid red", display: "flex" }}>
             <div>
               {isEmpty(patreonObject) ? null : (
                 <ChatGPT patreonObject={patreonObject} />
               )}
             </div>
-
-            <br />
 
             {/* render patreon content */}
             <div>
