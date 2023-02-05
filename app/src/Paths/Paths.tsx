@@ -12,7 +12,7 @@ export const Paths = ({ handlePathSelection }): JSX.Element => {
   // active prop will handle some styling to display restricted or blocked access
 
   let display = uiPaths.map((path) => (
-    <StyledPath id={path} active onClick={handlePathSelection}>
+    <StyledPath path={path} id={path} active onClick={handlePathSelection}>
       {path}
     </StyledPath>
   ));

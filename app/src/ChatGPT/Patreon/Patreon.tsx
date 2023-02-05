@@ -7,7 +7,7 @@ let Patreon = ({ patreonObject }) => {
     console.log("patreons", patreonObject);
     if (patreonObject.sourceType === "video") {
       return (
-        <video style={{ borderRadius: "30px" }} controls>
+        <video style={{ borderRadius: "30px", width: "100%" }} controls>
           <source src={patreonObject.fileSource} type="video/mp4" />
         </video>
       );

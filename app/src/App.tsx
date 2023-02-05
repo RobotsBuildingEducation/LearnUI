@@ -86,7 +86,10 @@ function App() {
 
           {/* selected header */}
           {!isEmpty(patreonObject.button) ? (
-            <h2 style={{ color: "white" }}> {patreonObject?.button || ""} </h2>
+            <h2 style={{ color: "white", marginTop: 12 }}>
+              {" "}
+              {patreonObject?.button || ""}{" "}
+            </h2>
           ) : null}
 
           {/* render chatbot */}
@@ -96,13 +99,6 @@ function App() {
                 <ChatGPT patreonObject={patreonObject} />
               )}
             </div>
-
-            {/* render patreon content */}
-            {/* <div>
-              {isEmpty(patreonObject) ? null : (
-                <Patreon patreonObject={patreonObject} />
-              )}
-            </div> */}
           </div>
         </>
       ) : null}

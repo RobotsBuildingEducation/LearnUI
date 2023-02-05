@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import isEmpty from "lodash/isEmpty";
 export const StyledNavigationContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -12,23 +12,6 @@ export const StyledNavigationContainer = styled.div`
   padding: 12px;
   border-radius: 2px;
   box-shadow: 0 3px 6px #0b186be2, 0 6px 6px rgba(0, 0, 0, 0.23);
-  &:hover {
-    /* transform: scale(1.01); */
-    /* box-shadow: 0 19px 38px  #0b186be2, 0 15px 12px rgba(0,0,0,0.22); */
-  }
-`;
-
-export const StyledTopicContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  margin-top: 12px;
-  margin-bottom: 12px;
-  transition: 0.2s all ease-in-out;
-  padding: 12px;
-  border-radius: 2px;
-  box-shadow: 0 3px 6px #6b0b68e1, 0 6px 6px rgba(0, 0, 0, 0.23);
   &:hover {
     /* transform: scale(1.01); */
     /* box-shadow: 0 19px 38px  #0b186be2, 0 15px 12px rgba(0,0,0,0.22); */
@@ -65,27 +48,17 @@ export const StyledModule = styled.div`
   /* border-radius: 46%; */
   color: white;
   transition: 0.15s all ease-in-out;
-  cursor: grab;
-  &:hover {
-    transform: scale(1.1);
-    /* box-shadow: 0 14px 28px #340627e0, 0 10px 10px rgba(0, 0, 0, 0.22); */
-  }
-`;
+  border: 1px solid
+    ${(props) => {
+      return props.patreonObject.highValue
+        ? "#F2D466"
+        : props.patreonObject.new
+        ? "#59CE00"
+        : props.patreonObject.incomplete
+        ? "#FD0000"
+        : "transaparent";
+    }};
 
-export const StyledTopic = styled.div`
-  border: 1px solid #636366;
-  background-color: black;
-  margin: 12px;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  /* border-radius: 46%; */
-  color: white;
-  transition: 0.15s all ease-in-out;
   cursor: grab;
   &:hover {
     transform: scale(1.1);

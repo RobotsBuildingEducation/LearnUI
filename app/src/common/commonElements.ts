@@ -1509,7 +1509,7 @@ export const CourseMap = {
     },
   },
   ["26th Street"]: {
-    ["Robots Building Education"]: {
+    ["RO.₿.E"]: {
       sourceType: "markdown",
       lesson: "RO.B.E",
       parent: "26th Street",

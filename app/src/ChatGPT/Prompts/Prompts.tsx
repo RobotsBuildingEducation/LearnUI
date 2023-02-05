@@ -1,3 +1,4 @@
+import { renderWithTooltip } from "../../common/uiSchema";
 import { StyledPromptButton } from "../../styles/lazyStyles";
 
 export const Prompts = ({
@@ -50,6 +51,12 @@ export const Prompts = ({
         flexDirection: "column",
       }}
     >
+      {renderWithTooltip(<div>🏦: 0</div>, "Proof of work", "left", {
+        border: "1px solid #F2D466",
+        marginBottom: "6px",
+        borderRadius: "10px",
+        backgroundColor: "#f2a900",
+      })}
       {promptMap}
       <div
         style={{
