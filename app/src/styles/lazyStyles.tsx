@@ -119,3 +119,27 @@ export const StyledPath = styled.div`
     /* box-shadow: 0 14px 28px #340627e0, 0 10px 10px rgba(0, 0, 0, 0.22); */
   }
 `;
+
+export const StyledPromptButton = styled.div`
+  background-color: ${(props) => {
+    return props.loadingMessage ? "#48484A" : "black";
+  }};
+
+  cursor: ${(props) => {
+    return props.loadingMessage ? "not-allowed" : "grab";
+  }};
+  color: white;
+  border: 2px solid #48484a;
+  border-radius: 10px;
+  text-align: left;
+  padding: 10px;
+  width: 200px;
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+  transition: 0.15s all ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;

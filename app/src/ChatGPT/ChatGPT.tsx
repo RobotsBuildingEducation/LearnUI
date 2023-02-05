@@ -12,170 +12,80 @@ export const ChatGPT = ({ patreonObject }) => {
   const [chatGptResponse, setChatGptResponse] = useState("");
   const [loadingStates, setLoadingStates] = useState({
     summarize: false,
-    studyGuide: false,
-    //i guess spanish
+    guide: false,
     anything: false,
-    quick: false,
+    define: false,
     demonstrate: false,
-    faq: false,
+    ask: false,
+    quiz: false,
+    inspire: false,
+    patreon: false,
   });
 
   useEffect(() => {
     setLoadingStates({
       summarize: false,
-      studyGuide: false,
-      //i guess spanish. Now i know. This used to handle general translations to spanish and "anything" from an text input field that was later disabled because we can't trust users not to break the rules lol
+      guide: false,
       anything: false,
-      quick: false,
-      faq: false,
+      define: false,
+      ask: false,
       quiz: false,
       demonstrate: false,
-      inspireCuriousity: false,
+      patreon: false,
+      inspire: false,
     });
     setChatGptResponse("");
   }, [patreonObject]);
 
+  const handlePromptSelection = (promptType) => {
+    let loader = Object.keys(loadingStates);
+    let result = loadingStates;
+    loader.forEach((prompt) => {
+      result[prompt] = false;
+    });
+    result[promptType] = true;
+    setLoadingStates(result);
+    setLoadingMessage(" ");
+    // setLoadingMessage(`prompt ${promptType} activated`);
+  };
   const handleSubmit = async (event, prompt = null, promptType = null) => {
     event.preventDefault();
+    setPromptMessage(prompt.request);
 
     if (promptType === "languageToggle") {
       setIsSpanishActive(!isSpanishActive);
-    }
-    if (promptType === "summarize") {
-      setLoadingStates({
-        summarize: true,
-        studyGuide: false,
-        anything: false,
-        quick: false,
-        faq: false,
-        demonstrate: false,
-        quiz: false,
-        inspireCuriousity: false,
-      });
-
-      setLoadingMessage("summarizing...");
-    } else if (promptType === "studyGuide") {
-      setLoadingStates({
-        summarize: false,
-        quick: false,
-        studyGuide: true,
-        anything: false,
-        faq: false,
-        demonstrate: false,
-        quiz: false,
-        inspireCuriousity: false,
-      });
-
-      setLoadingMessage("organizing...");
-    } else if (promptType === "quick") {
-      setLoadingStates({
-        summarize: false,
-        quick: true,
-        studyGuide: false,
-        anything: false,
-        faq: false,
-        demonstrate: false,
-        quiz: false,
-        inspireCuriousity: false,
-      });
-
-      setLoadingMessage("defining...");
-    } else if (promptType === "inspireCuriousity") {
-      setLoadingStates({
-        summarize: false,
-        quick: false,
-        studyGuide: false,
-        anything: false,
-        faq: false,
-        demonstrate: false,
-        quiz: false,
-        inspireCuriousity: true,
-      });
-
-      setLoadingMessage("discovering...");
-    } else if (promptType === "demonstrate") {
-      setLoadingStates({
-        summarize: false,
-        quick: false,
-        studyGuide: false,
-        anything: false,
-        faq: false,
-        demonstrate: true,
-        quiz: false,
-        inspireCuriousity: false,
-      });
-
-      setLoadingMessage("creating...");
-    } else if (promptType === "faq") {
-      setLoadingStates({
-        summarize: false,
-        quick: false,
-        studyGuide: false,
-        anything: false,
-        faq: true,
-        demonstrate: false,
-        quiz: false,
-        inspireCuriousity: false,
-      });
-
-      setLoadingMessage("curating...");
-    } else if (promptType === "quiz") {
-      setLoadingStates({
-        summarize: false,
-        quick: false,
-        studyGuide: false,
-        anything: false,
-        faq: true,
-        demonstrate: false,
-        quiz: true,
-        inspireCuriousity: false,
-      });
-
-      setLoadingMessage("testing...");
     } else {
-      // loads in spanish. See context about "anything"
-      setLoadingStates({
-        summarize: false,
-        studyGuide: false,
-        anything: true,
-        quick: false,
-        demonstrate: false,
-        quiz: false,
-        faq: false,
-        inspireCuriousity: false,
-      });
-      setLoadingMessage("no mms...");
+      handlePromptSelection(promptType);
     }
 
-    const response = await fetch(
-      "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          prompt: prompt,
-        }),
-      }
-    ).catch((error) => {
-      console.log("error", error);
-      console.log("err", { error });
-    });
+    // const response = await fetch(
+    //   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       prompt: prompt.request,
+    //     }),
+    //   }
+    // ).catch((error) => {
+    //   console.log("error", error);
+    //   console.log("err", { error });
+    // });
 
-    let data = await response.json();
+    // let data = await response.json();
 
-    let parsedData = data.bot.trim();
+    // let parsedData = data.bot.trim();
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    await delay(1500);
 
-    if (promptType === "demonstrate") {
-      setChatGptResponse(parsedData);
-    } else {
-      setChatGptResponse(parsedData);
-    }
+    setChatGptResponse(prompt.response);
 
     // If the request was successful, clear the input field
-    if (response.status === 200) {
-    }
+    // if (response.status === 200) {
+    //   //do somtehing
+    // }
 
     setLoadingMessage("");
   };
@@ -184,13 +94,16 @@ export const ChatGPT = ({ patreonObject }) => {
     <div
       onSubmit={handleSubmit}
       style={{
-        maxWidth: "400px",
+        // width: "fit-content",
+
         transition: "0.3s all ease-in-out",
-        margin: "auto",
         color: "white",
       }}
     >
-      <PromptMessage promptMessage={promptMessage} />
+      <PromptMessage
+        promptMessage={promptMessage}
+        patreonObject={patreonObject}
+      />
       <br />
 
       <Roxana

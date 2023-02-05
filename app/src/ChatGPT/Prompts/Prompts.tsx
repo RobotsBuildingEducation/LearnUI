@@ -1,3 +1,5 @@
+import { StyledPromptButton } from "../../styles/lazyStyles";
+
 export const Prompts = ({
   loadingMessage,
   patreonObject,
@@ -9,18 +11,24 @@ export const Prompts = ({
 
   console.log("patr", patreonObject);
   let promptMap = promptKeys.map((prompt) => (
-    <div
-      style={{
-        backgroundColor: loadingMessage ? "#48484A" : "black",
-        cursor: loadingMessage ? "not-allowed" : "grab",
-        color: "white",
-        border: "2px solid #48484A",
-        borderRadius: "10px",
-        textAlign: "left",
-        padding: 10,
-        maxWidth: "75%",
-        minWidth: "75%",
-      }}
+    <StyledPromptButton
+      loadingMessage={loadingMessage}
+      // style={{
+      //   backgroundColor: loadingMessage ? "#48484A" : "black",
+      //   cursor: loadingMessage ? "not-allowed" : "grab",
+      //   color: "white",
+      //   border: "2px solid #48484A",
+      //   borderRadius: "10px",
+      //   textAlign: "left",
+      //   padding: 10,
+      //   width: "200px",
+      //   marginTop: "24px",
+      //   transition: "0.15s all ease-in-out",
+      //   transform: "scale(1.1)",
+      //   // maxWidth: "80%",
+      //   // maxWidth: "100%",
+      //   // minWidth: "100%",
+      // }}
       onClick={(event) => {
         if (loadingMessage) {
         } else {
@@ -30,7 +38,7 @@ export const Prompts = ({
     >
       {patreonObject.prompts[prompt].icon}{" "}
       {patreonObject.prompts[prompt].action}
-    </div>
+    </StyledPromptButton>
   ));
 
   return (
@@ -53,8 +61,10 @@ export const Prompts = ({
           borderRadius: "10px",
           textAlign: "left",
           padding: 10,
-          maxWidth: "75%",
-          minWidth: "75%",
+          width: "200px",
+          marginTop: "24px",
+          // maxWidth: "100%",
+          // minWidth: "100%",
         }}
         onClick={(event) => {
           if (loadingMessage || !chatGptResponse) {

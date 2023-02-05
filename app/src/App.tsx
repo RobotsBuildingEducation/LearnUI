@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import isEmpty from "lodash/isEmpty";
 
 import "./App.css";
-import Patreon from "./Patreon/Patreon";
+import Patreon from "./ChatGPT/Patreon/Patreon";
 import ChatGPT from "./ChatGPT/ChatGPT";
 
 import { Paths } from "./Paths/Paths";
@@ -90,7 +90,7 @@ function App() {
           ) : null}
 
           {/* render chatbot */}
-          <div style={{ border: "1px solid red", display: "flex" }}>
+          <div>
             <div>
               {isEmpty(patreonObject) ? null : (
                 <ChatGPT patreonObject={patreonObject} />
@@ -98,11 +98,11 @@ function App() {
             </div>
 
             {/* render patreon content */}
-            <div>
+            {/* <div>
               {isEmpty(patreonObject) ? null : (
                 <Patreon patreonObject={patreonObject} />
               )}
-            </div>
+            </div> */}
           </div>
         </>
       ) : null}

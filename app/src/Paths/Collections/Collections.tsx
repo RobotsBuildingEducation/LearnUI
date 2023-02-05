@@ -16,21 +16,23 @@ export const Collections = ({
     let display = collections.map((collection) => {
       let modules = Object.keys(path[collection]);
 
-      return (
-        <div>
-          <h3>{collection}</h3>
-          <StyledCollectionContainer>
-            {modules.map((module) => (
-              <Module
-                path={currentPath}
-                collection={collection}
-                module={module}
-                handleModuleSelection={handleModuleSelection}
-              />
-            ))}
-          </StyledCollectionContainer>
-        </div>
-      );
+      if (modules?.length) {
+        return (
+          <div>
+            <h3>{collection}</h3>
+            <StyledCollectionContainer>
+              {modules.map((module) => (
+                <Module
+                  path={currentPath}
+                  collection={collection}
+                  module={module}
+                  handleModuleSelection={handleModuleSelection}
+                />
+              ))}
+            </StyledCollectionContainer>
+          </div>
+        );
+      }
     });
 
     return (

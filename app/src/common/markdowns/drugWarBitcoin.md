@@ -1,4 +1,5 @@
-<img width="75%" src="https://c10.patreonusercontent.com/4/patreon-media/p/post/75903825/23a098b9d0c64468acb67bec9e324897/eyJ3Ijo2MjB9/1.jpg?token-time=1675641600&token-hash=PtC9QP91inNFy7Xv-2dl9TXLczErKnpwJY2jxvi570U%3D" />
+<img width="100%" src="https://c10.patreonusercontent.com/4/patreon-media/p/post/75903825/23a098b9d0c64468acb67bec9e324897/eyJ3Ijo2MjB9/1.jpg?token-time=1675641600&token-hash=PtC9QP91inNFy7Xv-2dl9TXLczErKnpwJY2jxvi570U%3D" />
+<br/>
 If you prefer a more visual version, read the following essay here: https://github.com/RobotsBuildingEducation/Testify
 
 After the recent failures of FTX along with the tech recession, I figured it would be good to review the fundamentals, since it seems that most people move on from the fundamentals too quickly during speculative markets. To keep it brief, I started learning about Bitcoin and cryptocurrency sometime around 2015 when I was studying operating systems in school. It just made sense to me as a digital native. Today, I work as an engineer at a financial technology company that’s focused on embedded finance and open-banking.
