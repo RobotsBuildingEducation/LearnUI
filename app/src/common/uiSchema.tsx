@@ -9,6 +9,7 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 interface IPrompt {
   work: number;
+  tooltip: string | JSX.Element;
   action: string;
   icon: string;
   request: string;
@@ -74,6 +75,7 @@ export const ui: IPath = {
               "ms. roxana, can you please generate a video about coding and logic?",
             response: "null",
             spanish: "",
+            tooltip: "",
           },
           inspire: {
             work: 100,
@@ -83,6 +85,7 @@ export const ui: IPath = {
             response:
               "\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.",
             spanish: "",
+            tooltip: "",
           },
           summarize: {
             work: 100,
@@ -92,6 +95,7 @@ export const ui: IPath = {
             response:
               "\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.",
             spanish: "",
+            tooltip: "",
           },
           ask: {
             work: 100,
@@ -101,6 +105,7 @@ export const ui: IPath = {
             response:
               "\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.",
             spanish: "",
+            tooltip: "",
           },
           guide: {
             work: 100,
@@ -110,6 +115,7 @@ export const ui: IPath = {
             response:
               "\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors",
             spanish: "",
+            tooltip: "",
           },
           demonstrate: {
             work: 100,
@@ -119,6 +125,7 @@ export const ui: IPath = {
             response:
               '\n\n// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log("x is less than y");\n} else {\n  console.log("x is greater than or equal to y");\n}',
             spanish: "",
+            tooltip: "",
           },
           define: {
             work: 100,
@@ -128,6 +135,7 @@ export const ui: IPath = {
             response:
               "\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.",
             spanish: "",
+            tooltip: "",
           },
 
           quiz: {
@@ -138,6 +146,7 @@ export const ui: IPath = {
             response:
               "\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?",
             spanish: "",
+            tooltip: "",
           },
           market: {
             work: 100,
@@ -147,6 +156,7 @@ export const ui: IPath = {
             response:
               "\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?",
             spanish: "",
+            tooltip: "",
           },
         },
       },
