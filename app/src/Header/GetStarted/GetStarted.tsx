@@ -5,16 +5,16 @@ export const GetStarted = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
+      <Button variant="primary" onClick={() => setIsModalOpen(true)}>
+        Get Started
+      </Button>
+      <br />
+      <br />
       <a
         target={"_blank"}
         href="https://www.patreon.com/RobotsBuildingEducation"
         style={{ color: "white" }}
       >
-        <Button variant="primary" onClick={() => setIsModalOpen(true)}>
-          Get Started
-        </Button>
-        <br />
-        <br />
         <Button variant="dark">
           <img
             style={{ borderRadius: "6px" }}

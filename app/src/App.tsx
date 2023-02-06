@@ -95,7 +95,7 @@ function App() {
           ) : null}
 
           {/* render chatbot */}
-          <div style={{ width: 800 }}>
+          <div style={{ width: "100%" }}>
             <div>
               {isEmpty(patreonObject) ? null : (
                 <ChatGPT patreonObject={patreonObject} />

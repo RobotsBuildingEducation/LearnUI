@@ -16,8 +16,10 @@ export const Prompts = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   let promptKeys = Object.keys(patreonObject.prompts);
 
+  console.log("lodasing..", loadingMessage);
   let promptMap = promptKeys.map((prompt) => (
     <StyledPromptButton
+      style={{ display: loadingMessage ? "none" : "flex" }}
       loadingMessage={loadingMessage}
       onClick={(event) => {
         if (loadingMessage) {
@@ -26,8 +28,10 @@ export const Prompts = ({
         }
       }}
     >
-      {patreonObject.prompts[prompt].icon}{" "}
-      {patreonObject.prompts[prompt].action}
+      <a style={{ color: "white" }}>
+        {patreonObject.prompts[prompt].icon}{" "}
+        {patreonObject.prompts[prompt].action}
+      </a>
     </StyledPromptButton>
   ));
   //render with tooltips : TBD
@@ -115,6 +119,7 @@ export const Prompts = ({
           backgroundColor: true ? "#48484A" : "black",
           border: "2px solid #48484A",
           cursor: true ? "not-allowed" : "grab",
+          display: loadingMessage ? "none" : "flex",
           color: "white",
           borderRadius: "10px",
           textAlign: "left",

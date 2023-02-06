@@ -47,7 +47,7 @@ export const ChatGPT = ({ patreonObject }) => {
     });
     result[promptType] = true;
     setLoadingStates(result);
-    setLoadingMessage(" ");
+    setLoadingMessage("...");
     // setLoadingMessage(`prompt ${promptType} activated`);
   };
   const handleSubmit = async (event, prompt = null, promptType = null) => {

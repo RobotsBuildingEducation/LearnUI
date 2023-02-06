@@ -137,7 +137,7 @@ export const ui = (): IPath => {
         "Lesson 1": {
           filler: ``,
           new: false,
-          highValue: false,
+          highValue: true,
           incomplete: false,
           completed: false,
           needsImprovement: false,
@@ -279,10 +279,10 @@ export let controlPathVisibilityMap = (visibilityMap, selectedPath) => {
 };
 
 export let renderWithTooltip = (
-  element: JSX.Element | string,
-  tooltip: JSX.Element | string,
-  renderingDirection: string,
-  style: Record<string, any>
+  element: any,
+  tooltip: any,
+  renderingDirection: any,
+  style: any
 ) => {
   return (
     <OverlayTrigger

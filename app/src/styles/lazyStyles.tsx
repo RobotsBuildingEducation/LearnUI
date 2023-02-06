@@ -69,7 +69,8 @@ export const StyledModule = styled.div`
 export const StyledPath = styled.div`
   background-color: #2c2c2e;
 
-  width: 125px;
+  max-width: 75px;
+  min-width: 75px;
   height: 125px;
   display: flex;
   justify-content: center;
@@ -112,6 +113,7 @@ export const StyledPromptButton = styled.div`
   display: flex;
   align-items: center;
   transition: 0.15s all ease-in-out;
+
   &:hover {
     transform: scale(1.1);
   }

@@ -2,7 +2,7 @@ export const Passcode = ({ handleZeroKnowledgePassword }) => {
   return (
     <div>
       <h2>Enter Passcode</h2>
-      <input onChange={handleZeroKnowledgePassword} />
+      <input onChange={handleZeroKnowledgePassword} type="password" />
       <br />
       <br />
       <a

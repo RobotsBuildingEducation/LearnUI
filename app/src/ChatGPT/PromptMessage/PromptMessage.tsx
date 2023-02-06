@@ -19,6 +19,7 @@ export const PromptMessage = ({ promptMessage, patreonObject }) => {
           minWidth: "fit-content",
         }}
         id={"scrollPoint"}
+        name={"scrollPoint"}
       >
         {promptMessage ? promptMessage : <div>let's learn!</div>}
       </div>

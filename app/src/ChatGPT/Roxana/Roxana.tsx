@@ -53,7 +53,7 @@ export const Roxana = ({
         textAlign: "left",
         padding: 20,
         maxWidth: "82.5%",
-        border: "1px solid green",
+
         borderRadius: "30px",
 
         // overflow: "auto",
