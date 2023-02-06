@@ -11,7 +11,7 @@ export const Collections = ({
   currentPath,
 }): JSX.Element | null => {
   if (currentPath) {
-    let path = ui[currentPath]; // Engineer: {}
+    let path = ui()[currentPath]; // Engineer: {}
     let collections = Object.keys(path); // []]
     let display = collections.map((collection) => {
       let modules = Object.keys(path[collection]);
@@ -19,6 +19,7 @@ export const Collections = ({
       if (modules?.length) {
         return (
           <div>
+            <br />
             <h3>{collection}</h3>
             <StyledCollectionContainer>
               {modules.map((module) => (

@@ -74,6 +74,7 @@ function App() {
         <>
           <div>⚠️ OpenAI's chatGPT feature is currently disabled.</div>
 
+          {/* <div>My Accoun</div> */}
           {/* navigate */}
 
           <Paths handlePathSelection={handlePathSelection} />
@@ -84,6 +85,7 @@ function App() {
             currentPath={currentPath}
           />
 
+          <br />
           {/* selected header */}
           {!isEmpty(patreonObject.button) ? (
             <h2 style={{ color: "white", marginTop: 12 }}>
@@ -93,7 +95,7 @@ function App() {
           ) : null}
 
           {/* render chatbot */}
-          <div>
+          <div style={{ width: 800 }}>
             <div>
               {isEmpty(patreonObject) ? null : (
                 <ChatGPT patreonObject={patreonObject} />

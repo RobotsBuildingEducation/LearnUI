@@ -1,3 +1,5 @@
+import { GetStarted } from "./GetStarted/GetStarted";
+
 export const Header = () => {
   return (
     <>
@@ -8,6 +10,12 @@ export const Header = () => {
         src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674212147/Screen_Shot_2023-01-20_at_2.55.21_AM_ipay84.png"
       />
 
+      <br />
+      <br />
+      <GetStarted />
+      <br />
+      <br />
+      <br />
       <br />
     </>
   );

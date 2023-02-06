@@ -1,5 +1,10 @@
+import { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
+import { CodeBlock, dracula } from "react-code-blocks";
+import ReactJson from "react-json-view";
 import { renderWithTooltip } from "../../common/uiSchema";
 import { StyledPromptButton } from "../../styles/lazyStyles";
+import { DiscordButton } from "./DiscordButton/DiscordButton";
 
 export const Prompts = ({
   loadingMessage,
@@ -8,28 +13,12 @@ export const Prompts = ({
   chatGptResponse,
   isSpanishActive,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   let promptKeys = Object.keys(patreonObject.prompts);
 
-  console.log("patr", patreonObject);
   let promptMap = promptKeys.map((prompt) => (
     <StyledPromptButton
       loadingMessage={loadingMessage}
-      // style={{
-      //   backgroundColor: loadingMessage ? "#48484A" : "black",
-      //   cursor: loadingMessage ? "not-allowed" : "grab",
-      //   color: "white",
-      //   border: "2px solid #48484A",
-      //   borderRadius: "10px",
-      //   textAlign: "left",
-      //   padding: 10,
-      //   width: "200px",
-      //   marginTop: "24px",
-      //   transition: "0.15s all ease-in-out",
-      //   transform: "scale(1.1)",
-      //   // maxWidth: "80%",
-      //   // maxWidth: "100%",
-      //   // minWidth: "100%",
-      // }}
       onClick={(event) => {
         if (loadingMessage) {
         } else {
@@ -41,6 +30,38 @@ export const Prompts = ({
       {patreonObject.prompts[prompt].action}
     </StyledPromptButton>
   ));
+  //render with tooltips : TBD
+  // let promptMap = promptKeys.map((prompt) =>
+  //   renderWithTooltip(
+  //     <StyledPromptButton
+  //       loadingMessage={loadingMessage}
+  //       onClick={(event) => {
+  //         if (loadingMessage) {
+  //         } else {
+  //           handleSubmit(event, patreonObject.prompts[prompt], prompt);
+  //         }
+  //       }}
+  //     >
+  //       {patreonObject.prompts[prompt].icon}{" "}
+  //       {patreonObject.prompts[prompt].action}
+  //     </StyledPromptButton>,
+  //     <div style={{ border: "1px solid pink" }}>
+  //       <h3>Prompt Engineering</h3>
+  //       <h5 style={{ border: "1px solid green" }}>
+  //         Request&nbsp;{patreonObject.prompts[prompt].icon}
+  //         <br />
+  //         <div>{patreonObject.prompts[prompt].action}</div>
+  //       </h5>
+  //     </div>,
+  //     "left",
+  //     {
+  //       display: "flex",
+  //       justifyContent: "center",
+  //       marginRight: "24px",
+  //       border: "1px solid red",
+  //     }
+  //   )
+  // );
 
   return (
     <div
@@ -51,6 +72,36 @@ export const Prompts = ({
         flexDirection: "column",
       }}
     >
+      <Button variant="primary" onClick={() => setIsModalOpen(true)}>
+        🔎 View Prompt Engine
+      </Button>
+      <br />
+      <DiscordButton />
+      <br />
+      <Modal
+        centered
+        fullscreen={true}
+        show={isModalOpen}
+        onHide={() => setIsModalOpen(false)}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>AI Prompt Engineering</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h3>What is this?</h3>
+          <p>
+            This is for students and teachers who are curious of how the AI is
+            prompted and fine-tuned over time.
+          </p>
+
+          <ReactJson enableClipboard src={patreonObject} quotesOnKeys={false} />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
+            Thanks!
+          </Button>
+        </Modal.Footer>
+      </Modal>
       {renderWithTooltip(<div>🏦: 0</div>, "Proof of work", "left", {
         border: "1px solid #F2D466",
         marginBottom: "6px",
@@ -58,12 +109,12 @@ export const Prompts = ({
         backgroundColor: "#f2a900",
       })}
       {promptMap}
+      {/* Spanish is disabled atm. */}
       <div
         style={{
-          backgroundColor:
-            loadingMessage || !chatGptResponse ? "#48484A" : "black",
+          backgroundColor: true ? "#48484A" : "black",
           border: "2px solid #48484A",
-          cursor: loadingMessage || !chatGptResponse ? "not-allowed" : "grab",
+          cursor: true ? "not-allowed" : "grab",
           color: "white",
           borderRadius: "10px",
           textAlign: "left",
@@ -74,7 +125,7 @@ export const Prompts = ({
           // minWidth: "100%",
         }}
         onClick={(event) => {
-          if (loadingMessage || !chatGptResponse) {
+          if (true) {
           } else {
             handleSubmit(
               event,

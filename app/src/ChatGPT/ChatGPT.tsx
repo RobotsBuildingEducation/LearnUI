@@ -20,6 +20,7 @@ export const ChatGPT = ({ patreonObject }) => {
     quiz: false,
     inspire: false,
     patreon: false,
+    market: false,
   });
 
   useEffect(() => {
@@ -33,6 +34,7 @@ export const ChatGPT = ({ patreonObject }) => {
       demonstrate: false,
       patreon: false,
       inspire: false,
+      market: false,
     });
     setChatGptResponse("");
   }, [patreonObject]);
@@ -50,6 +52,7 @@ export const ChatGPT = ({ patreonObject }) => {
   };
   const handleSubmit = async (event, prompt = null, promptType = null) => {
     event.preventDefault();
+
     setPromptMessage(prompt.request);
 
     if (promptType === "languageToggle") {
@@ -58,6 +61,7 @@ export const ChatGPT = ({ patreonObject }) => {
       handlePromptSelection(promptType);
     }
 
+    // this API has a $5 limit. Please configure your own setup to test in a seperate location.
     // const response = await fetch(
     //   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
     //   {
@@ -81,6 +85,7 @@ export const ChatGPT = ({ patreonObject }) => {
     await delay(1500);
 
     setChatGptResponse(prompt.response);
+    // setChatGptResponse(parsedData);
 
     // If the request was successful, clear the input field
     // if (response.status === 200) {

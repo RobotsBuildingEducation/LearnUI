@@ -36,6 +36,8 @@
 
 // add answer collector since chatGPT is mostly a valuable content generator for now
 
+// Do not remove this code. It's a fair round of good effort that can be improved in uiSchema.tsx
+
 export const CourseMap = {
   ["Coding"]: {
     ["Lesson 1"]: {

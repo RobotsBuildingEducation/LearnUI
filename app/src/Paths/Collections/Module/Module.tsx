@@ -9,11 +9,11 @@ export const Module = ({
   collection,
   module,
 }): JSX.Element | null => {
-  let currentModule = ui[path][collection][module];
+  let currentModule = ui()[path][collection][module];
 
   return (
     <StyledModule
-      patreonObject={ui[path][collection][module]}
+      patreonObject={ui()[path][collection][module]}
       key={currentModule.button}
       onClick={() => handleModuleSelection(currentModule)}
     >

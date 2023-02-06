@@ -7,7 +7,6 @@ const bodyParser = require("body-parser");
 
 dotenv.config();
 const configuration = new Configuration({
-  // apiKey: process.env.OPENAI_API_KEY,
   apiKey: process.env.OPENAI_API_KEY,
 });
 

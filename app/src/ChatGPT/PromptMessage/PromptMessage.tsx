@@ -1,4 +1,5 @@
 export const PromptMessage = ({ promptMessage, patreonObject }) => {
+  console.log("PROMPT", promptMessage);
   return (
     <div style={{ display: "flex", justifyContent: "flex-end" }}>
       <div
@@ -14,7 +15,7 @@ export const PromptMessage = ({ promptMessage, patreonObject }) => {
           // padding: 10,
           // maxWidth: "100%",
           // minWidth: "100%",
-          maxWidth: "85%",
+          maxWidth: "82.5%",
           minWidth: "fit-content",
         }}
         id={"scrollPoint"}

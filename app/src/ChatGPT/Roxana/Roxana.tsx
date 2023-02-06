@@ -2,14 +2,13 @@ import React from "react";
 import { CodeBlock, dracula } from "react-code-blocks";
 import Patreon from "../Patreon/Patreon";
 
+// Important: This component needs to work with more custom prompts. It's currently too limited in scope and will affect other subjects like stock market content.
 export const Roxana = ({
   loadingMessage,
   loadingStates,
   chatGptResponse,
   patreonObject,
 }) => {
-  console.log("x", patreonObject.fileSource);
-
   let RoxanaLoadingAnimation = () => {
     return (
       <div>
@@ -53,7 +52,8 @@ export const Roxana = ({
         justifyContent: "flex-start",
         textAlign: "left",
         padding: 20,
-        width: "82.5%",
+        maxWidth: "82.5%",
+        border: "1px solid green",
         borderRadius: "30px",
 
         // overflow: "auto",
@@ -74,7 +74,7 @@ export const Roxana = ({
         )}
         {loadingMessage.length < 1 &&
         chatGptResponse &&
-        (loadingStates.guide || loadingStates.ask) ? (
+        (loadingStates.guide || loadingStates.ask || loadingStates.quiz) ? (
           <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
             {chatGptResponse
               .match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
@@ -89,23 +89,21 @@ export const Roxana = ({
         ) : loadingMessage.length < 1 &&
           chatGptResponse &&
           loadingStates.demonstrate ? (
-          <div>
-            <CodeBlock
-              text={chatGptResponse}
-              language={patreonObject["demonstratePrompt"]
-                .split(" ")
-                .slice(-1)[0]
-                ?.slice(0, -1)}
-              showLineNumbers={true}
-              theme={dracula}
-            />
-          </div>
+          <CodeBlock
+            text={chatGptResponse}
+            language={patreonObject?.prompts?.demonstrate?.request
+              ?.split(" ")
+              .slice(-1)[0]
+              ?.slice(0, -1)}
+            showLineNumbers={true}
+            theme={dracula}
+          />
         ) : loadingMessage.length < 1 &&
           ((chatGptResponse && loadingStates.summarize) ||
             (chatGptResponse && loadingStates.define) ||
             (chatGptResponse && loadingStates.inspire) ||
             (chatGptResponse && loadingStates.patreon) ||
-            (chatGptResponse && loadingStates.quiz) ||
+            (chatGptResponse && loadingStates.market) ||
             (chatGptResponse && loadingStates.anything)) ? (
           <div>{chatGptResponse}</div>
         ) : (
