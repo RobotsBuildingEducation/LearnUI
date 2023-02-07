@@ -20,7 +20,7 @@ export const ChatGPT = ({ patreonObject }) => {
     quiz: false,
     inspire: false,
     patreon: false,
-    market: false,
+    shop: false,
   });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export const ChatGPT = ({ patreonObject }) => {
       demonstrate: false,
       patreon: false,
       inspire: false,
-      market: false,
+      shop: false,
     });
     setChatGptResponse("");
   }, [patreonObject]);

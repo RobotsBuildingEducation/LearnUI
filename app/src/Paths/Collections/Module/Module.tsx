@@ -28,7 +28,7 @@ export const Module = ({
         ""
       )}
 
-      {/* Simple for now. tooltip added to module schema in the future. Use 'module.incomplete' as a tooltip example*/}
+      {/* Simple for now. tooltip added to module schema in the future. Use 'module.underConstruction' as a tooltip example*/}
       <div>
         {currentModule.new
           ? renderWithTooltip(
@@ -68,7 +68,7 @@ export const Module = ({
                 borderRadius: "10px",
               }
             )
-          : currentModule.incomplete
+          : currentModule.underConstruction
           ? renderWithTooltip(
               <div
                 style={{
@@ -79,7 +79,7 @@ export const Module = ({
               >
                 🔥
               </div>,
-              `incomplete
+              `underConstruction
             ${
               " " + currentModule?.tooltip ? "- " + currentModule?.tooltip : ""
             } 🔥`,

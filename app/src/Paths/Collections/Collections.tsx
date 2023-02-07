@@ -21,6 +21,14 @@ export const Collections = ({
           <div>
             <br />
             <h3>{collection}</h3>
+
+            <br />
+            <div>
+              💰= high value &nbsp;| &nbsp;🌱 = new &nbsp;| &nbsp;🔥 =
+              underConstruction
+              <br />
+              <br />
+            </div>
             <StyledCollectionContainer>
               {modules.map((module) => (
                 <Module

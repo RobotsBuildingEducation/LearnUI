@@ -38,8 +38,8 @@ export const StyledModule = styled.div`
   border: 1px solid #636366;
   background-color: black;
   margin: 12px;
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -54,7 +54,7 @@ export const StyledModule = styled.div`
         ? "#F2D466"
         : props.patreonObject.new
         ? "#59CE00"
-        : props.patreonObject.incomplete
+        : props.patreonObject.underConstruction
         ? "#FD0000"
         : "transaparent";
     }};
