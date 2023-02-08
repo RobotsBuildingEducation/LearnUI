@@ -72,7 +72,10 @@ function App() {
 
       {isZeroKnowledgeUser ? (
         <>
-          <div>⚠️ OpenAI's chatGPT feature is currently disabled.</div>
+          <div>
+            ⚠️ OpenAI's chatGPT feature is currently disabled. Everything is
+            being rebuilt to be more awesome.
+          </div>
 
           {/* <div>My Accoun</div> */}
           {/* navigate */}

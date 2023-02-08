@@ -50,7 +50,9 @@ export const StyledModule = styled.div`
   transition: 0.15s all ease-in-out;
   border: 1px solid
     ${(props) => {
-      return props.patreonObject.highValue
+      return props.patreonObject.rare
+        ? "#3AF6FF"
+        : props.patreonObject.highValue
         ? "#F2D466"
         : props.patreonObject.new
         ? "#59CE00"
@@ -102,8 +104,14 @@ export const StyledPromptButton = styled.div`
   cursor: ${(props) => {
     return props.loadingMessage ? "not-allowed" : "grab";
   }};
+
   color: white;
-  border: 2px solid #48484a;
+  /* border: 2px solid #48484a; */
+
+  border: 1px solid
+    ${(props) => {
+      return props?.borderHighlight;
+    }};
   border-radius: 10px;
   text-align: left;
   padding: 10px;

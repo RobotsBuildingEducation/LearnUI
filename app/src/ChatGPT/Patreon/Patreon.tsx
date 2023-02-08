@@ -14,7 +14,7 @@ let Patreon = ({ patreonObject }) => {
     }
 
     return (
-      <div style={{ textAlign: "left", padding: 75 }}>
+      <div style={{ textAlign: "left" }}>
         <MarkdownRenderer file={patreonObject.fileSource} />
       </div>
     );

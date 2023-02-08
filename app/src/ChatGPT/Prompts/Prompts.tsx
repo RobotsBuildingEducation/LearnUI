@@ -16,24 +16,83 @@ export const Prompts = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   let promptKeys = Object.keys(patreonObject.prompts);
 
-  console.log("lodasing..", loadingMessage);
-  let promptMap = promptKeys.map((prompt) => (
-    <StyledPromptButton
-      style={{ display: loadingMessage ? "none" : "flex" }}
-      loadingMessage={loadingMessage}
-      onClick={(event) => {
-        if (loadingMessage) {
-        } else {
-          handleSubmit(event, patreonObject.prompts[prompt], prompt);
-        }
-      }}
-    >
-      <a style={{ color: "white" }}>
-        {patreonObject.prompts[prompt].icon}{" "}
-        {patreonObject.prompts[prompt].action}
-      </a>
-    </StyledPromptButton>
-  ));
+  let promptMap = promptKeys.map((prompt) => {
+    let hasHumanTouch = patreonObject?.prompts?.[prompt]?.humanTouch;
+    let isPremiumContent = patreonObject?.prompts?.[prompt]?.premiumContent;
+    let isSponsoredContent = patreonObject?.prompts?.[prompt]?.sponsoredContent;
+    let isDynamicContent = patreonObject?.prompts?.[prompt]?.dynamicContent;
+    let promptSponsor = patreonObject?.prompts?.[prompt]?.sponsor;
+
+    let isHighlighted =
+      hasHumanTouch ||
+      isPremiumContent ||
+      isSponsoredContent ||
+      isDynamicContent;
+    let borderHighlight = hasHumanTouch
+      ? "#f316ff" //
+      : isPremiumContent
+      ? "#F7404A"
+      : isSponsoredContent
+      ? "rgba(0, 255, 183, 0.776)"
+      : isDynamicContent
+      ? "#f7e779"
+      : "#48484a";
+
+    let tooltipMessage = hasHumanTouch
+      ? "💅 fine-tuned with human touch"
+      : isPremiumContent
+      ? "🤖 created by RO.B.E"
+      : isDynamicContent
+      ? "💫 can be media or code written in Javascript, Java, Python or other useful languages."
+      : isSponsoredContent
+      ? `📰 Sponsored by ${promptSponsor || "[no sponsor yet]"}`
+      : "#48484a";
+
+    console.log("TOOLTIP", tooltipMessage);
+    console.log("borderHighlight", borderHighlight);
+    if (isHighlighted) {
+      return renderWithTooltip(
+        <StyledPromptButton
+          style={{ display: loadingMessage ? "none" : "flex" }}
+          loadingMessage={loadingMessage}
+          onClick={(event) => {
+            if (loadingMessage) {
+            } else {
+              handleSubmit(event, patreonObject.prompts[prompt], prompt);
+            }
+          }}
+          borderHighlight={borderHighlight}
+        >
+          <a style={{ color: "white" }}>
+            {patreonObject.prompts[prompt].icon}{" "}
+            {patreonObject.prompts[prompt].action}
+          </a>
+        </StyledPromptButton>,
+        tooltipMessage,
+        "left",
+        { border: `1px solid ${borderHighlight}`, marginRight: 24 }
+      );
+    } else {
+      return (
+        <StyledPromptButton
+          style={{ display: loadingMessage ? "none" : "flex" }}
+          borderHighlight={borderHighlight}
+          loadingMessage={loadingMessage}
+          onClick={(event) => {
+            if (loadingMessage) {
+            } else {
+              handleSubmit(event, patreonObject.prompts[prompt], prompt);
+            }
+          }}
+        >
+          <a style={{ color: "white" }}>
+            {patreonObject.prompts[prompt].icon}{" "}
+            {patreonObject.prompts[prompt].action}
+          </a>
+        </StyledPromptButton>
+      );
+    }
+  });
   //render with tooltips : TBD
   // let promptMap = promptKeys.map((prompt) =>
   //   renderWithTooltip(

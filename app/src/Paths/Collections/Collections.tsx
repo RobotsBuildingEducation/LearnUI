@@ -1,4 +1,5 @@
-import { ui, uiPaths } from "../../common/uiSchema";
+import { Button } from "react-bootstrap";
+import { renderWithTooltip, ui, uiPaths } from "../../common/uiSchema";
 import {
   StyledCollectionContainer,
   StyledModule,
@@ -23,12 +24,7 @@ export const Collections = ({
             <h3>{collection}</h3>
 
             <br />
-            <div>
-              💰= high value &nbsp;| &nbsp;🌱 = new &nbsp;| &nbsp;🔥 =
-              underConstruction
-              <br />
-              <br />
-            </div>
+            <div></div>
             <StyledCollectionContainer>
               {modules.map((module) => (
                 <Module
@@ -52,6 +48,21 @@ export const Collections = ({
           // visibility: isCodingVisible ? "visible" : "hidden",
         }}
       >
+        <br />
+        {renderWithTooltip(
+          <Button variant="primary">🔥🌱💰💎 ?</Button>,
+          <div>
+            {" "}
+            🌱 = new &nbsp; <br />
+            💰= high value &nbsp; <br />
+            💎 = rare value&nbsp;
+            <br />
+            &nbsp;🔥 = under construction
+            <br />
+            <br />
+          </div>,
+          "top"
+        )}
         {display}
       </div>
     );

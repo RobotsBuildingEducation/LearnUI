@@ -28,10 +28,10 @@ export const Roxana = ({
         build RO.B.E by helping you learn more with useful prompts 😊
         <br />
         <br />
-        Check out our latest sponsors:{" "}
+        Check out our latest sponsors: ME!! :){" "}
         <a
           onClick={() => {
-            window.open("https://www.google.com");
+            window.open("https://www.patreon.com/RobotsBuildingEducation");
           }}
           target="_blank"
           style={{ color: "white", textDecoration: "underline" }}

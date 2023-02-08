@@ -29,22 +29,23 @@ export const Module = ({
       )}
 
       {/* Simple for now. tooltip added to module schema in the future. Use 'module.underConstruction' as a tooltip example*/}
+      {/* 3AF6FF */}
       <div>
-        {currentModule.new
+        {currentModule?.rare
           ? renderWithTooltip(
               <div
                 style={{
-                  border: "1px solid #59CE00",
+                  border: "1px solid #3AF6FF",
                   borderRadius: "10px",
                   width: "50px",
                 }}
               >
-                🌱
+                💎
               </div>,
-              "new! 🐛",
+              "rare value 💍",
               "top",
               {
-                border: "1px solid #59CE00",
+                border: "1px solid #3AF6FF",
                 marginBottom: "6px",
                 borderRadius: "10px",
               }
@@ -68,6 +69,25 @@ export const Module = ({
                 borderRadius: "10px",
               }
             )
+          : currentModule.new
+          ? renderWithTooltip(
+              <div
+                style={{
+                  border: "1px solid #59CE00",
+                  borderRadius: "10px",
+                  width: "50px",
+                }}
+              >
+                🌱
+              </div>,
+              "new! 🐛",
+              "top",
+              {
+                border: "1px solid #59CE00",
+                marginBottom: "6px",
+                borderRadius: "10px",
+              }
+            )
           : currentModule.underConstruction
           ? renderWithTooltip(
               <div
@@ -79,7 +99,7 @@ export const Module = ({
               >
                 🔥
               </div>,
-              `underConstruction
+              `under construction
             ${
               " " + currentModule?.tooltip ? "- " + currentModule?.tooltip : ""
             } 🔥`,
