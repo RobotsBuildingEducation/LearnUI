@@ -9,7 +9,7 @@ export default defineConfig({
   },
 
   define: {
-    // global: {},
+    global: {},
     "process.env": {},
   },
 
