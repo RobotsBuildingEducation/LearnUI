@@ -34,7 +34,7 @@ export const StyledCollectionContainer = styled.div`
     /* box-shadow: 0 19px 38px  #0b186be2, 0 15px 12px rgba(0,0,0,0.22); */
   }
 `;
-export const StyledModule = styled.div`
+export const StyledModule = styled.button`
   border: 1px solid #636366;
   background-color: black;
   margin: 12px;
@@ -69,7 +69,7 @@ export const StyledModule = styled.div`
   }
 `;
 
-export const StyledPath = styled.div`
+export const StyledPath = styled.button`
   background-color: #2c2c2e;
 
   max-width: 75px;
@@ -97,7 +97,7 @@ export const StyledPath = styled.div`
   }
 `;
 
-export const StyledPromptButton = styled.div`
+export const StyledPromptButton = styled.button`
   background-color: ${(props) => {
     return props.loadingMessage ? "#48484A" : "black";
   }};

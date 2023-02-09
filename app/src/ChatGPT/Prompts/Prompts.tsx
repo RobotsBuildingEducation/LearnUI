@@ -49,8 +49,6 @@ export const Prompts = ({
       ? `📰 Sponsored by ${promptSponsor || "[no sponsor yet]"}`
       : "#48484a";
 
-    console.log("TOOLTIP", tooltipMessage);
-    console.log("borderHighlight", borderHighlight);
     if (isHighlighted) {
       return renderWithTooltip(
         <StyledPromptButton
@@ -76,6 +74,7 @@ export const Prompts = ({
     } else {
       return (
         <StyledPromptButton
+          tabindex="0"
           style={{ display: loadingMessage ? "none" : "flex" }}
           borderHighlight={borderHighlight}
           loadingMessage={loadingMessage}
