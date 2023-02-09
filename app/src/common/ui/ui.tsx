@@ -13,9 +13,9 @@ export let ultimateEffeciencyJutsu = (key) => {
     [`Lesson 10`]: `database design`,
     [`Lesson 11`]: `backend software engineering`,
     [`Lesson 12`]: `computer operating systems`,
-    [`Lesson 13`]: `using command line interfaces to create apps with npm`,
-    [`Lesson 14`]: `APIs`, // wow this one is crazy in commonElements.ts lol
-    [`Lesson 15`]: `Firebase`,
+    [`Lesson 13`]: `command line interfaces`,
+    [`Lesson 14`]: `fintech APIs`, // wow this one is crazy in commonElements.ts lol
+    [`Lesson 15`]: `noSQL with Firebase Firestore`,
     [`Lesson 16`]: `Git and Github`,
     ["Build For Undocumented"]:
       "opportunities to consult as an undocumented immigrant with Hydrogen by Shopify",

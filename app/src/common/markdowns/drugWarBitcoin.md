@@ -1,3 +1,5 @@
+response: `This prompt is available for your business. Please reach out to be on Patreon with your interest :)`,
+
 <img width="100%" src="https://c10.patreonusercontent.com/4/patreon-media/p/post/75903825/23a098b9d0c64468acb67bec9e324897/eyJ3Ijo2MjB9/1.jpg?token-time=1675641600&token-hash=PtC9QP91inNFy7Xv-2dl9TXLczErKnpwJY2jxvi570U%3D" />
 <br/>
 If you prefer a more visual version, read the following essay here: https://github.com/RobotsBuildingEducation/Testify

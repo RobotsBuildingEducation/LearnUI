@@ -18,12 +18,18 @@ export const Module = ({
       onClick={() => handleModuleSelection(currentModule)}
     >
       {currentModule.sourceType === "video" ? (
-        <span> &#9658;&nbsp;{currentModule.button}</span>
+        <span>
+          {" "}
+          &#9658;
+          <br /> {currentModule.button}
+        </span>
       ) : (
         ""
       )}
       {currentModule.sourceType === "markdown" ? (
-        <span>📄&nbsp;{currentModule.button}</span>
+        <span>
+          📄 <br /> {currentModule.button}
+        </span>
       ) : (
         ""
       )}

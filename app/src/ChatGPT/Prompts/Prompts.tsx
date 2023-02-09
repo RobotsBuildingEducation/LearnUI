@@ -28,6 +28,7 @@ export const Prompts = ({
       isPremiumContent ||
       isSponsoredContent ||
       isDynamicContent;
+
     let borderHighlight = hasHumanTouch
       ? "#f316ff" //
       : isPremiumContent

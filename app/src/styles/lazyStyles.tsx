@@ -39,13 +39,14 @@ export const StyledModule = styled.div`
   background-color: black;
   margin: 12px;
   width: 125px;
-  height: 125px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  /* border-radius: 46%; */
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
   color: white;
   transition: 0.15s all ease-in-out;
   border: 1px solid
@@ -112,7 +113,9 @@ export const StyledPromptButton = styled.div`
     ${(props) => {
       return props?.borderHighlight;
     }};
-  border-radius: 10px;
+  /* border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px; */
   text-align: left;
   padding: 10px;
   width: 200px;

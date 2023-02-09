@@ -11,7 +11,7 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Foundations Coding & Logic`, // may not need - `name`
+      button: `1. Coding & Logic`, // may not need - `name`
       header: `Foundations: Coding & Logic`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220062/download_4_xnineu.mp4`, // may not need
 
@@ -139,8 +139,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Foundations Data & Sets`, // may not need - `name`
-      header: `Foundations Data & Sets`,
+      button: `2. Data & Functions`, // may not need - `name`
+      header: `2. Data & Functions`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220121/download_5_q0viph.mp4`, // may not need
 
       prompts: {
@@ -262,8 +262,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Creating Objects`, // may not need - `name`
-      header: `Creating Objects`,
+      button: `3. Creating Objects`, // may not need - `name`
+      header: `3. Creating Objects`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220184/download_6_mzx1ss.mp4`, // may not need
 
       prompts: {
@@ -383,8 +383,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Internet Apps`, // may not need - `name`
-      header: `Internet Apps`,
+      button: `4. Internet Apps`, // may not need - `name`
+      header: `4. Internet Apps`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220233/download_7_l6kd1z.mp4"`, // may not need
 
       prompts: {
@@ -505,8 +505,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Loops & Counting`, // may not need - `name`
-      header: `Loops & Counting`,
+      button: `5. Loops & Counting`, // may not need - `name`
+      header: `5. Loops & Counting`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220261/download_8_gww39e.mp4"`, // may not need
       prompts: {
         patreon: {
@@ -625,8 +625,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `HTML`, // may not need - `name`
-      header: `HTML`,
+      button: `6. HTML`, // may not need - `name`
+      header: `6. HTML`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220287/download_9_uf9kjn.mp4`, // may not need
 
       prompts: {
@@ -747,8 +747,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `CSS`, // may not need - `name`
-      header: `CSS`,
+      button: `7. CSS`, // may not need - `name`
+      header: `7. CSS`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220314/download_10_epzusw.mp4`, // may not need
 
       prompts: {
@@ -869,8 +869,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `React`, // may not need - `name`
-      header: `React`,
+      button: `8. React`, // may not need - `name`
+      header: `8. React`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220343/download_11_whqtek.mp4`, // may not need
 
       prompts: {
@@ -991,8 +991,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Creating Users`, // may not need - `name`
-      header: `Creating Users`,
+      button: `9. Creating Users`, // may not need - `name`
+      header: `9. Creating Users`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220377/download_12_adwen3.mp4`, // may not need
 
       prompts: {
@@ -1014,7 +1014,7 @@ export const Engineer = {
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please explain how companies are able to collect data when creating users on their platform?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nCompanies are able to collect data from users when they create an account by using a series of registration or sign-up forms where the user is asked to provide information. This information may include name, age, gender, location, email, phone number, and other details. This data is then stored in the company’s database, which is later accessed by data scientists and other team members to gain insights into user behaviour, needs and preferences.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1026,7 +1026,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nOAuth is an open-standard authorization protocol or framework that describes how users can access resources on third-party websites or applications through a secure system. It works by providing access tokens, which are essentially encrypted keys that identify a user and give them access to a restricted resource. Users log in to their accounts and authorise the third-party application to access their data by providing a specific access token. The application then presents the token to the service provider, which the service provider then verifies and allows the access to the user-assigned resource. OAuth promotes secure access to user data through stronger authentication mechanisms, as well as by allowing users to revoke app access rights at any time.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1038,7 +1038,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is OAuth? Answer: OAuth is an open standard authorization framework that allows applications to securely access resources on behalf of a user.\n\n2. What is the difference between OAuth and OpenID? Answer: OAuth is used to authorize third-party applications to access user resources, whereas OpenID is used to authenticate users.\n\n3. What is a Bearer Token? Answer: A Bearer Token is an access token that grants its holder access to a protected resource without additional authentication.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1050,7 +1050,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. OAuth is an open-source authorization protocol that allows users to securely access resources without sharing personal credentials.\n\n2. OAuth enables clients to access resources on behalf of a user without having to store or handle the user's credentials.\n\n3. OAuth uses tokens which identify the authenticated user and the scope of access permitted to the resource.\n\n4. OAuth uses an authorization server and a resource server to manage access to resources.\n\n5. OAuth provides various permission-granting options, including authorization codes, implicit grants, resource owner credentials, and client credentials.\n\n6. OAuth is used to authorize access to web services, APIs, and mobile applications.\n\n7. OAuth supports applications built on different operating systems, such as web, mobile, and desktop.\n\n8. OAuth provides support for both the client and the resource server to communicate securely over the internet.\n\n9. OAuth enables applications to access user data on other websites and in the cloud.\n\n10. OAuth is built on the concept of secure delegation and is used in many popular applications, such as Google, Amazon, and Twitter.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1061,9 +1061,8 @@ export const Engineer = {
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of using ${ultimateEffeciencyJutsu(
             `Lesson 9`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          )} with no other text in ruby?`,
+          response: `\n\nHere is a basic example of how to implement OAuth in Ruby.\n\nrequire 'base64'\nrequire 'net/https'\nrequire 'uri'\nrequire 'json'\n\n# Client ID and secret\nclient_id = 'yourclientid'\nclient_secret = 'yourclientsecret'\n\n# HTTP request URL \nurl = 'https://example.com/oauth/token'\n\n# Encode credentials\ncredentials = Base64.strict_encode64(\"#{client_id}:#{client_secret}\")\n\n# Create the HTTP objects\nuri = URI.parse(url)\nhttp = Net::HTTP.new(uri.host, uri.port)\nhttp.use_ssl = true\n\n# Create the POST request\nrequest = Net::HTTP::Post.new(uri.request_uri)\n\n# Set headers\nrequest.basic_auth('Basic', credentials)\nrequest.add_field('Content-Type', 'application/x-www-form-urlencoded')\n\n# Set body params\nrequest.body = 'grant_type=client_credentials'\n\n# Send request\nresponse = http.request(request) \n\n# Parse response\ndata = JSON.parse(response.body)\n\n# Extract the access token\naccess_token = data['access_token']`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1075,7 +1074,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nOAuth is an open authorization protocol that enables secure API authentication.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1088,7 +1087,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. How does OAuth enable secure access to data?\n\n2. What are the different OAuth authorization flows?\n\n3. How does OAuth differ from OpenID Connect?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1113,8 +1112,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Database Foundations`, // may not need - `name`
-      header: `Database Foundations`,
+      button: `10. Database Foundations`, // may not need - `name`
+      header: `10. Database Foundations`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220399/download_13_xxdhvo.mp4`, // may not need
 
       prompts: {
@@ -1135,10 +1134,8 @@ export const Engineer = {
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 10`
-          )}?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          request: `ms. roxana, can you please explain how users in a databases and machine learning are related?`,
+          response: `\n\nUsers in a database and machine learning are related because having more users in a database provides more data for the machine learning algorithm to analyze. This data can be used to train the machine learning model, as well as to improve the model's accuracy. In other words, the more information available in the database, the better the machine learning model can be trained and the more accurate it can become.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1150,7 +1147,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 10`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nDatabase design involves creating a logical and physical structure of a database, using software applications and specialized programming tools. This process involves mapping out the structure of the data, setting up and maintaining the data storage parameters, and creating the necessary rules and regulations to manage the data. Database design also involves setting up the processes needed to manage the flow of data into and out of the system. Finally, it also involves setting up any necessary user access and security protocols.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1162,7 +1159,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 10`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is normalization? - Normalization is a process of organizing data in a database to minimize redundancy and dependency.\n\n2. What is a primary key? - A primary key is a unique identifier for a record in a database table.\n\n3. What is the difference between clustered and nonclustered index? - A clustered index stores the data in a sorted format, while a nonclustered index only stores a reference to the data.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1174,20 +1171,18 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 10`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the importance of database design and be familiar with the different ways it is used. \n2. Learn Database Theory and how to use it to organize and manage data. \n3. Understand the basics of database architecture and the different components used.\n4. Learn the role and importance of data modeling and how it relates to database design.\n5. Have an understanding of Normalization techniques used in database design.\n6. Be familiar with different database programming language syntax and tools.\n7. Learn about the different types of keys and how they can be used to maintain data integrity. \n8. Be able to create and maintain database tables, fields, and data relationships. \n9. Understand the different security measures that should be taken when designing and maintaining a database.\n10. Understand the importance of user interaction with databases, incorporating language(s) such as SQL, PL/SQL, AND T-SQL.`,
           spanish: ``,
           tooltip: ``,
         },
         demonstrate: {
+          humanTouch: true,
           completed: false,
           work: 100,
           action: `demonstrate`,
           icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 10`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          request: `ms. roxana, can you please show me an example of noSQL with firebase and SQL and mySQL?`,
+          response: `\n\nNoSQL example with Firebase:\n\nConsider a Firebase database that stores student records. A NoSQL approach may store data in a document-like structure like this:\n\n{\n  Name: \"John Doe\",\n  Age: 22,\n  Preferences: {\n    Music: \"Classical\",\n    Language: \"English\"\n  },\n  Grades: {\n    Math: \"A+\",\n    Science: \"B\"\n  }\n}\n\nSQL example with MySQL:\n\nConsider a MySQL database that stores student records. A SQL approach may store data in a table-like structure like this:\n\nCREATE TABLE student_records (\n  Name VARCHAR(255),\n  Age INT,\n  Music VARCHAR(255),\n  Language VARCHAR(255),\n  Math CHAR(2),\n  Science CHAR(2)\n);\n\nINSERT INTO student_records (Name, Age, Music, Language, Math, Science) \nVALUES(\"John Doe\", 22, \"Classical\", \"English\", \"A+\", \"B\");`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1199,7 +1194,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 10`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nDatabase design is the process of creating a logical data structure used to store, manipulate and retrieve data efficiently.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1212,7 +1207,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 10`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is the process of data normalization, and why is it important in database design?\n2. How can data integrity be ensured when designing a database?\n3. What strategies can be employed when designing a database to optimize query performance?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1237,8 +1232,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Backend Clouds`, // may not need - `name`
-      header: `Backend Clouds`,
+      button: `11. Backend Clouds`, // may not need - `name`
+      header: `11. Backend Clouds`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220422/download_14_lkehax.mp4`, // may not need
 
       prompts: {
@@ -1259,9 +1254,7 @@ export const Engineer = {
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 11`
-          )}?`,
+          request: `ms. roxana, can you please explain why serverless computing got popular?`,
           response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
           spanish: ``,
           tooltip: ``,
@@ -1309,7 +1302,7 @@ export const Engineer = {
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 11`
-          )} with no other text in javascript?`,
+          )} with no other text in python?`,
           response:
             "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
           spanish: ``,
@@ -1357,12 +1350,13 @@ export const Engineer = {
       new: false,
       highValue: true,
       underConstruction: true,
+      rare: true,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Operating Systems & Machines`, // may not need - `name`
-      header: `Operating Systems & Machines`,
+      button: `12. Operating Systems & Machines`, // may not need - `name`
+      header: `12. Operating Systems & Machines`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220456/download_15_um5siz.mp4`, // may not need
 
       prompts: {
@@ -1383,9 +1377,7 @@ export const Engineer = {
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 12`
-          )}?`,
+          request: `ms. roxana, can you please explain the relationship between ASICs, FPGAs, Tesla's Optimus robot and bitcoin miners?`,
           response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
           spanish: ``,
           tooltip: ``,
@@ -1428,12 +1420,13 @@ export const Engineer = {
         },
         demonstrate: {
           completed: false,
+          humanTouch: true,
           work: 100,
           action: `demonstrate`,
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 12`
-          )} with no other text in javascript?`,
+          )} with no other text in Rust?`,
           response:
             "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
           spanish: ``,
@@ -1485,8 +1478,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Setting Up An App`, // may not need - `name`
-      header: `Setting Up An App`,
+      button: `13. Setting Up An App`, // may not need - `name`
+      header: `13. Setting Up An App`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220489/download_16_lpne2o.mp4"`, // may not need
 
       prompts: {
@@ -1507,9 +1500,7 @@ export const Engineer = {
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 13`
-          )}?`,
+          request: `ms. roxana, can you please explain how things like chatGPT and command lines are similar?`,
           response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
           spanish: ``,
           tooltip: ``,
@@ -1557,7 +1548,7 @@ export const Engineer = {
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 13`
-          )} with no other text in javascript?`,
+          )} with basic npm commands?`,
           response:
             "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
           spanish: ``,
@@ -1610,8 +1601,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Creating Fintech`, // may not need - `name`
-      header: `Creating Fintech`,
+      button: `14. Creating Fintech`, // may not need - `name`
+      header: `14. Creating Fintech`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220538/download_17_snhdb6.mp4`, // may not need
 
       prompts: {
@@ -1628,13 +1619,12 @@ export const Engineer = {
           tooltip: ``,
         },
         inspire: {
+          humanTouch: true,
           completed: false,
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Cloud Investing`
-          )}?`,
+          request: `ms. roxana, can you please explain how the drug war, bitcoin and the bank secrecy act are related and how it may be problematic for civil liberties?`,
           response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
           spanish: ``,
           tooltip: ``,
@@ -1682,7 +1672,7 @@ export const Engineer = {
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 14`
-          )} with no other text in javascript?`,
+          )} with no other text in NodeJS?`,
           response:
             "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
           spanish: ``,
@@ -1734,8 +1724,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Creating Database`, // may not need - `name`
-      header: `Creating Database`,
+      button: `15. Creating Database`, // may not need - `name`
+      header: `15. Creating Database`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220555/download_18_uv5kve.mp4`, // may not need
 
       prompts: {
@@ -1752,13 +1742,12 @@ export const Engineer = {
           tooltip: ``,
         },
         inspire: {
+          humanTouch: true,
           completed: false,
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 15`
-          )}?`,
+          request: `ms. roxana, can you please explain how entrepeneurs can use platforms like Firebase to create businesses?`,
           response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
           spanish: ``,
           tooltip: ``,
@@ -1853,13 +1842,14 @@ export const Engineer = {
       filler: ``,
       new: false,
       highValue: true,
+      rare: true,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Working Together`, // may not need - `name`
-      header: `Working Together`,
+      button: `16. Working Together`, // may not need - `name`
+      header: `16. Working Together`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220688/download_vm66up.mp4`, // may not need
 
       prompts: {
@@ -1876,13 +1866,13 @@ export const Engineer = {
           tooltip: ``,
         },
         inspire: {
+          humanTouch: true,
           completed: false,
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 16`
-          )}?`,
+          request:
+            "ms. roxana, can you please explain what robotic process automation is?",
           response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
           spanish: ``,
           tooltip: ``,
@@ -2003,14 +1993,13 @@ export const Engineer = {
           tooltip: ``,
         },
         inspire: {
+          dynamicContent:true,
           completed: false,
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Build For Undocumented`
-          )}?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          request: `ms. roxana, can you please share how undocumented immigrants can learn how to build things with tools like Hydrogen by Shopify to earn a living in Spanish?`,
+          response: `\n\nHay varias opciones para los inmigrantes indocumentados que desean aprender cómo construir cosas con herramientas como Hydrogen de Shopify para ganarse la vida. Primero, recomendamos revisar la documentación oficial de Hydrogen. Muchos betatesters documentan su proceso paso a paso para aquellos deseos de aprender. Igualmente, los foros y grupos de discusión para desarrolladores como Reddit, Stack Exchange y Github ofrecen guías y secciones FAQ en español. Estas fuentes contienen contenido específico, recomendaciones, consejos y trucos sobre cómo usar la plataforma Hydrogen. Por último, los webinars y seminarios web sobre cómo usar Hydrogen son una forma estupenda de ganar conocimiento sobre la plataforma.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2055,9 +2044,7 @@ export const Engineer = {
           work: 100,
           action: `demonstrate`,
           icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Build For Undocumented`
-          )} with no other text in javascript?`,
+          request: `ms. roxana, can you please show me an example Shopify builds apps with Hydrogen in spanish?`,
           response:
             "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
           spanish: ``,

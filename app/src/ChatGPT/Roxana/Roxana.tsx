@@ -28,13 +28,17 @@ export const Roxana = ({
         build RO.B.E by helping you learn more with useful prompts 😊
         <br />
         <br />
-        Check out our latest sponsors: ME!! :){" "}
+        Check out our latest sponsors: ME!! 😊{" "}
         <a
           onClick={() => {
             window.open("https://www.patreon.com/RobotsBuildingEducation");
           }}
           target="_blank"
-          style={{ color: "white", textDecoration: "underline" }}
+          style={{
+            color: "white",
+            textDecoration: "underline",
+            cursor: "grab",
+          }}
         >
           RO.B.E
         </a>
@@ -54,7 +58,9 @@ export const Roxana = ({
         padding: 20,
         maxWidth: "82.5%",
 
-        borderRadius: "30px",
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+        borderBottomRightRadius: 30,
 
         // overflow: "auto",
         // maxWidth: "80%",

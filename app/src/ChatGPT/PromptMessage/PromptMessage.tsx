@@ -6,7 +6,7 @@ export const PromptMessage = ({ promptMessage, patreonObject }) => {
         style={{
           backgroundColor: "#0C84FF",
           color: "white",
-          borderRadius: "30px",
+          // borderRadius: "30px",
           display: "flex",
           flexDirection: "column",
           textAlign: "left",
@@ -17,6 +17,9 @@ export const PromptMessage = ({ promptMessage, patreonObject }) => {
           // minWidth: "100%",
           maxWidth: "82.5%",
           minWidth: "fit-content",
+          borderTopLeftRadius: 30,
+          borderTopRightRadius: 30,
+          borderBottomLeftRadius: 30,
         }}
         id={"scrollPoint"}
       >
