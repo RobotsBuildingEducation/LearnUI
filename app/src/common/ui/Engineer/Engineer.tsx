@@ -255,8 +255,8 @@ export const Engineer = {
     },
     "Lesson 3": {
       filler: ``,
-      new: false,
-      highValue: true,
+      new: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
@@ -377,7 +377,7 @@ export const Engineer = {
     "Lesson 4": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
@@ -741,7 +741,7 @@ export const Engineer = {
     "Lesson 7": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -863,7 +863,7 @@ export const Engineer = {
     "Lesson 8": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -985,7 +985,7 @@ export const Engineer = {
     "Lesson 9": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -1106,7 +1106,7 @@ export const Engineer = {
     "Lesson 10": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -1226,7 +1226,7 @@ export const Engineer = {
     "Lesson 11": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -1347,9 +1347,9 @@ export const Engineer = {
     "Lesson 12": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
-      rare: true,
+      rare: false,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
@@ -1593,7 +1593,7 @@ export const Engineer = {
       highValue: false,
       underConstruction: true,
       completed: false,
-      rare: true,
+      rare: false,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
@@ -1834,8 +1834,8 @@ export const Engineer = {
     "Lesson 16": {
       filler: ``,
       new: false,
-      highValue: true,
-      rare: true,
+      highValue: false,
+      rare: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -1963,7 +1963,7 @@ export const Engineer = {
       highValue: false,
       underConstruction: true,
       completed: false,
-      rare: true,
+      rare: false,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `markdown`, // may not need
@@ -2086,7 +2086,7 @@ export const Engineer = {
       underConstruction: true,
       completed: false,
       needsImprovement: false,
-      rare: true,
+      rare: false,
       tooltip: ``,
       sourceType: `markdown`, // may not need
       button: `Build For Community`, // may not need - `name`
@@ -2207,7 +2207,7 @@ export const Engineer = {
     "Build For Teachers": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -2460,7 +2460,7 @@ export const Engineer = {
       highValue: false,
       underConstruction: true,
       completed: false,
-      rare: true,
+      rare: false,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
@@ -2706,7 +2706,7 @@ export const Engineer = {
     "Linked Lists": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -2830,7 +2830,7 @@ export const Engineer = {
     "Link Travel": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -2954,7 +2954,7 @@ export const Engineer = {
     "Link Changing": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -3078,7 +3078,7 @@ export const Engineer = {
     Algorithms: {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,

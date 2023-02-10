@@ -1,6 +1,7 @@
 // export const schemaUpdater = (ui) => {};
 
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { LittleVillage } from "./ui/26thStreet/LittleVillage";
 import { Creator } from "./ui/Creator/Creator";
 import { Engineer } from "./ui/Engineer/Engineer";
 import { Entrepeneur } from "./ui/Entrepeneur/Entrepeneur";
@@ -132,7 +133,7 @@ export const ui = (): IPath => {
     Engineer: Engineer,
     Creator: Creator,
     Entrepeneur: Entrepeneur,
-    "26th Street": {},
+    "26th Street": LittleVillage,
   };
 };
 export let uiPaths = Object.keys(ui());

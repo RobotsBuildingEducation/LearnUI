@@ -64,6 +64,7 @@ export let ultimateEffeciencyJutsu = (key) => {
       "the pros and cons of investing in industrial technology companies like Autodesk",
     ["Cloud Investing"]:
       "the pros and cons of investing in cloud software like Cloudflare",
+    ["Little Village"]: "Little Village, Chicago",
   };
   return map[key] || "null";
 };

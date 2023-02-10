@@ -5,11 +5,11 @@ export const Entrepeneur = {
     "Bitcoin, Automa & the Drug War": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
-      rare: true,
+      rare: false,
       tooltip: ``,
       sourceType: `markdown`, // may not need
       button: `Bitcoin, Automa & the Drug War`, // may not need - `name`
@@ -130,7 +130,7 @@ export const Entrepeneur = {
     "Bitcoin & Social Technology": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -750,7 +750,7 @@ export const Entrepeneur = {
     "Creating Competitive Entry Level Resumes": {
       filler: ``,
       new: false,
-      highValue: true,
+      highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
