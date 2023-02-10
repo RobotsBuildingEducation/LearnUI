@@ -6,7 +6,7 @@ export const Entrepeneur = {
       filler: ``,
       new: false,
       highValue: false,
-      underConstruction: false,
+      underConstruction: true,
       completed: false,
       needsImprovement: false,
       rare: false,

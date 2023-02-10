@@ -6,7 +6,7 @@ export const LittleVillage = {
       filler: ``,
       new: true,
       highValue: false,
-      underConstruction: false,
+      underConstruction: true,
       completed: false,
       needsImprovement: false,
       tooltip: ``,

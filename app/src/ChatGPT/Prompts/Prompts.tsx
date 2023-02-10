@@ -147,19 +147,27 @@ export const Prompts = ({
         show={isModalOpen}
         onHide={() => setIsModalOpen(false)}
       >
-        <Modal.Header closeButton>
+        <Modal.Header
+          closeButton
+          style={{ color: "white", backgroundColor: "black" }}
+        >
           <Modal.Title>AI Prompt Engineering</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{ backgroundColor: "black", color: "white" }}>
           <h3>What is this?</h3>
           <p>
             This is for students and teachers who are curious of how the AI is
             prompted and fine-tuned over time.
           </p>
 
-          <ReactJson enableClipboard src={patreonObject} quotesOnKeys={false} />
+          <ReactJson
+            theme={"threezerotwofour"}
+            enableClipboard
+            src={patreonObject}
+            quotesOnKeys={false}
+          />
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer style={{ color: "white", backgroundColor: "black" }}>
           <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
             Thanks!
           </Button>

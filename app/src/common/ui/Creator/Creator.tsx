@@ -133,7 +133,7 @@ export const Creator = {
       highValue: false,
       underConstruction: true,
       completed: false,
-      rare: false,
+      rare: true,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `markdown`, // may not need
@@ -258,7 +258,7 @@ export const Creator = {
       highValue: false,
       underConstruction: true,
       completed: false,
-      rare: false,
+      rare: true,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `markdown`, // may not need
@@ -382,7 +382,7 @@ export const Creator = {
     "UI/UX": {
       filler: ``,
       new: false,
-      highValue: false,
+      highValue: true,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -507,6 +507,7 @@ export const Creator = {
       filler: ``,
       new: false,
       highValue: false,
+      rare: true,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
