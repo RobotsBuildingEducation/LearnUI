@@ -62,30 +62,32 @@ export const ChatGPT = ({ patreonObject }) => {
     }
 
     // this API has a $5 limit. Please configure your own setup to test in a seperate location.
-    // const response = await fetch(
-    //   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       prompt: prompt.request,
-    //     }),
-    //   }
-    // ).catch((error) => {
-    //   console.log("error", error);
-    //   console.log("err", { error });
-    // });
+    const response = await fetch(
+      "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt: prompt.request,
+        }),
+      }
+    ).catch((error) => {
+      console.log("error", error);
+      console.log("err", { error });
+    });
 
-    // let data = await response.json();
-    // let parsedData = data.bot.trim();
+    let data = await response.json();
+    let parsedData = data.bot.trim();
 
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    await delay(1500);
+    // x
+    // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    // await delay(1500);
 
-    setChatGptResponse(prompt.response);
-    // setChatGptResponse(parsedData);
+    // x
+    // setChatGptResponse(prompt.response);
+    setChatGptResponse(parsedData);
 
     // If the request was successful, clear the input field
     // if (response.status === 200) {

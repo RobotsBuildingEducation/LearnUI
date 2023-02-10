@@ -136,7 +136,7 @@ export const Prompts = ({
       }}
     >
       <Button variant="primary" onClick={() => setIsModalOpen(true)}>
-        🔎 View Prompt Engine
+        💗 View Roxana
       </Button>
       <br />
       <DiscordButton />

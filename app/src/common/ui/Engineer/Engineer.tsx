@@ -1255,7 +1255,7 @@ export const Engineer = {
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please explain why serverless computing got popular?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nServerless computing became popular in recent years thanks to its ability to abstract away the complexities of managing underlying cloud infrastructure, allowing developers to focus more on building the applications themselves. Serverless computing can be used to quickly build and deploy applications at scale, often with more reliability, durability and cost-effectiveness than traditional infrastructure. Additionally, it reduces the amount of manual work involved in setting up and coordinating a server infrastructure, as well as the ongoing operational costs associated with maintaining servers.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1267,7 +1267,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nBackend software engineering is the process of designing the programming and technology that power the web applications, websites, and other web-based products. This work involves using programming languages such as Java, Python, C#, and C++ to create the software’s code, logic, and architecture. It also involves setting up the infrastructure such as databases, web servers, and file systems to store and access the data. Finally, it also involves ensuring that the application product performs correctly and security policies are in place.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1279,7 +1279,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is backend software engineering? - Backend software engineering is the branch of software engineering related to devising, building, and maintaining the underlying architecture of digital applications.\n\n2. What skills are needed for backend software engineering? - Proficiency with software programming languages, database and server management, API development, and system architecture are all necessary skills for a successful backend software engineer.\n\n3. What is the best way to learn backend software engineering? - The best way to learn backend software engineering is to start with basics like HTML, CSS, and JavaScript then progress to more complex enterprise-grade programming languages.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1291,7 +1291,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand back-end architectures including MVC, REST, and SOA \n2. Be familiar with popular server-side technologies such as Node.js, Ruby on Rails and Java\n3. Implement authentication and authorization\n4. Design and query databases such as MySQL and Postgres\n5. Understand caching mechanisms such as memcache and Redis\n6. Implement API services using web services such as SOAP and XML-RPC \n7. Utilize version control systems such as git\n8. Have a basic understanding of the command line and shell scripting\n9. Utilize DevOps strategies such as continuous integration, deployment and monitoring\n10. Know principles of security and scalability, such as potential threats and load balancing`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1303,8 +1303,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )} with no other text in python?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          response: `\n\nA note from RO.B.E. ms. roxana is talking about sockets here. \n\nThey're really cool. \n\n Check out more here: https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http/\n\n# Example of backend software engineering with no other text in Python:\n\n#import a necessary module\nimport socket\n\n#create a socket object\nsock = socket.socket()\n\n#Bind the socket to a port\nsock.bind(('', 55555))\n\n#listen for incoming connections\nsock.listen(5)\n\n#accept incoming connection\nconnection, addr = sock.accept()\n\n#receive data from the client\ndata = connection.recv(1024)\n\n#process the data \nresponse = process_data(data)\n\n#send the response to the client\nconnection.send(response)\n\n#close the connection\nconnection.close()`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1316,7 +1315,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nBackend software engineering is the development of server-side logic to provide a backend architecture for web applications.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1329,7 +1328,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1.What role does an API serve in a backend software engineering project?\n\n2.Name two different server-side scripting languages that are commonly used in backend software engineering projects?\n\n3. What key considerations must be taken into account when creating a secure backend environment?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1378,7 +1377,7 @@ export const Engineer = {
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please explain the relationship between ASICs, FPGAs, Tesla's Optimus robot and bitcoin miners?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nASICs (application-specific integrated circuits) are specialized chips used to mine crypto-currencies, like bitcoin. They are built specifically to perform cryptocurrency mining calculations at higher speeds and greater efficiency than other chips like GPUs, CPUs, and FPGAs. ASICs are very important in the cryptocurrency market as they enable miners to mine more cryptocurrencies in less time.\n\nFPGAs (Field Programmable Gate Arrays) are microchips that can be programmed to perform specific tasks that ASICs would not be able to. FPGAs are more energy efficient than ASICs and can also be quickly reconfigured to perform different tasks. Although FPGAs are slower than ASICs, they can be used to mine alternative currencies.\n\nTesla's Optimus Robot is a robotic construction tool designed for large-scale projects. This tool can be programmed to build complex structures quickly and efficiently. Optimus Robot can be a powerful tool for large-scale cryptocurrency mining operations.\n\nBitcoin miners use computers and other hardware devices to validate Bitcoin transactions and keep the Bitcoin network secure. Bitcoin miners need specialized hardware to support the processing power and memory required to successfully mine Bitcoins. ASICs, FPGAs, and Radeon GPUs are popular choices for Bitcoin miners due to their excellent speed, efficiency and cost-effectiveness.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1390,7 +1389,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 12`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nThe basics of an operating system are: its purpose is to manage the hardware and software components of a computer system; it acts as an intermediary between applications and the computer hardware; it provides basic functions such as memory and process management, input/output device control, file system management, and data management; it also provides an interface for the user to interact with the system.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1402,7 +1401,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 12`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is an operating system? Answer: An operating system is software that manages the operation of a computer's hardware components.\n\n2. What are the main features of an operating system? Answer: Operating systems offer features such as memory management, process management, user interface, networking, and device driver support.\n\n3. What is the difference between a Linux-based and a Windows-based system? Answer: A Linux-based system is typically open source and free to use, while a Windows-based system requires a purchased license and is not open source.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1414,7 +1413,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 12`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the basic concept of computer operating systems and their components, including hardware and application elements. \n2. Learn about the different types of operating systems and the advantages and disadvantages of each.\n3. Learn how to set up network environments and connect devices to the system.\n4. Learn the process of installing, configuring, and maintaining an operating system.\n5. Learn to customize settings and user options, manage system resources and modify system preferences.\n6. Become familiar with different user interfaces and understand how to interact with them.\n7. Learn how to use command line tools to diagnose and troubleshoot issues.\n8. Learn how to configure security settings, including authentication and access control.\n9. Understand how to keep an operating system patched and up-to-date with available security updates.\n10. Learn how to back up data and restore the operating system after a hardware or software failure.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1424,11 +1423,8 @@ export const Engineer = {
           work: 100,
           action: `demonstrate`,
           icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 12`
-          )} with no other text in Rust?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          request: `ms. roxana, can you please show me an example of kernel code written in C++?`,
+          response: `\n\nHere is an example of kernel code written in C++:\n\n// Kernel code in C++ \n__global__ void simple_kernel(int *data) \n{ \n    int tid = threadIdx.x;\n    int i = blockIdx.x * blockDim.x + threadIdx.x;\n\n    // Kernel code here\n    data[i] *= 2; \n}`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1440,7 +1436,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 12`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nA computer operating system is a software that manages hardware and software resources to provide the necessary services for applications to run on a computer.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1453,7 +1449,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 12`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is the difference between an operating system and a software application?\n2. What are the advantages and disadvantages of using an open-source operating system?\n3. How is an operating system able to process, store and manage information?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1501,7 +1497,7 @@ export const Engineer = {
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please explain how things like chatGPT and command lines are similar?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nChatGPT and command lines are both ways of interacting with a computer, usually via text-based input. Both involve providing input on a text-based interface, and the computer provides output in a similar way. The main difference is that command line interfaces require the user to type a command into the terminal in order to get the computer to do something, whereas with ChatGPT the user can just type a natural language question or statement and the computer will generate a response.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1513,7 +1509,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nA command line interface (CLI) is a means of interacting with a computer program where the user issues commands to the program in the form of lines of text (i.e. commands and arguments). This is usually done through a command shell, although other programs may also access the same features. In a command line interface, a user types in commands, which can include simple operations such as launching a program, copying or deleting a file, or more complex operations such as searching text files for a certain keyword. The command line interface is a powerful tool as it allows a user to quickly and easily access a vast array of computer programs, tasks, and settings with just a few simple keystrokes.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1525,7 +1521,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is a command line interface? Ans: A command line interface (CLI) is a method of interacting with a computer by typing text-based commands.\n\n2. How do I access a command line interface? Ans: Accessing a command line interface usually requires using a terminal emulator program.\n\n3. What is the difference between a terminal and a shell? Ans: A terminal is the graphical interface to interact with the command line whereas a shell is the program that interprets user commands.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1537,7 +1533,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the concepts and fundamentals of command line interfaces (CLI)\n2. Change the directory (cd)\n3. List and view content in the current directory (ls)\n4. Create new directories (mkdir)\n5. Remove existing directories (rmdir)\n6. Create/edit files (touch/vi)\n7. Copy, move, and rename files (cp/mv/rename)\n8. Find files (find)\n9. Basic commands for system and network administration (ping/ifconfig)\n10. Download files from the internet (wget/curl)`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1562,7 +1558,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nA command line interface is a user interface that allows a user to interact with a computer using text-based command inputs.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1575,7 +1571,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is one of the primary interfaces that allows a user to interact with a computer?\nA: Command line interface.\n\n2. What is the most common command used to view the contents of a directory in a Command Line Interface?\nA: The 'ls' command.\n\n3. What does cd do in a Command Line Interface?\nA: The 'cd' command changes the current working directory.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1625,7 +1621,7 @@ export const Engineer = {
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please explain how the drug war, bitcoin and the bank secrecy act are related and how it may be problematic for civil liberties?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nThe Drug War, Bitcoin and the Bank Secrecy Act are all related in the sense that each can potentially be used to facilitate illegal activity or money laundering. Bitcoin and the Bank Secrecy Act both provide a layer of privacy and anonymity that can be used by drug dealers and other criminals to mask illegal activities. This can be problematic for civil liberties because it allows individuals to commit crimes without fear of being caught, thus undermining the rule of law. Furthermore, the ability to easily move and exchange large amounts of money anonymously through digital currencies like Bitcoin has opened the door for new forms of criminal activity such as money laundering, tax evasion, and terrorism financing. Blockchain based currencies can also be used to circumvent sanctions and regulations, further eroding the legitimacy of legal systems.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1637,7 +1633,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 14`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nFinTech APIs are programmatic interfaces used by banks, financial institutions, and businesses to access financial services. They allow users to send, receive, and store digital funds, process payments, track money transfers, and manage financial data in an automated and secure way. These APIs have become increasingly popular as they offer scalability, provide businesses with more control over their payments, and offer a secure way to move money between different accounts. They offer a range of features and services, such as payments processing, digital money transfers, invoicing, fraud prevention, integrated marketing, data analytics, automated payment reconciliation, and more.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1649,7 +1645,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 14`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is an API in fintech? - An API in fintech allows third-party developers to access financial data and services.\n\n2. How does a fintech API work? - A fintech API works by providing an interface for developers to access financial data and services, without the need for manual intervention. \n\n3. What’s the benefit of using a fintech API? - By using a fintech API, businesses can quickly integrate powerful financial solutions and save time and money.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1661,7 +1657,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 14`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the different types of fintech APIs and their specific use cases \n2. Familiarize yourself with the various technologies used in fintech APIs including REST, SOAP, JSON, and OAUTH2 \n3. Learn how to integrate financial service APIs with third-party applications \n4. Understand how payment gateways and merchant processing APIs enable online and mobile payments \n5. Explore the security considerations around handling financial data \n6. Know the privacy and data protection aspects of financial services APIs \n7. Research the different pricing models for using fintech APIs \n8. Identify which financial services APIs can be used in particular jurisdictions \n9. Learn how to best use the APIs' documentation to create and test applications \n10. Monitor the development of new and emerging fintech APIs for opportunities.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1670,11 +1666,8 @@ export const Engineer = {
           work: 100,
           action: `demonstrate`,
           icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 14`
-          )} with no other text in NodeJS?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          request: `ms. roxana, can you please show me an example of creating a transaction with Stripe's Javascript SDK?`,
+          response: `\n\nSure. Here is an example of creating a transaction with Stripe's Javascript SDK.\n\n// Create a stripe instance using your Stripe API keys.\nvar stripe = Stripe('pk_test_your_stripe_key');\n\n// Create a card element and add it to the page.\nvar card = stripe.elements().create('card');\ncard.mount('#card-element');\n\n// Handle real-time validation errors from the card element.\ncard.addEventListener('change', function(event) {\n  var displayError = document.getElementById('card-errors');\n  if (event.error) {\n    displayError.textContent = event.error.message;\n  } else {\n    displayError.textContent = '';\n  }\n});\n\n// Handle form submission.\nvar form = document.getElementById('payment-form');\nform.addEventListener('submit', function(event) {\n  event.preventDefault();\n\n  stripe.createToken(card).then(function(result) {\n    if (result.error) {\n      // Inform the user if there was an error\n      var errorElement = document.getElementById('card-errors');\n      errorElement.textContent = result.error.message;\n    } else {\n      // Send the token to your server\n      stripeTokenHandler(result.token);\n    }\n  });\n});\n\n// Submit the form with the token ID.\nfunction stripeTokenHandler(token) {\n  // Insert the token ID into the form so it gets submitted to the server\n  var form = document.getElementById('payment-form');\n  var hiddenInput = document.createElement('input');\n  hiddenInput.setAttribute('type', 'hidden');\n  hiddenInput.setAttribute('name', 'stripeToken');\n  hiddenInput.setAttribute('value', token.id);\n  form.appendChild(hiddenInput);\n\n  // Submit the form\n  form.submit();\n}`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1686,7 +1679,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 14`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nFintech APIs allow for the secure integration of technology products with financial systems and services.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1699,7 +1692,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 14`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is the main purpose of a FinTech API?\n\n2. What type of information can a FinTech API provide?\n\n3. What are some of the benefits of using a FinTech API?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1748,7 +1741,7 @@ export const Engineer = {
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please explain how entrepeneurs can use platforms like Firebase to create businesses?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nEntrepreneurs can use Firebase, a cloud-based development platform, in various ways to create and grow businesses. Firebase provides powerful development and analytics tools, so you don't need to worry about setting up a backend or learning how to use a database. \n\nFirebase can help entrepreneurs create their apps with a few clicks and a few lines of code. It provides easy-to-use solutions for user authentication, data storage and hosting, serverless functions, and analytics that can help entrepreneurs understand their customers better. Firebase also provides tools for automating tasks such as marketing campaigns, customer support, and more. \n\nFirebase can provide a valuable platform for entrepreneurs to launch their businesses in a cost-effective and time-efficient manner. With the help of Firebase, entrepreneurs can quickly launch their products, test their ideas, and get an early start on their businesses.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1760,7 +1753,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nNoSQL with Firebase Firestore is a document-oriented NoSQL database designed for storing, syncing and querying large datasets for modern, web and mobile app development. It stores data as documents in a distributed cloud environment. Documents are stored in collections, with each document containing a set of key-value pairs. Firestore provides features like offline data synchronization, real-time data streaming, authentication and data validation. It also lets developers query and filter data and includes automatic scaling of data across multiple regions. Firestore also offers security rules to ensure data safety and access control.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1772,7 +1765,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is NoSQL and Firebase Firestore? - NoSQL is a non-relational database management system and Firebase Firestore is the cloud-hosted, NoSQL database provided by Google.\n\n2. Why should I use Firebase Firestore? - Firebase Firestore provides users with a scalable, real-time database that enables data synchronization in client and server-side applications.\n\n3. How does Firebase Firestore save my data? - Firebase Firestore stores data in collections of documents and fields within those documents, similar to MongoDB or CouchDB.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1784,20 +1777,20 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the purpose of using NoSQL and Firebase Firestore in modern development \n2. Become familiar with the different types of NoSQL databases, e.g. key-value pair, document-oriented, columnar, graph-based, etc.\n3. Understand the basics of the Firebase architecture and how it works with cloud computing\n4. Learn the basics of data modeling for NoSQL databases and how to structure data to optimize query performance\n5. Understand the scalability, security, and availability of NoSQL databases on the Firebase platform\n6. Understand the basics of client-side security and authentication features available in Firebase Firestore\n7. Become familiar with querying data in Firebase Firestore, including understanding different query types, such as data ordering, filtering, and aggregation\n8. Understand the basics of Firebase Firestore synchronization and real-time data streaming\n9. Get familiar with different features available in the Firebase console, such as monitoring and analytics\n10. Become proficient with development tools like Cloud Functions and Firebase SDKs for Android, iOS, and web development`,
           spanish: ``,
           tooltip: ``,
         },
         demonstrate: {
+          humanTouch: true,
           completed: false,
           work: 100,
           action: `demonstrate`,
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 15`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          )} that stores openAI's ChatGPT messages in a collection with documents defined by user_id with no other text in javascript?`,
+          response: `\n\nHere is an example of code that uses Firebase Firestore to store openAI's ChatGPT messages in a collection with documents defined by user_id with no other text in Javascript:\n\n//Wirte to Firestore using the Firebase web SDK \nvar firestore = firebase.firestore(); \n\n//Create a reference to the collection of openAI messages \nvar openAIMessagesRef = firestore.collection('chatGPT');\n\n//Create a reference to the specific user document \nvar userRef = openAIMessagesRef.doc(user_id); \n\nuserRef.set({\n   openAIMessage: openAIMessage,\n});`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1809,7 +1802,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nNoSQL Firebase Firestore is a cloud-based, scalable database service designed to store and sync application data in real time.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1822,7 +1815,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is the main advantage of using Firebase Firestore over other NoSQL databases?\n\n2. What are some of the features and benefits of using Firebase's cloud-hosted Firestore?\n\n3. How can developers structure data within Firebase Firestore to optimize performance?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1873,7 +1866,7 @@ export const Engineer = {
           icon: `⚡`,
           request:
             "ms. roxana, can you please explain what robotic process automation is?",
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nRobotic process automation (RPA) is a type of technology that uses software bots (aka robotics) to execute simple and repetitive tasks and processes. They interact with applications, websites, databases, and systems, just like a human worker would, but at a much faster rate. RPA bots can be programmed to take over and automate common, tedious, and time-consuming digital tasks. They can complete these tasks using existing applications and systems, eliminating the need for manual data entry and human involvement in certain processes.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1885,7 +1878,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nGit is a version control system used for tracking changes made to projects over time. Github is a hosting platform for Git that is used to store and manage files and code in a project. It allows for collaboration between developers, thereby enabling them to update, author, review, and maintain project code. It also provides various security, branch management, and deployment features to make it easier for developers to work together. Additionally, Github offers a variety of integrations and tools to help streamline the development process.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1897,7 +1890,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is Git? - Git is an open source distributed version control system for tracking changes in source code.\n\n2. What is GitHub? - GitHub is a code hosting platform for version control and collaboration.\n\n3. How do I use Push and Pull in Git? - Push enables local changes to be uploaded to remote repositories, while pull allows changes from remote repositories to be downloaded to local branches.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1909,7 +1902,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the difference between Git and Github – Git is a version control system, while Github is a cloud-based hosting service used to store and manage repositories.\n2. Learn how to create and clone a repository – the most basic step in using Git and Github.\n3. Know how to stage and commit changes – this is essential for tracking and managing changes to a repository.\n4. Gain familiarity with working with branches – branches help keep code organized and makes it easier to test possible changes before committing them to the main repository.\n5. Familiarize yourself with Cherry picking – Cherry picking allows you to choose specific commits from other branches and add them to your current branch. \n6. Understand how to use Github pull requests – If a team is working on the same project, pull requests are vital for enabling team collaboration.\n7. Be familiar with reverting a commit – Reverting a commit is useful for undoing any changes that have been made to a codebase. \n8. Become familiar with forking repositories – Forks are like separate copies of a repository, and are used to experiment without disrupting the main repository. \n9. Know how to manage merge conflicts – Merge conflicts arise when multiple people are making changes to a codebase at the same time, and they need to be managed to keep the codebase functional. \n10. Learn how to use Github Gists – Gists are short snippets of code that can be stored and shared with others.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1920,9 +1913,8 @@ export const Engineer = {
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 16`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          )} with no other text in the command line?`,
+          response: `\n\ngit clone https://github.com/username/repositoryname.git`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1934,7 +1926,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nGit is a version control system for tracking changes in code, and Github is a cloud-based host for version control repositories.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1947,7 +1939,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is the difference between Git and GitHub?\n2. What command is used to create a local Git repository?\n3. How can multiple collaborators work on an open source project in the same repository?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1993,7 +1985,7 @@ export const Engineer = {
           tooltip: ``,
         },
         inspire: {
-          dynamicContent:true,
+          dynamicContent: true,
           completed: false,
           work: 100,
           action: `inspire`,

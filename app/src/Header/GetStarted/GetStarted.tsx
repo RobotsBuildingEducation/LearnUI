@@ -51,7 +51,7 @@ export const GetStarted = () => {
             <br />
             To find the passcode to enter the app, subscribe to the Patreon.
             Refunds are available. $1, $3, $50, $1000 all have access to the
-            same features. Your $1
+            same features.
           </p>
           <hr />
           <br />I haven't finished this "Getting Started" because I'm still
