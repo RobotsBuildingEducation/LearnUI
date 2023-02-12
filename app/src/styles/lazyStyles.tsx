@@ -37,6 +37,7 @@ export const StyledCollectionContainer = styled.div`
 export const StyledModule = styled.button`
   border: 1px solid #636366;
   background-color: black;
+  background-size: cover;
   margin: 12px;
   width: 125px;
   height: 200px;

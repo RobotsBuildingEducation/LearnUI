@@ -4,6 +4,7 @@ export const Engineer = {
   "Crash Course": {
     "Lesson 1": {
       filler: ``,
+      hasCode: true,
       new: true,
       highValue: false,
       underConstruction: true,
@@ -113,7 +114,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 1`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is an example of a Boolean expression?\n2. What is an algorithm used for?\n3. How can a programmer effectively debug a code?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -132,6 +133,7 @@ export const Engineer = {
     },
     "Lesson 2": {
       filler: ``,
+      hasCode: true,
       new: true,
       highValue: false,
       underConstruction: true,
@@ -256,6 +258,7 @@ export const Engineer = {
     "Lesson 3": {
       filler: ``,
       new: true,
+      hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
@@ -357,8 +360,8 @@ export const Engineer = {
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 3`
-          )}?`,
-          response: `"\n\n1. What are the foundational elements of an Object Oriented Programming (OOP) approach?\nA. Encapsulation, Abstraction, Polymorphism, and Inheritance.\n\n2. What is the acronym for the four main functions in a CRUD application?\nA. Create, Read, Update, and Delete (CRUD).\n\n3. What is the key benefit of using class inheritance to create objects in OOP?\nA. Class inheritance allows you to reuse existing code, which reduces the amount of time it takes to develop and maintain an application. This also allows you to use features from an existing class without having to re-implement them."`,
+          )} without any answers?`,
+          response: `\n\n1. What is the purpose of object-oriented programming?\n2. In what ways do CRUD applications facilitate data management?\n3. How is object-oriented programming used to create complex applications?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -377,6 +380,7 @@ export const Engineer = {
     "Lesson 4": {
       filler: ``,
       new: true,
+      hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
@@ -479,8 +483,8 @@ export const Engineer = {
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 4`
-          )}?`,
-          response: `\n\n1. What type of HTTP method is used to request data from a server?\nA. POST\n\n2. What type of HTTP method is used to send new data to a server?\nA. PUT\n\n3. What HTTP method is used to delete data from the server?\nA. DELETE`,
+          )} without any answers?`,
+          response: `\n\n1. What common HTTP methods are used in RESTful web services?\n2. What is the main purpose of the OPTIONS method?\n3. What is the HTTP method used to modify an existing resource?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -499,6 +503,7 @@ export const Engineer = {
     "Lesson 5": {
       filler: ``,
       new: true,
+      hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
@@ -599,8 +604,8 @@ export const Engineer = {
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 5`
-          )}?`,
-          response: `\n\n1. What type of loop is used to continue through a block of code while a specified condition remains true?\nA. For loop\n\n2. How do you end an infinite loop?\nA. By using a break statement or a conditional statement that affects the loop's condition.\n\n3. What type of loop is used to loop through each element of an array in order?\nA. For-each loop`,
+          )} without any answers?`,
+          response: `\n\n1. What type of loop should be used when you want to iterate over a collection of items in the same order that they appear in the collection? \n\n2. What keyword is used in most programming languages to start and end a loop? \n\n3. How do you prevent an infinite loop from running indefinitely in a program?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -619,6 +624,7 @@ export const Engineer = {
     "Lesson 6": {
       filler: ``,
       new: true,
+      hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
@@ -741,6 +747,7 @@ export const Engineer = {
     "Lesson 7": {
       filler: ``,
       new: true,
+      hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
@@ -843,8 +850,8 @@ export const Engineer = {
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 7`
-          )}?`,
-          response: `\n\n1. What is the correct syntax for writing an ID selector in CSS?\n\nA. #id\n\n2. What is the correct syntax for writing a class selector in CSS?\n\nA. .class\n\n3. What is the correct syntax for writing a pseudo-class in CSS?\n\nA. :pseudo-class`,
+          )} without any answers?`,
+          response: `\n\n1. What's the difference between margin and padding in terms of CSS styling? \n2. What kind of selector would you use to target a div element with an ID of 'container'? \n3. What is the purpose of using float in CSS?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -863,6 +870,8 @@ export const Engineer = {
     "Lesson 8": {
       filler: ``,
       new: false,
+      hasCode: true,
+
       highValue: false,
       underConstruction: false,
       completed: false,
@@ -986,6 +995,7 @@ export const Engineer = {
       filler: ``,
       new: false,
       highValue: false,
+      hasCode: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
@@ -1107,6 +1117,7 @@ export const Engineer = {
       filler: ``,
       new: false,
       highValue: false,
+      hasCode: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
@@ -1227,6 +1238,7 @@ export const Engineer = {
       filler: ``,
       new: false,
       highValue: true,
+      hasCode: true,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -1327,8 +1339,8 @@ export const Engineer = {
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 11`
-          )}?`,
-          response: `\n\n1.What role does an API serve in a backend software engineering project?\n\n2.Name two different server-side scripting languages that are commonly used in backend software engineering projects?\n\n3. What key considerations must be taken into account when creating a secure backend environment?`,
+          )} without any answers?`,
+          response: `\n\n1. What is the purpose of dependency injection in web development?\n2. Describe the roles of models, views, and controllers in a back-end system.\n3. What is the role of object-relational mapping (ORM) in backend software engineering?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1348,6 +1360,7 @@ export const Engineer = {
       filler: ``,
       new: false,
       highValue: true,
+      hasCode: true,
       underConstruction: true,
       rare: false,
       completed: false,
@@ -1448,8 +1461,8 @@ export const Engineer = {
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 12`
-          )}?`,
-          response: `\n\n1. What is the difference between an operating system and a software application?\n2. What are the advantages and disadvantages of using an open-source operating system?\n3. How is an operating system able to process, store and manage information?`,
+          )} without any answers?`,
+          response: `\n\n1. In an operating system, what is the difference between the kernel and user space processes?\n\n2. What is the purpose of virtualization in an operating system?\n\n3. What is the master boot record and how is it used within an operating system?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1469,6 +1482,7 @@ export const Engineer = {
       filler: ``,
       new: false,
       highValue: false,
+      hasCode: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
@@ -1570,8 +1584,8 @@ export const Engineer = {
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 13`
-          )}?`,
-          response: `\n\n1. What is one of the primary interfaces that allows a user to interact with a computer?\nA: Command line interface.\n\n2. What is the most common command used to view the contents of a directory in a Command Line Interface?\nA: The 'ls' command.\n\n3. What does cd do in a Command Line Interface?\nA: The 'cd' command changes the current working directory.`,
+          )} without any answers?`,
+          response: `\n\n1. What is a command line interface?\n2. What are the common commands available when using a command line interface?\n3. How does a command line interface differ from a graphical user interface?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1591,6 +1605,7 @@ export const Engineer = {
       filler: ``,
       new: false,
       highValue: true,
+      hasCode: true,
       underConstruction: false,
       completed: false,
       rare: false,
@@ -1713,6 +1728,7 @@ export const Engineer = {
       new: false,
       highValue: false,
       underConstruction: false,
+      hasCode: true,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
@@ -1834,6 +1850,7 @@ export const Engineer = {
     "Lesson 16": {
       filler: ``,
       new: false,
+      hasCode: true,
       highValue: true,
       rare: false,
       underConstruction: false,
@@ -2457,6 +2474,7 @@ export const Engineer = {
     "Programming Languages": {
       filler: ``,
       new: false,
+      hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
@@ -2583,6 +2601,7 @@ export const Engineer = {
       filler: ``,
       new: false,
       highValue: false,
+      hasCode: true,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
@@ -2705,6 +2724,7 @@ export const Engineer = {
     },
     "Linked Lists": {
       filler: ``,
+      hasCode: true,
       new: false,
       highValue: true,
       underConstruction: true,
@@ -2830,6 +2850,7 @@ export const Engineer = {
     "Link Travel": {
       filler: ``,
       new: false,
+      hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
@@ -2954,6 +2975,7 @@ export const Engineer = {
     "Link Changing": {
       filler: ``,
       new: false,
+      hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
@@ -3078,6 +3100,7 @@ export const Engineer = {
     Algorithms: {
       filler: ``,
       new: false,
+      hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,

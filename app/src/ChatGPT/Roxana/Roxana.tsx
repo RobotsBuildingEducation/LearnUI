@@ -45,6 +45,11 @@ export const Roxana = ({
       </div>
     );
   };
+
+  console.log(
+    "chat resp",
+    chatGptResponse?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
+  );
   return (
     <div
       // Gray response message by the AI
@@ -69,7 +74,7 @@ export const Roxana = ({
         // minWidth: loadingStates.demonstrate ? "100%" : "75%",
       }}
     >
-      {/* width: "100%", */}
+      {/* Loading */}
       <div style={{ display: "flex" }}>
         {loadingMessage ? (
           <RoxanaLoadingAnimation />
@@ -78,15 +83,17 @@ export const Roxana = ({
         ) : (
           <RoxanaIntroText />
         )}
+        {/* message */}
         {loadingMessage.length < 1 &&
         chatGptResponse &&
         (loadingStates.guide || loadingStates.ask || loadingStates.quiz) ? (
           <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
             {chatGptResponse
-              .match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
-              ?.map((item) => (
-                <li style={{ paddingBottom: 24 }}>{item}</li>
-              ))}
+              ?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
+              ?.map((item) => {
+                console.log("item", item);
+                return <li style={{ paddingBottom: 24 }}>{item}</li>;
+              })}
           </ul>
         ) : loadingMessage.length < 1 &&
           chatGptResponse &&
@@ -94,7 +101,8 @@ export const Roxana = ({
           <Patreon patreonObject={patreonObject} />
         ) : loadingMessage.length < 1 &&
           chatGptResponse &&
-          loadingStates.demonstrate ? (
+          loadingStates.demonstrate &&
+          patreonObject?.hasCode ? (
           <CodeBlock
             text={chatGptResponse}
             language={patreonObject?.prompts?.demonstrate?.request
@@ -110,6 +118,7 @@ export const Roxana = ({
             (chatGptResponse && loadingStates.inspire) ||
             (chatGptResponse && loadingStates.patreon) ||
             (chatGptResponse && loadingStates.market) ||
+            (chatGptResponse && loadingStates.demonstrate) ||
             (chatGptResponse && loadingStates.anything)) ? (
           <div>{chatGptResponse}</div>
         ) : (

@@ -18,6 +18,7 @@ export const Prompts = ({
 
   let promptMap = promptKeys.map((prompt) => {
     let hasHumanTouch = patreonObject?.prompts?.[prompt]?.humanTouch;
+    let hasRobotTouch = patreonObject?.prompts?.[prompt]?.robotTouch;
     let isPremiumContent = patreonObject?.prompts?.[prompt]?.premiumContent;
     let isSponsoredContent = patreonObject?.prompts?.[prompt]?.sponsoredContent;
     let isDynamicContent = patreonObject?.prompts?.[prompt]?.dynamicContent;
@@ -25,11 +26,14 @@ export const Prompts = ({
 
     let isHighlighted =
       hasHumanTouch ||
+      hasRobotTouch ||
       isPremiumContent ||
       isSponsoredContent ||
       isDynamicContent;
 
-    let borderHighlight = hasHumanTouch
+    let borderHighlight = hasRobotTouch
+      ? "#0C84FF"
+      : hasHumanTouch
       ? "#f316ff" //
       : isPremiumContent
       ? "#F7404A"
@@ -39,7 +43,9 @@ export const Prompts = ({
       ? "#f7e779"
       : "#48484a";
 
-    let tooltipMessage = hasHumanTouch
+    let tooltipMessage = hasRobotTouch
+      ? "finessed with machine learning 😏"
+      : hasHumanTouch
       ? "💅 fine-tuned with human touch"
       : isPremiumContent
       ? "🤖 created by RO.B.E"

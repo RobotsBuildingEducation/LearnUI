@@ -1,13 +1,13 @@
-- So I started working with a few folks in a very minor but significant way. They're creative folks and we're going to just stay in close communication about trying to actively improve with social media.
-  Truthfully, a big challenge for me is that I have pretty severe ADHD, so it's pretty hard for me to be consistent in ways that some things demand, and really I just try my best to make it work. But like all things, there are tradeoffs. I digress. Let's jump into it.
-  There are ways to grow as a content creator and as an influencer. I believe there's a significant difference between the two. I will be publishing this in steps, and sending an alert when updates are made. I will make several changes to this post before releasing "officially". However, here's a list and you may use it however you want in the meantime.
+So I started working with a few folks in a very minor but significant way. They're creative folks and we're going to just stay in close communication about trying to actively improve with social media.
+Truthfully, a big challenge for me is that I have pretty severe ADHD, so it's pretty hard for me to be consistent in ways that some things demand, and really I just try my best to make it work. But like all things, there are tradeoffs. I digress. Let's jump into it.
+There are ways to grow as a content creator and as an influencer. I believe there's a significant difference between the two. I will be publishing this in steps, and sending an alert when updates are made. I will make several changes to this post before releasing "officially". However, here's a list and you may use it however you want in the meantime.
 
 ---
 
 Videos under 20k:
 
-- Usually these videos have some kind of low-effort but useful bent to them. They can be negative, combative, disagreeable, or some kind of pessimistic trait. This is kind of like doing social media on easy-mode, but I believe there may be somewhat of an upper limit to this approach when it comes to influence. It works, and everyone can kind of relate that negative feelings just kind of have a bias for attention than positive ones, but positive ones are usually way stronger end-games. Are they bad to do? It depends on your case, but I think in terms of min-maxing and growth, you probably don't wanna depend on it because then the algorithm basically wins a round on you and you kinda wanna beat the algorithm. And sometimes these kinds of videos can bubble up. It doesn't mean that videos that usually perform around 20-50k can't be changed into 200k+ videos. But then again it's that algorithmic bell-curve that kinda informs you about the machine you're working with.
-  With that noted, I've been doing a general review of my account and have noticed that I tend to just notepad a lot of content. That currently just works with me because I don't have many resources to work with.
+Usually these videos have some kind of low-effort but useful bent to them. They can be negative, combative, disagreeable, or some kind of pessimistic trait. This is kind of like doing social media on easy-mode, but I believe there may be somewhat of an upper limit to this approach when it comes to influence. It works, and everyone can kind of relate that negative feelings just kind of have a bias for attention than positive ones, but positive ones are usually way stronger end-games. Are they bad to do? It depends on your case, but I think in terms of min-maxing and growth, you probably don't wanna depend on it because then the algorithm basically wins a round on you and you kinda wanna beat the algorithm. And sometimes these kinds of videos can bubble up. It doesn't mean that videos that usually perform around 20-50k can't be changed into 200k+ videos. But then again it's that algorithmic bell-curve that kinda informs you about the machine you're working with.
+With that noted, I've been doing a general review of my account and have noticed that I tend to just notepad a lot of content. That currently just works with me because I don't have many resources to work with.
 
 ---
 
@@ -18,7 +18,7 @@ I will probably jot down a lot of attributes in a matrix without any order. Just
 
 Steps Ahead
 
-- Redo and repurpose videos. Sometimes a video tweet can be an audio-visual explanation. Sometimes a long explanation can be condensed down to 5 seconds. Do them with the intent of "getting the message right" rather than generating more content. So primarily ask, "how can I do this a little better with the right amount of resources?" and critically re-examining performance vs. expectation.
+Redo and repurpose videos. Sometimes a video tweet can be an audio-visual explanation. Sometimes a long explanation can be condensed down to 5 seconds. Do them with the intent of "getting the message right" rather than generating more content. So primarily ask, "how can I do this a little better with the right amount of resources?" and critically re-examining performance vs. expectation.
 
 ---
 

@@ -36,7 +36,7 @@ export let ultimateEffeciencyJutsu = (key) => {
     ["Creating Purpose"]:
       "creating purpose by choosing problems to solve and journeys to take",
     ["Abraham Lincoln"]: "Abraham Lincoln and his views on divine providence",
-    ["Philosophy"]: "Critical race theory and machine learning algorithms",
+    ["Philosophy"]: "Critical Race Theory and machine learning algorithms",
     ["Bitcoin, Automa & the Drug War"]:
       "the relationship between bitcoin, automation and the drug war",
     ["Bitcoin x Social Technology"]:

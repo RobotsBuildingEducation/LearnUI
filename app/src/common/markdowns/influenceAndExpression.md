@@ -1,4 +1,4 @@
-<img width="75%" src="https://c10.patreonusercontent.com/4/patreon-media/p/post/75903438/6e76dfa76e814153af2a8ed512722976/eyJ3Ijo2MjB9/1.jpg?token-time=1675641600&token-hash=48wk_CHeiwxYCCDPqyz8QB6bLsKGNWF5XuNgLO3tPAk%3D" />
+<img width="100%" src="https://res.cloudinary.com/eduprojectsil/image/upload/v1676193809/1_lqmbjj.jpg" />
 
 So before beginning, let’s quickly go through my experience on the subject. I’ve been using internet forums for about 20 years. The first one I really participated in was called GameFAQs. The first time I was ever introduced to search engine optimization (SEO) was through my brother after he completed a bachelors in marketing and communications in 2014. SEO is a marketing technology that people use to understand and grow their rank, relevance, and recommendation results on platforms like Google or Tiktok.
 

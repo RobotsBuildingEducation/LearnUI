@@ -45,6 +45,7 @@ function App() {
 
   const handleZeroKnowledgePassword = (event) => {
     if (event.target.value === import.meta.env.VITE_PATREON_PASSCODE) {
+      localStorage.setItem("patreonPasscode", event.target.value);
       setIsZeroKnowledgeUser(true);
     }
   };

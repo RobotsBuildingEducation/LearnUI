@@ -6,7 +6,7 @@ export const Passcode = ({ handleZeroKnowledgePassword }) => {
       <br />
       <br />
       <a
-        href="https://www.patreon.com/posts/77944323"
+        href="https://www.patreon.com/posts/76527832"
         target="_blank"
         style={{ textDecoration: "underline", color: "white" }}
       >

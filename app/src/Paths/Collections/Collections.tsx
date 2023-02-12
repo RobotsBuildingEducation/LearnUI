@@ -50,7 +50,7 @@ export const Collections = ({
       >
         <br />
         {renderWithTooltip(
-          <Button variant="primary">🔥🌱💰💎 ?</Button>,
+          <Button variant="primary">🔥🌱💰💎</Button>,
           <div>
             {" "}
             🌱 = new &nbsp; <br />
@@ -61,7 +61,7 @@ export const Collections = ({
             <br />
             <br />
           </div>,
-          "top"
+          "right"
         )}
         {display}
       </div>

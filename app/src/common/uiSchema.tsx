@@ -36,8 +36,11 @@ interface IPrompt {
   // spanish translation/stoggle/
   spanish?: string | boolean;
 
-  //fine tuned with human ideas
+  //fine tuned with human ideas.
   humanTouch?: boolean;
+
+  //enhanced with machine learning.
+  robotTouch?: boolean;
 
   //fine-tuned with currently patreon hosted content
   premiumContent?: boolean;
@@ -53,6 +56,7 @@ interface IModule {
   // internal preference
   filler: string;
 
+  hasCode?: boolean;
   // markdown or video for patreon content
   sourceType: string;
 
@@ -130,8 +134,8 @@ interface IPath {
 export const ui = (): IPath => {
   // can branch this further to reduce JSON size computed when invoked.
   return {
-    Engineer: Engineer,
     Creator: Creator,
+    Engineer: Engineer,
     Entrepeneur: Entrepeneur,
     "26th Street": LittleVillage,
   };

@@ -11,7 +11,7 @@ const MarkdownRenderer = ({ file }) => {
 
   return (
     <div
-      style={{ color: "white" }}
+      style={{ color: "white", maxWidth: "222px", wordBreak: "break-word" }}
       dangerouslySetInnerHTML={{ __html: marked(markdown) }}
     />
   );

@@ -62,6 +62,7 @@ export const ChatGPT = ({ patreonObject }) => {
     }
 
     // this API has a $5 limit. Please configure your own setup to test in a seperate location.
+
     // const response = await fetch(
     //   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
     //   {
