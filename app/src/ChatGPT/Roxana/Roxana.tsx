@@ -1,5 +1,6 @@
 import React from "react";
 import { CodeBlock, dracula } from "react-code-blocks";
+import Spinner from "react-bootstrap/Spinner";
 import Patreon from "../Patreon/Patreon";
 
 // Important: This component needs to work with more custom prompts. It's currently too limited in scope and will affect other subjects like stock market content.
@@ -12,23 +13,33 @@ export const Roxana = ({
   let RoxanaLoadingAnimation = () => {
     return (
       <div>
+        <Spinner animation="grow" variant="info" size="sm">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
         <img
           width="150px"
           src="https://res.cloudinary.com/eduprojectsil/image/upload/v1674214037/27a54381577040049f440eaffe1fc901_1_hjbczg.gif"
         />
-        {loadingMessage}
+        <Spinner animation="grow" variant="primary" size="sm">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
       </div>
     );
   };
 
+  console.log("patr", patreonObject);
+
   let RoxanaIntroText = () => {
     return (
       <div>
-        hola!! i'm ms. roxana, a teacher built with OpenAI. I help Sheilfer
-        build RO.B.E by helping you learn more with useful prompts 😊
+        {patreonObject?.header === "Indocumentadofy"
+          ? "¡¡Hola!! Soy miss roxana, una maestra construida con OpenAI. Ayudo a Sheilfer a construir RO.B.E ayudándote a aprender más con indicaciones útiles hola!! 😊"
+          : "i'm ms. roxana, a teacher built with OpenAI. I help Sheilfer build RO.B.E by helping you learn more with useful prompts 😊"}
         <br />
         <br />
-        Check out our latest sponsors: ME!! 😊{" "}
+        {patreonObject?.header === "Indocumentadofy"
+          ? "Echa un vistazo a nuestros últimos patrocinadores: ¡¡YO!! 😊"
+          : "Check out our latest sponsors: ME!! 😊"}{" "}
         <a
           onClick={() => {
             window.open("https://www.patreon.com/RobotsBuildingEducation");
@@ -46,10 +57,6 @@ export const Roxana = ({
     );
   };
 
-  console.log(
-    "chat resp",
-    chatGptResponse?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
-  );
   return (
     <div
       // Gray response message by the AI
@@ -91,7 +98,6 @@ export const Roxana = ({
             {chatGptResponse
               ?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
               ?.map((item) => {
-                console.log("item", item);
                 return <li style={{ paddingBottom: 24 }}>{item}</li>;
               })}
           </ul>

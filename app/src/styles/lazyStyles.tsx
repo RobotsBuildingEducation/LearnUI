@@ -22,7 +22,7 @@ export const StyledCollectionContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
+  justify-content: center;
   margin-top: 12px;
   margin-bottom: 12px;
   transition: 0.2s all ease-in-out;
@@ -38,8 +38,9 @@ export const StyledModule = styled.button`
   border: 1px solid #636366;
   background-color: black;
   background-size: cover;
-  margin: 12px;
-  width: 125px;
+  box-sizing: border-box;
+  margin: 8px;
+  width: 140px;
   height: 200px;
   display: flex;
   flex-direction: column;

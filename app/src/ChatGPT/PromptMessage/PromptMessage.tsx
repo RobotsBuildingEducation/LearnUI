@@ -1,5 +1,4 @@
 export const PromptMessage = ({ promptMessage, patreonObject }) => {
-  console.log("PROMPT", promptMessage);
   return (
     <div style={{ display: "flex", justifyContent: "flex-end" }}>
       <div
@@ -23,7 +22,13 @@ export const PromptMessage = ({ promptMessage, patreonObject }) => {
         }}
         id={"scrollPoint"}
       >
-        {promptMessage ? promptMessage : <div>let's learn!</div>}
+        {promptMessage ? (
+          promptMessage
+        ) : patreonObject?.header === "Indocumentadofy" ? (
+          <div>¡Aprendamos!</div>
+        ) : (
+          <div>let's learn!</div>
+        )}
       </div>
     </div>
   );

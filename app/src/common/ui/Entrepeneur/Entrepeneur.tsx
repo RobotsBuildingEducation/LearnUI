@@ -1376,8 +1376,8 @@ export const Entrepeneur = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `markdown`, // may not need
-      button: `"Mexican-American Trade Investing`, // may not need - `name`
-      header: `"Mexican-American Trade Investing`,
+      button: `Mexican-American Trade Investing`, // may not need - `name`
+      header: `Mexican-American Trade Investing`,
       fileSource: await import("../../markdowns/mexicanAmericanTrade.md?raw"), // may not need
 
       prompts: {

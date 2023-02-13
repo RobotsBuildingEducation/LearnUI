@@ -116,6 +116,8 @@ interface IModule {
 
     // advertising agreements with patrons
     shop: IPrompt;
+
+    //in the future: translate. Dropdown/search + translate Module
   };
 }
 

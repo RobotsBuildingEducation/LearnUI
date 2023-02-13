@@ -19,19 +19,23 @@ export const Prompts = ({
   let promptMap = promptKeys.map((prompt) => {
     let hasHumanTouch = patreonObject?.prompts?.[prompt]?.humanTouch;
     let hasRobotTouch = patreonObject?.prompts?.[prompt]?.robotTouch;
+    let isSpanish = patreonObject?.prompts?.[prompt]?.spanish;
     let isPremiumContent = patreonObject?.prompts?.[prompt]?.premiumContent;
     let isSponsoredContent = patreonObject?.prompts?.[prompt]?.sponsoredContent;
     let isDynamicContent = patreonObject?.prompts?.[prompt]?.dynamicContent;
     let promptSponsor = patreonObject?.prompts?.[prompt]?.sponsor;
 
     let isHighlighted =
+      isSpanish ||
       hasHumanTouch ||
       hasRobotTouch ||
       isPremiumContent ||
       isSponsoredContent ||
       isDynamicContent;
 
-    let borderHighlight = hasRobotTouch
+    let borderHighlight = isSpanish
+      ? "#30D158"
+      : hasRobotTouch
       ? "#0C84FF"
       : hasHumanTouch
       ? "#f316ff" //
@@ -43,8 +47,10 @@ export const Prompts = ({
       ? "#f7e779"
       : "#48484a";
 
-    let tooltipMessage = hasRobotTouch
-      ? "finessed with machine learning 😏"
+    let tooltipMessage = isSpanish
+      ? "🌎 en español"
+      : hasRobotTouch
+      ? "😏 finessed with machine learning"
       : hasHumanTouch
       ? "💅 fine-tuned with human touch"
       : isPremiumContent
@@ -142,7 +148,9 @@ export const Prompts = ({
       }}
     >
       <Button variant="primary" onClick={() => setIsModalOpen(true)}>
-        💗 View Roxana
+        {patreonObject?.header === "Indocumentadofy"
+          ? "💗 Ver Roxana"
+          : "💗 View Roxana"}
       </Button>
       <br />
       <DiscordButton />
@@ -187,34 +195,40 @@ export const Prompts = ({
       })}
       {promptMap}
       {/* Spanish is disabled atm. */}
-      <div
-        style={{
-          backgroundColor: true ? "#48484A" : "black",
-          border: "2px solid #48484A",
-          cursor: true ? "not-allowed" : "grab",
-          display: loadingMessage ? "none" : "flex",
-          color: "white",
-          borderRadius: "10px",
-          textAlign: "left",
-          padding: 10,
-          width: "200px",
-          marginTop: "24px",
-          // maxWidth: "100%",
-          // minWidth: "100%",
-        }}
-        onClick={(event) => {
-          if (true) {
-          } else {
-            handleSubmit(
-              event,
-              `ms. roxana, can you please translate your response to spanish? ${chatGptResponse}`,
-              "languageToggle"
-            );
-          }
-        }}
-      >
-        &#127758; {isSpanishActive ? "in English" : "en español"}
-      </div>
+
+      {renderWithTooltip(
+        <div
+          style={{
+            backgroundColor: true ? "#48484A" : "black",
+            border: "2px solid #48484A",
+            cursor: true ? "not-allowed" : "grab",
+            display: loadingMessage ? "none" : "flex",
+            color: "white",
+            borderRadius: "10px",
+            textAlign: "left",
+            padding: 10,
+            width: "200px",
+            marginTop: "24px",
+            // maxWidth: "100%",
+            // minWidth: "100%",
+          }}
+          onClick={(event) => {
+            if (true) {
+            } else {
+              handleSubmit(
+                event,
+                `ms. roxana, can you please translate your response to spanish? ${chatGptResponse}`,
+                "languageToggle"
+              );
+            }
+          }}
+        >
+          &#127758; {isSpanishActive ? "in English" : "translate"}
+        </div>,
+        "🚧 under development",
+        "left",
+        { marginRight: "12px", border: "1px solid #F2D466" }
+      )}
     </div>
   );
 };

@@ -21,8 +21,9 @@ export let ultimateEffeciencyJutsu = (key) => {
       "opportunities to consult as an undocumented immigrant with Hydrogen by Shopify",
     ["Build For Teachers"]: "GitHub for teachers",
     ["Build For Community"]:
-      "the relationship between bitcoin, automation and universal basic income?",
-    ["Social Chat"]: "how to design chat apps",
+      "the relationship between bitcoin, automation and universal basic income",
+    ["Social Chat"]:
+      "a chat app where users can subscribe to people's private chats",
     ["Programming Languages"]: "programming languages",
     ["Recursion"]: "recursion",
     ["Linked Lists"]: "linked lists",
