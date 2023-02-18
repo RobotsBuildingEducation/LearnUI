@@ -74,8 +74,8 @@ export const StyledModule = styled.button`
 export const StyledPath = styled.button`
   background-color: #2c2c2e;
 
-  max-width: 75px;
-  min-width: 75px;
+  /* max-width: 200px; */
+  width: 20%;
   height: 125px;
   display: flex;
   justify-content: center;

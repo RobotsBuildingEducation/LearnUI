@@ -16,7 +16,7 @@ export let ultimateEffeciencyJutsu = (key) => {
     [`Lesson 13`]: `command line interfaces`,
     [`Lesson 14`]: `fintech APIs`, // wow this one is crazy in commonElements.ts lol
     [`Lesson 15`]: `noSQL with Firebase Firestore`,
-    [`Lesson 16`]: `Git and Github`,
+    [`Lesson 16`]: `Git and Gipthub`,
     ["Build For Undocumented"]:
       "opportunities to consult as an undocumented immigrant with Hydrogen by Shopify",
     ["Build For Teachers"]: "GitHub for teachers",
@@ -24,7 +24,7 @@ export let ultimateEffeciencyJutsu = (key) => {
       "the relationship between bitcoin, automation and universal basic income",
     ["Social Chat"]:
       "a chat app where users can subscribe to people's private chats",
-    ["Programming Languages"]: "programming languages",
+    ["Programming Languages"]: "the theory of programming languages",
     ["Recursion"]: "recursion",
     ["Linked Lists"]: "linked lists",
     ["Link Travel"]: "traversing linked lists and trees",

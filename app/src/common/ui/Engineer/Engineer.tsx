@@ -2351,7 +2351,7 @@ export const Engineer = {
           work: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate aan essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
             `Social Chat`
           )}?`,
           response: `null`,
@@ -2459,15 +2459,15 @@ export const Engineer = {
       },
     },
   },
-  "Technical Interview Foundations": {
+  "Computer Science": {
     "Programming Languages": {
       filler: ``,
       new: false,
-      hasCode: true,
-      highValue: false,
-      underConstruction: true,
+      hasCode: false,
+      highValue: true,
+      underConstruction: false,
       completed: false,
-      rare: true,
+      rare: false,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
@@ -2496,7 +2496,7 @@ export const Engineer = {
           request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Programming Languages`
           )}?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nOne inspiring story that comes to mind is the story of Grace Hopper, an American computer scientist and United States Navy officer. She is widely credited as being the inventor of the first compiler for a computer programming language, making software programming more accessible and easier to complete. She also helped develop the first English-like programming language, COBOL, which is still widely used today. Her work opened up the field of computer programming and she helped create the groundwork for modern programming languages. She was a true pioneer in the world of computer science and is an inspiring role model for anyone considering entering into the field.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2508,7 +2508,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Programming Languages`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nThe basics of the theory of programming languages include the concept of a programming language, which is a formal system designed for writing as well as executing a sequence of instructions. This code is then compiled, partially evaluated, or interpreted for a target machine (e.g., a computer), which deploys it for a particular task. Programming language theory examines the design, implementation, and definition of programming languages, as well as their application in the software industry. It looks at the syntax, semantics, formal correctness, and compilation of programming language construction, as well as its application domains, such as programming language design, language processing systems, database systems, operating systems, artificial intelligence, computer graphics, and natural language processing.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2520,7 +2520,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Programming Languages`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is a programming language? - A programming language is a structured language used to write programs for a computer.\n2. What is type checking? - Type checking is the process of verifying and enforcing restrictions on the data types used in a program.\n3. What are the common goals of programming language design? - Common goals of programming language design include code readability, modularity, reusability and scalability.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2532,7 +2532,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Programming Languages`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the concept of syntax and context-free grammars \n2. Understand the concept of types and type systems\n3. Identify and distinguish different programming paradigms\n4. Understand the principles of denotational and operational semantics\n5. Know the process of compilation of a program \n6. Be familiar with the Pragmatics of language design\n7. Investigate the strengths and weaknesses of language features\n8. Understand how garbage collection and exception handling works\n9. Understand language modularization, abstraction and encapsulation\n10. Understand memory management, references and aliasing`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2541,11 +2541,8 @@ export const Engineer = {
           work: 100,
           action: `demonstrate`,
           icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Programming Languages`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          request: `ms. roxana, can you please explain an example of a pumping lemma in the theory of formal programming languages?`,
+          response: `\n\nA pumping lemma is a fundamental tool used to prove that certain types of languages are not regular. The pumping lemma states that if a language is regular, then there must exist a certain number, known as the “pumping constant”, such that any string in the language of length greater than the pumping constant may be “pumped”, or divided into three parts, in such a way that when any of those parts are repeated an arbitrary number of times, the resulting string will still be in the language. \n\nFor example, let's say that the language L consists of all strings of a's, b's, and c's where the number of a's, b's, and c's are all the same. If a string in language L has length n and n is greater than the pumping constant, then that string may be divided into three parts consisting of x, y, and z such that xy^iz is still a valid string in language L for any positive integer i. In other words, if we take any string of length n in L, and break it into three parts x, y, and z such that x and z are non-empty, then any string of the form xy^iz (with a positive integer i) will still be a valid string in L. \n\nThus, if there is any language that cannot fulfill this requirement, then that language is not regular. The pumping lemma provides a useful tool in recognizing and determining which languages are and are not regular.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2557,7 +2554,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Programming Languages`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nThe Theory of Programming Languages is the study of the structure, implementation, and definition of programming languages and systems.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2570,7 +2567,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Programming Languages`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What are the four main components of a programming language?\n2. What are the differences between procedural and object-oriented programming?\n3. What is a compiler and why is it important for programming languages?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2591,7 +2588,7 @@ export const Engineer = {
       new: false,
       highValue: false,
       hasCode: true,
-      underConstruction: true,
+      underConstruction: false,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
@@ -2621,7 +2618,7 @@ export const Engineer = {
           request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Recursion`
           )}?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nOne inspiring story of recursion concerns a man named Jakob Bernoulli (1654–1705), a Swiss mathematician and physicist. He studied the art of recursive patterns in nature, such as the spirals of a nautilus shell, and developed the mathematical foundations for the modern concept of recursion. He even wrote about this topic in 1713: “The is, indeed, an admirable mystery in the altitude of figures which terminate a spiral line, the descent of which slides insensibly from circumference to the centre.” This showed a deep appreciation for recursive patterns, and it inspired mathematicians for centuries to come.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2633,7 +2630,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Recursion`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nRecursion is a way of breaking a problem into smaller parts of the same problem and repeating a process, called the recursive step, until the problem is solved. In other words, it’s a method of solving a problem by breaking it down into simpler versions of the same problem until a solution is found. In programming, it's used to solve problems relating to iterations, algorithms and data structures.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2645,7 +2642,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Recursion`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is recursion? - Recursion is a programming technique which involves a method calling itself.\n2. How does recursion work? - Recursion works by breaking a problem down into smaller subproblems, each of which is solved using the same algorithm.\n3. What is the base case of a recursive problem? - The base case is the condition which tells the algorithm when to stop recursing, and start returning values up the stack.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2657,7 +2654,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Recursion`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand what recursion is and how it works. \n2. Describe the advantages and disadvantages of using recursion.\n3. Identify the base case and recursive case of a problem.\n4. Identify tail recursion and understand how it is executed.\n5. Explain the differences between linear recursion and binary recursion. \n6. Understand the relationship between recursion and iteration.\n7. Explain the concept of recursion space complexity.\n8. Design an algorithm using recursion.\n9. Understand how recursion can be used to generate relationships between data sets.\n10. Develop an understanding of how the principles of recursion can be applied in problem solving.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2666,11 +2663,8 @@ export const Engineer = {
           work: 100,
           action: `demonstrate`,
           icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Recursion`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          request: `ms. roxana, can you please show me an example of a fibonacci sequence  done recursively in python?`,
+          response: `\n\ndef fibonacci(n): \n    if n <= 1: \n        return n \n    else: \n        return(fibonacci(n-1) + fibonacci(n-2)) \n\n# test\nfor n in range(10):\n    print(fibonacci(n))`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2682,11 +2676,10 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Recursion`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nRecursion is a process whereby a function calls itself repeatedly until a given condition is satisfied.`,
           spanish: ``,
           tooltip: ``,
         },
-
         quiz: {
           completed: false,
           work: 100,
@@ -2695,7 +2688,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Recursion`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is the definition of recursion?\n2. What is a potential use case of recursion in computer programming?\n3. How can you control the execution of recursion to prevent it from entering an infinite loop?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2716,7 +2709,7 @@ export const Engineer = {
       hasCode: true,
       new: false,
       highValue: true,
-      underConstruction: true,
+      underConstruction: false,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
@@ -2744,9 +2737,9 @@ export const Engineer = {
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Recursion`
+            `Linked Lists`
           )}?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          response: `\n\nThere is an inspiring story about a computer science professor who, despite all odds, found a way to use linked-lists in a creative and useful way. The professor was teaching a course on data structures and devoted a considerable amount of time to helping her students understand linked-lists. One student, however, wasn't getting the concept and was failing the course. In desperation, the professor asked the student to come to her for help and began to explain linked-lists again, this time, using everyday examples. After some time, the student finally understood the concept and together, they began brainstorming on how to apply linked-lists to a real life problem. \n\nThe professor asked the student if he was familiar with public transportation schedules, to which the student said yes. The professor continued by asking the student how he would approach the task of creating a complex multi-route journey planner given the data available to him. This is when it clicked for the student. Using linked-lists, he rearranged the data into a tree-like structure and was able to come up with a workable solution to the problem.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2758,7 +2751,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Linked Lists`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nLinked lists are a data structure used to store sequences of data elements in a linear fashion. Each element is connected to its neighbor in the sequence with a link (pointer) to the next element. An element in a linked list is known as a node and typically contains two parts; data and the link to the next element. Linked lists can be implemented in almost any language and can be used to store and retrieve objects in a dynamic manner. They are commonly used for sorting, searching and manipulating data.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2770,7 +2763,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Linked Lists`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is a linked list? - A linked list is a data structure consisting of a chain of nodes connected by links or pointers.\n2. What is the difference between an array and a linked list? - An array stores data in a contiguous, or sequential, block of memory whereas a linked list stores data in separate nodes connected by links.\n3. How are linked lists useful? - Linked lists are useful because they use memory efficiently and have fast insertion and deletion capabilities.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2782,7 +2775,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Linked Lists`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the purpose of a linked list and its nature as a linear, dynamic data structure\n2. Recognize that a linked list is composed of nodes and each node stores a piece of data and reference to another node\n3. Understand the components of a node: data and next, and the role of the dummy node in a linked list\n4. Know the key operations of a linked list: insertion (add new element to start, node at specific location, end of linked list), deletion, search (sequential and binary search)\n5. Be able to differentiate between a singly- and a doubly-linked list\n6. Know how to iterate through a linked list to traverse and access its elements\n7. Know the difference between a linked list and an array, when to choose one over the other\n8. Understand the advantages and disadvantages of using a linked list\n9. Know common applications of linked lists such as stacks, queues and hash tables\n10. Understand the concept of memory management when creating linked list objects`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2793,9 +2786,8 @@ export const Engineer = {
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Linked Lists`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          )} with no other text in python?`,
+          response: `\n\nLinked List in Python:\n\nclass Node: \n    def __init__(self, data): \n        self.data = data \n        self.next = None\n  \nclass LinkedList: \n    def __init__(self): \n        self.head = None\n  \n    def push(self, new_data): \n        # 1 & 2: Allocate the Node & Put in the data \n        new_node = Node(new_data) \n\n        # 3. Make next of new Node as head \n        new_node.next = self.head \n  \n        # 4. Move the head to point to new Node  \n        self.head = new_node \n  \n    def printList(self): \n        temp = self.head \n        while (temp): \n            print (temp.data) \n            temp = temp.next`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2807,7 +2799,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Linked Lists`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nA linked list is a dynamic data structure of sequentially linked memory elements.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2820,7 +2812,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Linked Lists`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What characteristic do linked lists have that differentiates them from other data structures?\n2. What is the purpose of a sentinel node in a linked list?\n3. What are the advantages of using a linked list over an array?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2836,18 +2828,18 @@ export const Engineer = {
         },
       },
     },
-    "Link Travel": {
+    "Link Traversal": {
       filler: ``,
       new: false,
       hasCode: true,
-      highValue: false,
-      underConstruction: true,
+      highValue: true,
+      underConstruction: false,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Link Travel`, // may not need - `name`
-      header: `Link Travel`,
+      button: `Link Traversal`, // may not need - `name`
+      header: `Link Traversal`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674725908/download_22_rjgmqs.mp4`, // may not need
 
       prompts: {
@@ -2868,10 +2860,8 @@ export const Engineer = {
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Link Travel`
-          )}?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          request: `ms. roxana, can you please share how linked lists work in neural networks?`,
+          response: `\n\nLinked lists are generally used to represent the layers of a neural network. They can be used to represent how the nodes in each layer is connected to one another. A linked list stores a collection of values, called nodes, and each node contains an associated value as well as a pointer to the address of the next node in the structure. This allows neural networks to quickly retrieve a specific node without having to traverse the entire list.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2883,7 +2873,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Link Travel`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nTraversing a linked list means to iterate through all elements in the list. To begin, you'll need to create a variable to store the head of the list. You will then want to iterate through the list until you reach the tail. As you iterate, you'll want to access each element and/or perform some action. When you're done, you'll set the variable to the next element and continue until the tail is reached. \n\nTraversing a tree means to visit each node in the tree, either in a pre-order, in-order, or post-order approach. In a pre-order approach, you would first process the root node, followed by all its left-subtree, and then all its right-subtree. In an in-order approach, you would first process the left-subtree, followed by the root node, and then the right-subtree. In a post-order approach, you would process each left-subtree and right-subtree first, followed by the root node.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2895,7 +2885,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Link Travel`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. How do I start traversing a linked list? - Begin the traversal by starting at the head node.\n2. How do I traverse a binary tree? - Traverse a binary tree by recursively visiting the left and right nodes.\n3. What is post-order traversal? - Post-order traversal is when you visit the left and right children of a node before the node itself.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2907,7 +2897,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Link Travel`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the differences between a linked list and a tree.\n2. Learn the basic components of a linked list: head node, tail node, and data node.\n3. Understand the purpose of a linked list: to store data in linear order.\n4. Understand the basic components of a tree: root, branch, and leaf.\n5. Learn about the different types of trees: binary search tree, red-black tree, AVL tree, etc.\n6. Learn about traversing trees: pre-order, post-order, and in-order traversal.\n7. Understand the steps involved in a tree traversal: analyze the current node, traverse the left subtree, traverse the right subtree.\n8. Learn how to traverse both linked lists and trees using iterative and recursive techniques.\n9. Practice coding the traversal algorithms.\n10. Understand the Big-O runtime of the traversal algorithms.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2918,9 +2908,8 @@ export const Engineer = {
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Link Travel`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          )} with no other text in python?`,
+          response: `\n\nTraversing a linked list: \n\nclass Node: \n    def __init__(self, data): \n        self.data = data \n        self.next = None\n\nclass LinkedList: \n    def __init__(self): \n        self.head = None\n\n    def traverse(self): \n        current = self.head\n\n        while current is not None: \n            print(current.data)\n            current = current.next \n\n\nTraversing a tree: \n\nclass Node: \n    def __init__(self, data): \n        self.data = data \n        self.left = None \n        self.right = None\n\ndef traverse(root): \n    if root is not None: \n\n        traverse(root.left) \n        print(root.data) \n        traverse(root.right)`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2932,7 +2921,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Link Travel`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nTraversing linked lists and trees involves systematically visiting each node or item in the structure, usually in a specific order.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2945,7 +2934,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Link Travel`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is the difference between a linked list and a tree?\n2. What is the time complexity of traversing a linked list using a recursive algorithm?\n3. How can memory be saved when traversing a tree using a breadth-first search?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -2961,18 +2950,18 @@ export const Engineer = {
         },
       },
     },
-    "Link Changing": {
+    "Link Swapping": {
       filler: ``,
       new: false,
       hasCode: true,
       highValue: false,
-      underConstruction: true,
+      underConstruction: false,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Link Changing`, // may not need - `name`
-      header: `Link Changing`,
+      button: `Link Swapping`, // may not need - `name`
+      header: `Link Swapping`,
       fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674725986/download_23_lbtipl.mp4"`, // may not need
 
       prompts: {
@@ -2993,10 +2982,8 @@ export const Engineer = {
           work: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Link Changing`
-          )}?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          request: `ms. roxana, can you please social networks and following graphs work?`,
+          response: `\n\nSocial networks are networks of individuals and organizations that are connected to each other based on a common relationship, usually formed through communication and information exchange. Following graphs describe relationships between entities, such as between two people, organizations, or groups. They are typically visualized as lines or arrows that connect the entities, symbolizing their relationships. Following graphs can be used to represent complex social networks and visualize how relationships between individuals or organizations evolve over time.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3008,7 +2995,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Link Changing`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nSwapping nodes in a linked list, tree, or graph involves exchanging two nodes and the elements the nodes contain. In a linked list, two adjacent nodes are usually swapped; in a tree, two child nodes can be swapped; and in a graph, two adjacent nodes can be swapped. The process of swapping involves taking the element in one node and placing it in another node while also moving the connecting pointers and relationships between the nodes to maintain the list/tree/graph structure.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3020,7 +3007,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Link Changing`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. How do I swap two nodes in a linked list? - Swap the data stored in the two nodes.\n2. How do I swap two nodes in a tree? - Traverse the tree to find the nodes, then swap their data.\n3. How do I swap two nodes in a graph? - Traverse the graph to find the nodes, then swap their adjacent edges.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3032,7 +3019,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Link Changing`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the basic concepts behind linked lists, trees, and graphs\n2. Be familiar with the syntax and the logic that links nodes in these structures\n3. Consider the different kinds of swapping operations available for manipulating nodes (direct swap, data swap, etc.)\n4. Define the elements that need to be exchanged when swapping nodes (pointers, links, or data)\n5. Explore the implications of swapping nodes on the structure (ordering, length, balance, etc.)\n6. Identify the correct sequence of steps when swapping nodes in a linked list, tree, or graph\n7. Develop an understanding of the methods used to traverse and locate nodes within a structure\n8. Compare and contrast the advantages and disadvantages of different node swapping operations\n9. Learn practical strategies for debugging problems encountered when swapping nodes\n10. Practice coding different node swapping operations with different data structures`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3044,8 +3031,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Link Changing`
           )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          response: `\n\nHere is an example of swapping nodes in a linked list in JavaScript: \n\n// Create a Linked List Node \nclass Node { \n  constructor(data) { \n      this.data = data; \n      this.next = null; \n  } \n} \n\n// Create a swapNodes function \nfunction swapNodes(head, p, q) { \n    let current_p = head; \n    let current_q = head; \n    let prev_p = head; \n    let prev_q = head; \n  \n    // Loop until the two nodes are found \n    while (current_p !== null && current_p.data != p.data) { \n        prev_p = current_p; \n        current_p = current_p.next; \n    } \n  \n    while (current_q !== null && current_q.data != q.data) { \n        prev_q = current_q; \n        current_q = current_q.next; \n    } \n  \n    // Check if the nodes were found \n    if (current_p === null || current_q === null) { \n        return; \n    } \n  \n    // If the nodes were found, swap them \n    prev_p.next = current_q; \n    prev_q.next = current_p; \n  \n    // Swap their \"next\" pointers \n    let temp = current_p.next; \n    current_p.next = current_q.next; \n    current_q.next = temp; \n  \n    return head; \n}`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3057,7 +3043,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Link Changing`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nSwapping nodes in a linked list, tree, or graph is the process of exchanging two nodes' positions in the structure.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3070,7 +3056,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Link Changing`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is the difference between swapping nodes in a linked list, tree, and graph?\n2. What are the steps required to swap two nodes in a linked list?\n3. What algorithm can be used to efficiently swap two nodes in a tree or graph?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3090,8 +3076,8 @@ export const Engineer = {
       filler: ``,
       new: false,
       hasCode: true,
-      highValue: false,
-      underConstruction: true,
+      highValue: true,
+      underConstruction: false,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
@@ -3116,12 +3102,11 @@ export const Engineer = {
         inspire: {
           completed: false,
           work: 100,
+          robotTouch: true,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Algorithms`
-          )}?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          request: `ms. roxana, can you please share how tree and graph algorithms were used for the COVID outbreak?`,
+          response: `\n\nTree and graph algorithms are used in COVID outbreak modeling to analyze data and visualize complex networks and connections that exist between different factors, such as individuals, communities, and environmental conditions and events. These algorithms can be used to track the spread of the disease, predict high-risk areas and disease trajectories, and understand the underlying transmission networks to better inform public health interventions and population-level responses. For example, tree algorithms can be used to build predictive models that identify high-risk trends in transmission, such as locations that are at a higher risk for outbreaks and travel-associated risk. Graph algorithms can be used to map and visualize complex spatial networks and connections that influence the spread of the virus, such as how social contact and movement of people can spread the virus or how healthcare access can impact outcomes. They can also be used to assess resource allocation needs and assist with targeted interventions by accurately forecasting the future spread of the virus.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3133,7 +3118,7 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Algorithms`
           )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          response: `\n\nTree algorithms are search algorithms for traversing a tree in order to find specific information. These algorithms can be used to maximize the effectiveness of a search by exploring the complete tree to return the most relevant information. Graph algorithms are a subset of tree algorithms and enable efficient searching of paths between two points in a graph. Graph algorithms are a branch of mathematics that focus on finding the shortest path from one node to another in a graph, or finding the most efficient path using the fewest number of edges.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3145,7 +3130,7 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Algorithms`
           )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          response: `\n\n1. What is the difference between Trees and Graphs? Answer: Trees consist of nodes connected by directed, or unidirectional, edges while Graphs consist of nodes connected by bidirectional edges. \n\n2. What is Depth-First Search? Answer: Depth-First Search is a graph traversal algorithm that begins at the root node and explores as far as possible along each branch before backtracking. \n\n3. What is Breadth-First Search? Answer: Breadth-First Search is a graph traversal algorithm that starts from the root node and explores the neighbor nodes first, before moving to the next level neighbors.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3157,7 +3142,7 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Algorithms`
           )} with 10 bullet points?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          response: `\n\n1. Understand the key differences between trees and graphs, including the definition of each structure and the differences of their associated algorithms.\n2. Review the various techniques and processes used to traverse a tree or graph structure, such as depth-first search (DFS), breadth-first search (BFS), and topological sorting.\n3. Learn how to implement the AVL tree data structure and its associated algorithms for balancing and searching.\n4. Grasp the concepts of minimum spanning tree (MST) algorithm, such as Prim’s or Kruskal’s algorithm, and how to compute, store and optimize the structure.\n5. Analyze and understand different graph operations, such as finding the shortest path between two vertices, connectivity and connectivity components.\n6. Comprehend Dijkstra’s Algorithm, Bellman-Ford Algorithm, A* Algorithm and Floyd-Warshell Algorithm, and when and how to use each algorithm.\n7. Grasp techniques and algorithms utilized in network flow optimization problems, including the Maximum Flow Problem and the Minimum Cost Flow Problem.\n8. Learn techniques to traverse the structure of a network flow and calculate maximum and minimum flow values.\n9. Identify Hamiltonian Path and Eulerian Path, and both components needed to solve the Traveling Salesman Problem.\n10. Analyze algorithms used to identify and sort connected components, such as Connected Component Labeling and Kosa-Karu Algorithm.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3166,11 +3151,8 @@ export const Engineer = {
           work: 100,
           action: `demonstrate`,
           icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Algorithms`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          request: `ms. roxana, can you please show me an example of a common tree or graph algorithm in javascript?`,
+          response: `\n\nTree Algorithm:\n\nfunction traverse(node) {\n  if (node === null) {\n    return;\n  }\n  console.log(node.data);\n  traverse(node.left);\n  traverse(node.right);\n}\n\nGraph Algorithm:\n\nfunction visit(vertex) {\n  if (visited[vertex]) {\n    return;\n  }\n  visited[vertex] = true;\n  console.log(vertex);\n  for (let neighbor of neighbors[vertex]) {\n    visit(neighbor);\n  }\n}`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3182,7 +3164,7 @@ export const Engineer = {
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Algorithms`
           )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          response: `\n\nTree algorithms are algorithms which traverse a tree data structure to perform a functional task, while graph algorithms traverse a graph data structure to perform a functional task.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -3195,7 +3177,7 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Algorithms`
           )}?`,
-          response: `\n\n1. What is the difference between a programming language and a scripting language?\n2. What is the purpose of a loop in coding and logic?\n3. What is the difference between a for loop and a while loop in coding and logic?`,
+          response: `\n\n1. What is the difference between a breadth-first search and a depth-first search in terms of tree and graph algorithms?\n\n2. How is Kruskal's algorithm used to find the minimum spanning tree in a graph?\n\n3. What is the difference between a directed graph and an undirected graph with respect to tree and graph algorithms?`,
           spanish: ``,
           tooltip: ``,
         },

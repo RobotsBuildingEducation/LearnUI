@@ -1,6 +1,8 @@
 # Part 1 - Setting Up App
 
-Hi. I recently restored my computer and will be building a small app. I figured it would be a good idea to document this process. Let me know if it's helpful or would like further elaborations/improvements. The point of this document is to be as plain as possible. As always, as an engineer, depend on your ability to be curious and take initiative to understand information that is unknown to you.
+Hi. I recently restored my computer and will be building a small app. I figured it would be a good idea to document this process. Let me know if it's helpful or would like further elaborations/improvements. The point of this document is to be as plain as possible.
+
+As always, as an engineer, depend on your ability to be curious and take initiative to understand information that is unknown to you.
 
 This document will tell you how to public an app to the internet with a database a github account from scratch.
 React App (tapdm3.web.app)

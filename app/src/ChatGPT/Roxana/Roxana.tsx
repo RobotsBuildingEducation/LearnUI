@@ -68,7 +68,8 @@ export const Roxana = ({
         justifyContent: "flex-start",
         textAlign: "left",
         padding: 20,
-        maxWidth: "82.5%",
+        maxWidth:
+          patreonObject.prompts.patreon.icon === "►" ? "617.5px" : "82.5%",
 
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
@@ -109,15 +110,23 @@ export const Roxana = ({
           chatGptResponse &&
           loadingStates.demonstrate &&
           patreonObject?.hasCode ? (
-          <CodeBlock
-            text={chatGptResponse}
-            language={patreonObject?.prompts?.demonstrate?.request
-              ?.split(" ")
-              .slice(-1)[0]
-              ?.slice(0, -1)}
-            showLineNumbers={true}
-            theme={dracula}
-          />
+          <div
+            style={{
+              // border: "1px solid red",
+              position: "relative",
+            }}
+          >
+            <CodeBlock
+              text={chatGptResponse}
+              language={patreonObject?.prompts?.demonstrate?.request
+                ?.split(" ")
+                .slice(-1)[0]
+                ?.slice(0, -1)}
+              showLineNumbers={true}
+              theme={dracula}
+              style={{ position: "relative", border: "1px solid yellow" }}
+            />
+          </div>
         ) : loadingMessage.length < 1 &&
           ((chatGptResponse && loadingStates.summarize) ||
             (chatGptResponse && loadingStates.define) ||

@@ -6,7 +6,15 @@ let Patreon = ({ patreonObject }) => {
   let determineFileView = (patreonObject) => {
     if (patreonObject.sourceType === "video") {
       return (
-        <video style={{ borderRadius: "30px", width: "100%" }} controls>
+        <video
+          style={{
+            width: "100%",
+            borderRadius: "30px",
+            boxShadow:
+              "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+          }}
+          controls
+        >
           <source src={patreonObject.fileSource} type="video/mp4" />
         </video>
       );
