@@ -133,5 +133,3 @@ export const ChatGPT = ({ patreonObject }) => {
     </div>
   );
 };
-
-export default ChatGPT;

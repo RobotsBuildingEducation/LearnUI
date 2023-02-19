@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import isEmpty from "lodash/isEmpty";
+import { isEmpty } from "lodash";
 
 import "./App.css";
-import Patreon from "./ChatGPT/Patreon/Patreon";
-import ChatGPT from "./ChatGPT/ChatGPT";
+import { ChatGPT } from "./ChatGPT/ChatGPT";
 
 import { Paths } from "./Paths/Paths";
-import { controlPathVisibilityMap, ui } from "./common/uiSchema";
+import { controlPathVisibilityMap } from "./common/uiSchema";
 import { Collections } from "./Paths/Collections/Collections";
 import { Header } from "./Header/Header";
 import { Passcode } from "./Passcode/Passcode";
+import { SignInScreen } from "./database/firebaseResources";
 
 function App() {
   const [patreonObject, setPatreonObject] = useState<Record<string, any>>({});
@@ -23,6 +23,8 @@ function App() {
     Creator: false,
     Business: false,
   });
+
+  const [authUiConfig, setAuthUiConfig] = useState({});
 
   const handlePathSelection = (event) => {
     setVisibilityMap(controlPathVisibilityMap(visibilityMap, event.target.id));
@@ -66,7 +68,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-
+      <SignInScreen />
       {!isZeroKnowledgeUser ? (
         <Passcode handleZeroKnowledgePassword={handleZeroKnowledgePassword} />
       ) : null}

@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     target: "esnext",
+    minify: false,
   },
 
   define: {

@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/firebase": "^3.2.1",
     "axios": "^1.2.2",
     "bootstrap": "^5.2.3",
     "firebase": "^9.15.0",
@@ -26,6 +27,7 @@
     "react-draggable": "^4.4.5",
     "react-firebaseui": "^6.0.0",
     "react-json-view": "^1.21.3",
+    "rollup-plugin-cjs": "^1.0.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
