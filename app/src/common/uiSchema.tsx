@@ -53,6 +53,7 @@ interface IPrompt {
 }
 
 interface IModule {
+  documentID: string;
   // internal preference
   filler: string;
 
@@ -168,4 +169,35 @@ export let renderWithTooltip = (
       {element}
     </OverlayTrigger>
   );
+};
+
+/**
+ * @returns the total amount of proof of work points available in the platform.
+ */
+export let getGlobalProofOfWork = () => {
+  let pathKeys = Object.keys(ui());
+
+  let sum = 0;
+  let moduleCount = 0;
+
+  pathKeys.forEach((path) => {
+    let collectionKeys = Object.keys(ui()[path]);
+
+    collectionKeys.forEach((collection) => {
+      let moduleKeys = Object.keys(ui()[path][collection]);
+
+      moduleKeys.forEach((module) => {
+        moduleCount = moduleCount + 1;
+
+        let mod = ui()[path][collection][module];
+        let prompts = Object.keys(mod.prompts);
+
+        prompts.forEach((prompt) => {
+          sum = sum + mod.prompts[prompt].work;
+        });
+      });
+    });
+  });
+
+  return sum;
 };

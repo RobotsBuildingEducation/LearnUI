@@ -15,8 +15,6 @@ export const Header = () => {
       <GetStarted />
       <br />
       <br />
-      <br />
-      <br />
     </>
   );
 };

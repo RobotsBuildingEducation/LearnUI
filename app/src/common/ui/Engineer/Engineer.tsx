@@ -3,6 +3,7 @@ import { ultimateEffeciencyJutsu } from "../ui";
 export const Engineer = {
   "Crash Course": {
     "Lesson 1": {
+      documentID: `Lesson 1 - Crash Course`,
       filler: ``,
       hasCode: true,
       new: true,
@@ -132,6 +133,7 @@ export const Engineer = {
       },
     },
     "Lesson 2": {
+      documentID: ``,
       filler: ``,
       hasCode: true,
       new: true,
@@ -256,6 +258,8 @@ export const Engineer = {
       },
     },
     "Lesson 3": {
+      documentID: ``,
+
       filler: ``,
       new: true,
       hasCode: true,
@@ -378,6 +382,8 @@ export const Engineer = {
       },
     },
     "Lesson 4": {
+      documentID: ``,
+
       filler: ``,
       new: true,
       hasCode: true,
@@ -501,6 +507,8 @@ export const Engineer = {
       },
     },
     "Lesson 5": {
+      documentID: ``,
+
       filler: ``,
       new: true,
       hasCode: true,
@@ -622,6 +630,8 @@ export const Engineer = {
       },
     },
     "Lesson 6": {
+      documentID: ``,
+
       filler: ``,
       new: true,
       hasCode: true,
@@ -745,6 +755,8 @@ export const Engineer = {
       },
     },
     "Lesson 7": {
+      documentID: ``,
+
       filler: ``,
       new: true,
       hasCode: true,
@@ -868,6 +880,8 @@ export const Engineer = {
       },
     },
     "Lesson 8": {
+      documentID: ``,
+
       filler: ``,
       new: false,
       hasCode: true,
@@ -992,6 +1006,8 @@ export const Engineer = {
       },
     },
     "Lesson 9": {
+      documentID: ``,
+
       filler: ``,
       new: false,
       highValue: false,
@@ -1114,6 +1130,8 @@ export const Engineer = {
       },
     },
     "Lesson 10": {
+      documentID: ``,
+
       filler: ``,
       new: false,
       highValue: false,
@@ -1235,6 +1253,8 @@ export const Engineer = {
       },
     },
     "Lesson 11": {
+      documentID: ``,
+
       filler: ``,
       new: false,
       highValue: true,
@@ -1357,6 +1377,8 @@ export const Engineer = {
       },
     },
     "Lesson 12": {
+      documentID: ``,
+
       filler: ``,
       new: false,
       highValue: true,
@@ -1479,6 +1501,7 @@ export const Engineer = {
       },
     },
     "Lesson 13": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -1602,6 +1625,7 @@ export const Engineer = {
       },
     },
     "Lesson 14": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: true,
@@ -1724,6 +1748,7 @@ export const Engineer = {
       },
     },
     "Lesson 15": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -1848,6 +1873,7 @@ export const Engineer = {
       },
     },
     "Lesson 16": {
+      documentID: ``,
       filler: ``,
       new: false,
       hasCode: true,
@@ -1975,6 +2001,7 @@ export const Engineer = {
   },
   "Get Experience": {
     "Build For Undocumented": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -2088,6 +2115,7 @@ export const Engineer = {
       },
     },
     "Build For Community": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -2210,6 +2238,7 @@ export const Engineer = {
       },
     },
     "Build For Teachers": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: true,
@@ -2333,6 +2362,7 @@ export const Engineer = {
       },
     },
     "Social Chat": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -2461,6 +2491,7 @@ export const Engineer = {
   },
   "Computer Science": {
     "Programming Languages": {
+      documentID: ``,
       filler: ``,
       new: false,
       hasCode: false,
@@ -2584,6 +2615,7 @@ export const Engineer = {
       },
     },
     Recursion: {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -2705,6 +2737,7 @@ export const Engineer = {
       },
     },
     "Linked Lists": {
+      documentID: ``,
       filler: ``,
       hasCode: true,
       new: false,
@@ -2829,6 +2862,7 @@ export const Engineer = {
       },
     },
     "Link Traversal": {
+      documentID: ``,
       filler: ``,
       new: false,
       hasCode: true,
@@ -2951,6 +2985,7 @@ export const Engineer = {
       },
     },
     "Link Swapping": {
+      documentID: ``,
       filler: ``,
       new: false,
       hasCode: true,
@@ -3073,6 +3108,7 @@ export const Engineer = {
       },
     },
     Algorithms: {
+      documentID: ``,
       filler: ``,
       new: false,
       hasCode: true,

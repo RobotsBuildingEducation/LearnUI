@@ -1,3 +1,4 @@
+import { updateDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 
 import { CodeBlock, dracula } from "react-code-blocks";
@@ -5,7 +6,12 @@ import { PromptMessage } from "./PromptMessage/PromptMessage";
 import { Prompts } from "./Prompts/Prompts";
 import { Roxana } from "./Roxana/Roxana";
 
-export const ChatGPT = ({ patreonObject }) => {
+export const ChatGPT = ({
+  patreonObject,
+  userDocumentReference,
+  databaseUserDocument,
+  setDatabaseUserDocument,
+}) => {
   const [promptMessage, setPromptMessage] = useState("");
   const [isSpanishActive, setIsSpanishActive] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState("");
@@ -62,7 +68,6 @@ export const ChatGPT = ({ patreonObject }) => {
     }
 
     // this API has a $5 limit. Please configure your own setup to test in a seperate location.
-
     // const response = await fetch(
     //   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
     //   {
@@ -90,10 +95,16 @@ export const ChatGPT = ({ patreonObject }) => {
     setChatGptResponse(prompt.response);
     // setChatGptResponse(parsedData);
 
-    // If the request was successful, clear the input field
-    // if (response.status === 200) {
-    //   //do somtehing
-    // }
+    // update proof of work
+    console.log("doccy", databaseUserDocument);
+    await updateDoc(userDocumentReference, {
+      work: databaseUserDocument?.work + prompt.work,
+    });
+
+    //copy it
+    let docCopy = databaseUserDocument;
+    docCopy.work = databaseUserDocument?.work + prompt.work;
+    setDatabaseUserDocument(docCopy);
 
     setLoadingMessage("");
   };

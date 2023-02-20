@@ -3,6 +3,7 @@ import { ultimateEffeciencyJutsu } from "../ui";
 export const Creator = {
   "Lessons Learned & Insights": {
     "Creating Purpose": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -125,6 +126,7 @@ export const Creator = {
       },
     },
     Philosophy: {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -249,6 +251,7 @@ export const Creator = {
       },
     },
     "UI/UX": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: true,
@@ -372,6 +375,7 @@ export const Creator = {
       },
     },
     "Content Review": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -498,6 +502,7 @@ export const Creator = {
       },
     },
     "Influence & Expression": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -622,6 +627,7 @@ export const Creator = {
       },
     },
     "Abraham Lincoln": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,

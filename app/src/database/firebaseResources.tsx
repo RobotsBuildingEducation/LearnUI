@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import {
+  getFirestore,
+  // collection,
+  // query,
+  // where,
+  // getDocs,
+} from "firebase/firestore";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
-const AuthComponent = (StyledFirebaseAuth as any).default
+export const AuthComponent = (StyledFirebaseAuth as any).default
   ? (StyledFirebaseAuth as any).default
   : StyledFirebaseAuth;
 
@@ -17,10 +24,10 @@ export const firebaseConfig = {
   measurementId: "G-N0MK759NHN",
 };
 
-// Initialize Firebase - this connects your code to firebase
 export const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const database = getFirestore(app);
 
-// Configure FirebaseUI.
 export const uiConfig = {
   // Popup signin flow rather than redirect flow.
   signInFlow: "popup",
@@ -32,46 +39,4 @@ export const uiConfig = {
     // Avoid redirects after sign-in.
     signInSuccessWithAuthResult: () => false,
   },
-};
-
-export let auth = getAuth(app);
-
-export const SignInScreen = () => {
-  const [isSignedIn, setIsSignedIn] = useState(false); // Local signed-in state.
-
-  // Listen to the Firebase Auth state and set the local state.
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      // Check for user status
-      console.log("auth", auth);
-      console.log("user", user);
-      if (user.displayName) {
-        setIsSignedIn(true);
-      } else {
-        setIsSignedIn(false);
-      }
-    });
-  }, []);
-
-  if (!isSignedIn) {
-    return (
-      <div>
-        <h1>My App</h1>
-        <p>Please sign-in:</p>
-        <AuthComponent
-          id="firebaseui-auth-container"
-          uiConfig={uiConfig}
-          firebaseAuth={auth}
-        />
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <h1>Login Test</h1>
-      <p>Welcome {auth.currentUser.displayName}! You are now signed-in!</p>
-      <a onClick={() => auth.signOut()}>Sign-out</a>
-    </div>
-  );
 };

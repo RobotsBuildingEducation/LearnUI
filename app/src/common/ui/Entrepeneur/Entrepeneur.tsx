@@ -3,6 +3,7 @@ import { ultimateEffeciencyJutsu } from "../ui";
 export const Entrepeneur = {
   "Understanding Business": {
     "Bitcoin, Automa & the Drug War": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -128,6 +129,7 @@ export const Entrepeneur = {
       },
     },
     "Bitcoin & Social Technology": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -252,6 +254,7 @@ export const Entrepeneur = {
       },
     },
     "Tech Recession Investing & Real Estate I": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -376,6 +379,7 @@ export const Entrepeneur = {
       },
     },
     "Tech Recession Investing & Real Estate II": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -500,6 +504,7 @@ export const Entrepeneur = {
       },
     },
     "Tech Recession Investing & Real Estate III": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -624,6 +629,7 @@ export const Entrepeneur = {
       },
     },
     "Learn Coding": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -748,6 +754,7 @@ export const Entrepeneur = {
       },
     },
     "Creating Competitive Entry Level Resumes": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -872,6 +879,7 @@ export const Entrepeneur = {
       },
     },
     "Options Trading Advice": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -996,6 +1004,7 @@ export const Entrepeneur = {
       },
     },
     "Financial Technology Investing": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -1120,6 +1129,7 @@ export const Entrepeneur = {
       },
     },
     "Social Media Investing": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -1244,6 +1254,7 @@ export const Entrepeneur = {
       },
     },
     "Metaverse Investing": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -1368,6 +1379,7 @@ export const Entrepeneur = {
       },
     },
     "Mexican-American Trade Investing": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -1492,6 +1504,7 @@ export const Entrepeneur = {
       },
     },
     "Infrastructure Investing": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
@@ -1618,6 +1631,7 @@ export const Entrepeneur = {
       },
     },
     "Cloud Investing": {
+      documentID: ``,
       filler: ``,
       new: false,
       highValue: false,

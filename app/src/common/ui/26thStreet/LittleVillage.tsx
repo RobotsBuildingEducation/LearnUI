@@ -3,6 +3,7 @@ import { ultimateEffeciencyJutsu } from "../ui";
 export const LittleVillage = {
   "26th Street": {
     "Little Village": {
+      documentID: ``,
       filler: ``,
       new: true,
       highValue: false,

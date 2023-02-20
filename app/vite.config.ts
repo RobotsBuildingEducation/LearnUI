@@ -6,11 +6,19 @@ export default defineConfig({
   plugins: [react()],
   build: {
     target: "esnext",
-    minify: false,
   },
 
+  optimizeDeps: {
+    exclude: [
+      "firebase",
+      "firebase/app",
+      "firebase/auth",
+      "firebase/firestore",
+      "firebase/analytics",
+    ],
+  },
   define: {
-    // global: {},
+    global: {},
     "process.env": {},
   },
 
