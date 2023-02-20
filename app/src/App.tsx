@@ -192,7 +192,7 @@ function App() {
               </p>
               <p>Scholarships created: 5</p>
               <p style={{ textAlign: "left" }}>
-                Proof of work (PoW) is a systebm in which the worker proves to
+                Proof of work (PoW) is a system in which the worker proves to
                 verifiers that a certain amount of effort has been expended.
                 Verifiers can be machines, like those found with Bitcoin, or
                 they can be people like teachers grading your homework!
