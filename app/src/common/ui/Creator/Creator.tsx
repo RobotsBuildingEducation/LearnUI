@@ -1,4 +1,13 @@
 import { ultimateEffeciencyJutsu } from "../ui";
+import L23 from "../../videos/l23.mov";
+import L24 from "../../videos/l24.mov";
+import L25 from "../../videos/l25.mov";
+import L26 from "../../videos/l26.mov";
+import L27 from "../../videos/l27.mov";
+import L28 from "../../videos/l28.mov";
+import L29 from "../../videos/l29.mov";
+import L30 from "../../videos/l30.mov";
+import L31 from "../../videos/l31.mov";
 
 export const Creator = {
   "Lessons Learned & Insights": {
@@ -138,7 +147,7 @@ export const Creator = {
       sourceType: `video`, // may not need
       button: `Philosophy @ RO.B.E`, // may not need - `name`
       header: `Philosophy @ RO.B.E`,
-      fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674721556/IMG_9188_iewsh4.mov`, // may not need
+      fileSource: L30, // may not need
 
       prompts: {
         patreon: {
@@ -262,7 +271,7 @@ export const Creator = {
       sourceType: `video`, // may not need
       button: `User Experiences`, // may not need - `name`
       header: `Human Computer Interaction`,
-      fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674383801/IMG_1533_ynkxkf.mov`, // may not need
+      fileSource: L25, // may not need
 
       prompts: {
         patreon: {

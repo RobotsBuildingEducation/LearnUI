@@ -1,5 +1,6 @@
 import { updateDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
+import { isEmpty } from "lodash";
 
 import { CodeBlock, dracula } from "react-code-blocks";
 import { PromptMessage } from "./PromptMessage/PromptMessage";
@@ -96,15 +97,19 @@ export const ChatGPT = ({
     // setChatGptResponse(parsedData);
 
     // update proof of work
-    console.log("doccy", databaseUserDocument);
-    await updateDoc(userDocumentReference, {
-      work: databaseUserDocument?.work + prompt.work,
-    });
+    console.log("database user document", databaseUserDocument);
+    console.log("database user ref", userDocumentReference);
+    if (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) {
+      console.log("PROC");
+      await updateDoc(userDocumentReference, {
+        work: databaseUserDocument?.work + prompt.work,
+      });
 
-    //copy it
-    let docCopy = databaseUserDocument;
-    docCopy.work = databaseUserDocument?.work + prompt.work;
-    setDatabaseUserDocument(docCopy);
+      //copy it
+      let docCopy = databaseUserDocument;
+      docCopy.work = databaseUserDocument?.work + prompt.work;
+      setDatabaseUserDocument(docCopy);
+    }
 
     setLoadingMessage("");
   };

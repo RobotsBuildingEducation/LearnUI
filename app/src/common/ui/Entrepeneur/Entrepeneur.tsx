@@ -1,5 +1,11 @@
 import { ultimateEffeciencyJutsu } from "../ui";
 
+import L24 from "../../videos/l24.mov";
+import L26 from "../../videos/l26.mov";
+import L27 from "../../videos/l27.mov";
+import L28 from "../../videos/l28.mov";
+import L29 from "../../videos/l29.mov";
+
 export const Entrepeneur = {
   "Understanding Business": {
     "Bitcoin, Automa & the Drug War": {
@@ -140,7 +146,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Bitcoin & Social Technology`, // may not need - `name`
       header: `Bitcoin & Social Technology`,
-      fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674388103/IMG_1545_wz26l6.mov`, // may not need
+      fileSource: L29, // may not need
 
       prompts: {
         patreon: {
@@ -265,7 +271,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Tech Recession Investing & Real Estate I`, // may not need - `name`
       header: `Tech Recession Investing & Real Estate I`,
-      fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674721518/IMG_9184_ouquv2.mov`, // may not need
+      fileSource: L26, // may not need
 
       prompts: {
         patreon: {
@@ -390,7 +396,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Tech Recession Investing & Real Estate II`, // may not need - `name`
       header: `Tech Recession Investing & Real Estate II`,
-      fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674721555/IMG_9183_dbfoes.mov`, // may not need
+      fileSource: L27, // may not need
 
       prompts: {
         patreon: {
@@ -640,7 +646,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Learn Coding`, // may not need - `name`
       header: `Learn Coding`,
-      fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674721517/IMG_9185_wfrmsz.mov`, // may not need
+      fileSource: L28, // may not need
 
       prompts: {
         patreon: {
@@ -765,7 +771,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Creating Competitive Entry Level Resumes`, // may not need - `name`
       header: `Creating Competitive Entry Level Resumes`,
-      fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674721555/IMG_9181_mjw1zc.mov`, // may not need
+      fileSource: L24, // may not need
 
       prompts: {
         patreon: {

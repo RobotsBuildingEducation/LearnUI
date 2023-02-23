@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     target: "esnext",
   },
-
+  assetsInclude: ["**/*.mov", "**/*.mp4"],
   optimizeDeps: {
     exclude: [
       "firebase",
@@ -18,7 +18,7 @@ export default defineConfig({
     ],
   },
   define: {
-    // global: {},
+    global: {},
     "process.env": {},
   },
 

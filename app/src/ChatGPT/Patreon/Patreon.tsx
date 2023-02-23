@@ -16,6 +16,7 @@ let Patreon = ({ patreonObject }) => {
           controls
         >
           <source src={patreonObject.fileSource} type="video/mp4" />
+          <source src={patreonObject.fileSource} type="video/mov" />
         </video>
       );
     }

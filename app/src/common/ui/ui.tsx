@@ -16,7 +16,7 @@ export let ultimateEffeciencyJutsu = (key) => {
     [`Lesson 13`]: `command line interfaces`,
     [`Lesson 14`]: `fintech APIs`, // wow this one is crazy in commonElements.ts lol
     [`Lesson 15`]: `noSQL with Firebase Firestore`,
-    [`Lesson 16`]: `Git and Gipthub`,
+    [`Lesson 16`]: `Git and Github`,
     ["Build For Undocumented"]:
       "opportunities to consult as an undocumented immigrant with Hydrogen by Shopify",
     ["Build For Teachers"]: "GitHub for teachers",

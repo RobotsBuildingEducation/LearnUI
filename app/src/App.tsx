@@ -29,7 +29,7 @@ import {
   getDoc,
   setDoc,
 } from "firebase/firestore";
-import { ProgressBar } from "react-bootstrap";
+import { ProgressBar, Spinner } from "react-bootstrap";
 
 export const reducer = (state, action) => {
   if (action.type === "incremented_age") {
@@ -42,7 +42,7 @@ export const reducer = (state, action) => {
 
 function App() {
   // const [state, dispatch] = useReducer(reducer, { age: 42 });
-  const [isSignedIn, setIsSignedIn] = useState(false); // Local signed-in state.
+  const [isSignedIn, setIsSignedIn] = useState("start"); // Local signed-in state.
   const [isZeroKnowledgeUser, setIsZeroKnowledgeUser] = useState(false);
   const [databaseUserDocument, setDatabaseUserDocument] = useState({});
   const [userDocumentReference, setUserDocumentReference] = useState({});
@@ -131,6 +131,10 @@ function App() {
     (databaseUserDocument.work || 0) / getGlobalProofOfWork();
 
   console.log("PERCENTAGE", Math.floor(computePercentage * 100));
+
+  if (typeof isSignedIn == "string") {
+    return <Spinner animation="grow" variant="light" />;
+  }
   return (
     <div className="App">
       {/* <button onClick={() => dispatch({ type: "incremented_age" })}>
@@ -140,7 +144,7 @@ function App() {
       {/*  */}
       <Header />
 
-      {!isSignedIn ? (
+      {typeof isSignedIn === "string" || !isSignedIn ? (
         <div
           style={{
             border: "1px solid #1C1C1E",

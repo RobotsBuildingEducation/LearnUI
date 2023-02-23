@@ -25,11 +25,34 @@ export const GetStarted = () => {
         </Button>
       </a>
 
-      <Modal centered show={isModalOpen} onHide={() => setIsModalOpen(false)}>
+      <Modal
+        centered
+        show={isModalOpen}
+        fullscreen
+        onHide={() => setIsModalOpen(false)}
+      >
         <Modal.Header closeButton>
           <Modal.Title>Get Started</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          {/* <div style={{ border: "1px solid red" }}>
+            <div style={{ border: "1px solid green" }}>
+              <h2>Who</h2>
+            </div>
+            <div style={{ border: "1px solid green" }}>
+              <h2>What</h2>
+            </div>
+            <div style={{ border: "1px solid green" }}>
+              <h2>Where</h2>
+            </div>
+            <div style={{ border: "1px solid green" }}>
+              <h2>When</h2>
+            </div>
+            <div style={{ border: "1px solid green" }}>
+              {" "}
+              <h2>Why</h2>
+            </div>
+          </div> */}
           <h3>What is this?</h3>
           <p>
             The goal is to create the best possible first hour of learning to
