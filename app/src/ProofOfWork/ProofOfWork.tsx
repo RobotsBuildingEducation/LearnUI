@@ -31,7 +31,7 @@ export const ProofOfWork = ({
         <p>🤖 {displayName}</p>
         {renderWithTooltip(
           <div>
-            <Button variant="success">🏦</Button>&nbsp;{" "}
+            <Button variant="secondary">🏦</Button>&nbsp;{" "}
             {databaseUserDocument?.work || 0}{" "}
             <div>
               <ProgressBar
