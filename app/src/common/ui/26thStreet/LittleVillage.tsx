@@ -14,7 +14,7 @@ export const LittleVillage = {
       sourceType: `video`, // may not need
       button: `Little Village`, // may not need - `name`
       header: `Little Village`,
-      fileSource: `https://res.cloudinary.com/eduprojectsil/video/upload/v1674220062/download_4_xnineu.mp4`, // may not need
+      fileSource: ``, // may not need
 
       prompts: {
         patreon: {

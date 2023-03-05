@@ -1,3 +1,52 @@
+## The First Generation Investor: Financial Technology & Cryptocurrency
+
+A thought:
+
+The future of education will more closely express what learning is: an expression of effort, time, and energy. The future of education will not fit in previous models defined by arbitrary institutions that brokerage trust through "education" certifications.
+
+3. Financial Technology Investing
+   Consider the following relationship:
+
+An eighteen year old Black American can date their family back hundreds of years to some enslaved origin point. This same American is a pioneer in the family name as they invest in the US stock market for the first time in 2020. After several world revolutions, political movements and scientific advancements, an internet application had finally amended the fair access to the financial service.
+
+Financial technology is ultimately defined by and understood with critical race theory. Critical race theory is the philosophy behind the intersection of race, history, and power. The entire financial system is a system that attempts to govern and monitor the risk of each transaction by proving that the individual behind the transaction is not committing some kind of crime. This statement alone is worth multiple conversations which need to come together into one cohesive idea.
+
+So we need to illustrate the conversations behind race, history, power and the access to resources in order to understand the direction of the current financial technology industry. Decentralization, at its core, is the redistribution of power granted by some central entity or entities, so it only makes sense to observe critical race theory and its intersection with transforming technology.
+
+I find it fascinating that many Black Americans today are essentially immigrants to their own country where the first fair rights were afforded only just a few decades ago. In my view, critical race theory allows someone to consider the special conditions of groups with native and genocided origins. In the North American case, we would observe the power struggles experienced by Black Americans, the indigenous, and Hispanics. In Asia, we would observe groups in North Korea.
+
+In Eurasia, we can observe groups like the Israelis. The simple truth here is that genocides have far reaching consequences across many generations. Understanding and respecting the value of critical race theory allows you to observe truly phenomenal relationships. Let us set up one modern struggle: the US drug war, the demographics of incarcerated Americans, and the violence experienced south of the US border. Then let us observe the nature of trust as the ultimate form of value in the financial system.
+
+A simple and safe transaction in any given scenario between a merchant and customer would be a cash transaction. I agree to purchase a good or service with a US note backed by some credit reserve and the money instantly settles due to it being in the form of cash. This entire system completely fails if I offer you a convincing counterfeit bill.
+
+So then this issue of trust can be observed regionally, where cash transactions may vary in risk at a highway gas station versus some mall in a city suburb. The point here is that, despite the simple circumstances, much can still fundamentally go wrong.
+
+The entire process then transforms in complexity at the digital stage. There are entire systems and economies that are built to monitor and verify this trust between merchant and customer that then produces the infamous service and brokerage fee. This cash does not instantly settle, so the spender must spend in order to use their own money as a way to counteract the risk associated with making transactions digitally.
+
+What is challenging about the digital system is that it depends on legal frameworks that are based on power and liberty. They are compliant standards that require an individual to prove that they are not a blacklisted immigrant, criminal, or terrorist through the form of various sensitive documentations like a social security number or personal address.
+
+What this means is that just about every digital financial system functions off of a “verify first, trust later” model that effectively has you prove that you are not a criminal in order to use their discriminate systems. It is at this point where you might see that cryptocurrency advocates are encouraged to look for new systems that destructure and challenge the power struggles created by these legal frameworks.
+
+I hope that by this point, the reader can begin to see the relationships I’m trying to illustrate between historical powers, race, and financial institutions. In short, the US has staged some militant status quo involving drugs, terrorism, and the financing of systemic war, while also maintaining a financial system that monitors crime and terrorism. This relationship expresses itself in rather perverse ways. For example, is the security at an airport meant for airplane safety or is it just an incredibly cheap way to monitor immigration status?
+
+These legal frameworks have generational consequences on job availability, school funding, and access to many basic resources like safety and banking that govern our day to day life. How could one expect for a bank to survive in areas that are overpoliced, where jobs are erased, and where deposits decrease in supply?
+
+So returning back to the conversation about race and power, one can observe fascinating relationships and problems worth solving. The financial technology industry is often driven by this narrative of amending services for the underbanked. When you observe the underbanked in North America, you see the same pattern - Black Americans in the southern US states, underdeveloped city “sides”, and nations south of the border. This is by design. Systems of modern finance are built off of those systems of trust that we outlined above.
+
+What this design says is that these groups and regions are the least trusted groups, which is also true from a power perspective. One could see how this tragically results in a rather dangerous feedback loop and one could argue how this is one of the many forms of structural racism generated and maintained by the US technology industry.
+
+The end result is an imbalance of power in the US, resulting in a lose-lose for its society. The failures of the drug war, its resulting incarcerations, and widespread overconsumption of drugs and policing is a product of this imbalanced power. My view is that race is only a circumstance of the nature of power and history, and in the case of the US, it’s worth deeply observing as it is uniquely positioned as a society in world history.
+
+So with this entire context in mind, it becomes a lot easier to understand the significance of Bitcoin development and it's growing social currency in regions that have issues regarding transactions, trust, and violence like Latin America or Africa. Bitcoin believes in the inverse of the current system, a "trust first, verify later" model.
+
+It also allows you to understand the entire ecosystem that drives organizations like Square and Robinhood. Whether it be services for small businesses, artists, or investors, the narrative remains the same: democratize financial services. Democratization logically follows conversations of liberty and power! Using this mental model, one can more critically observe the relationships that drove Jay-Z to join the board of Square, or Square's development of credit services that don't depend on credit checking.
+
+The end result is that Square and other financial services are seeking ways to minimize risk and trust associated with digital transactions to reduce the overall cost of business and to enhance the delivery and accessibility of services. This is why I'm confident in financial technology's ability to transform and and improve our previous system.
+
+And this framework is what allows me to understand and predict Square's roadmap in industries that it is not involved in yet, like education funding and home owner loan issuances.
+
+---
+
 Disclaimer
 These are essays that I wrote when I first started my career as a content creator. I started as a writer on Reddit in May 2020-2021. I had recently started investing in the stock market after many years of market-watching on the sidelines while I went to school and learn computer science.
 

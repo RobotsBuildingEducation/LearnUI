@@ -129,7 +129,7 @@ interface IPath {
   Engineer: ICollection;
   Creator: ICollection;
   Entrepeneur: ICollection;
-  "26th Street": ICollection;
+  "26th Street 🚧": ICollection;
 }
 
 // be pro customization. Redundancy is fine if it allows for more customization.
@@ -140,7 +140,8 @@ export const ui = (): IPath => {
     Creator: Creator,
     Engineer: Engineer,
     Entrepeneur: Entrepeneur,
-    "26th Street": LittleVillage,
+    "26th Street 🚧": {},
+    // "26th Street 🚧": LittleVillage,
   };
 };
 export let uiPaths = Object.keys(ui());

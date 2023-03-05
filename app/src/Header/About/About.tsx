@@ -1,29 +1,15 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 
-export const GetStarted = () => {
+export const About = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <Button variant="primary" onClick={() => setIsModalOpen(true)}>
-        Get Started
+        About
       </Button>
       <br />
       <br />
-      <a
-        target={"_blank"}
-        href="https://www.patreon.com/RobotsBuildingEducation"
-        style={{ color: "white" }}
-      >
-        <Button variant="dark">
-          <img
-            style={{ borderRadius: "6px" }}
-            width="32px"
-            src="https://pbs.twimg.com/profile_images/1266950784609992705/xEe7mBx9_400x400.png"
-          />
-          &nbsp; Discover More @ Patreon
-        </Button>
-      </a>
 
       <Modal
         centered
@@ -32,7 +18,7 @@ export const GetStarted = () => {
         onHide={() => setIsModalOpen(false)}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Get Started</Modal.Title>
+          <Modal.Title>About</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {/* <div style={{ border: "1px solid red" }}>

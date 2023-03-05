@@ -1,4 +1,4 @@
-import { GetStarted } from "./GetStarted/GetStarted";
+import { About } from "./About/About";
 
 export const Header = () => {
   return (
@@ -12,9 +12,7 @@ export const Header = () => {
 
       <br />
       <br />
-      <GetStarted />
-      <br />
-      <br />
+      <About />
     </>
   );
 };

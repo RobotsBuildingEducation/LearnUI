@@ -9,6 +9,7 @@ export const Roxana = ({
   loadingStates,
   chatGptResponse,
   patreonObject,
+  isDemo,
 }) => {
   let RoxanaLoadingAnimation = () => {
     return (
@@ -30,6 +31,50 @@ export const Roxana = ({
   console.log("patr", patreonObject);
 
   let RoxanaIntroText = () => {
+    if (isDemo) {
+      return (
+        <div>
+          i'm ms. roxana, a teacher built with OpenAI. I help Sheilfer build
+          RO.B.E by helping you learn more with useful prompts 😊
+          <br />
+          <br />
+          Advertisting slots are available to all subscribers. RO.B.E is an
+          education app that's carefully built with banking and community in
+          mind. Check out my friend Claudia's music!
+          <br />
+          <br />
+          <div
+            style={{
+              width: "100%",
+              textAlign: "center",
+            }}
+          >
+            <a
+              onClick={() => {
+                window.open("https://www.snowthaproduct.com/");
+              }}
+              target="_blank"
+              style={{
+                color: "white",
+                textDecoration: "underline",
+                cursor: "grab",
+              }}
+            >
+              <img
+                src="/../../../public/snowthaproduct.jpeg"
+                style={{
+                  boxShadow:
+                    "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",
+                  height: 250,
+                  width: 250,
+                  borderRadius: "12px",
+                }}
+              />
+            </a>
+          </div>
+        </div>
+      );
+    }
     return (
       <div>
         {patreonObject?.header === "Indocumentadofy"

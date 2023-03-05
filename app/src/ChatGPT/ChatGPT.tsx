@@ -12,6 +12,14 @@ export const ChatGPT = ({
   userDocumentReference,
   databaseUserDocument,
   setDatabaseUserDocument,
+  globalDocumentReference,
+  globalWorkCounter,
+  setGlobalWorkCounter,
+  isDemo = false,
+
+  displayName = "Demo Robots",
+
+  computePercentage,
 }) => {
   const [promptMessage, setPromptMessage] = useState("");
   const [isSpanishActive, setIsSpanishActive] = useState(false);
@@ -29,6 +37,15 @@ export const ChatGPT = ({
     patreon: false,
     shop: false,
   });
+
+  /**
+   *
+   * lets test patreonObject first
+   * [
+   *  { key: '', prompt: Element, response: Element, slot: '' } || patreonObject?
+   * ]
+   */
+  const [conversation, setConversation] = useState([]);
 
   useEffect(() => {
     setLoadingStates({
@@ -57,6 +74,7 @@ export const ChatGPT = ({
     setLoadingMessage("...");
     // setLoadingMessage(`prompt ${promptType} activated`);
   };
+
   const handleSubmit = async (event, prompt = null, promptType = null) => {
     event.preventDefault();
 
@@ -97,18 +115,38 @@ export const ChatGPT = ({
     // setChatGptResponse(parsedData);
 
     // update proof of work
-    console.log("database user document", databaseUserDocument);
-    console.log("database user ref", userDocumentReference);
-    if (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) {
-      console.log("PROC");
+
+    if (
+      (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
+      !isDemo
+    ) {
+      //doesnt return obj, so update firebase and react seperately
       await updateDoc(userDocumentReference, {
         work: databaseUserDocument?.work + prompt.work,
       });
 
-      //copy it
+      // update global work
+      await updateDoc(globalDocumentReference, {
+        total: globalWorkCounter + prompt.work,
+      });
+
+      //copy it to react
       let docCopy = databaseUserDocument;
       docCopy.work = databaseUserDocument?.work + prompt.work;
       setDatabaseUserDocument(docCopy);
+
+      let globalCopy = globalWorkCounter;
+      globalCopy = globalWorkCounter + prompt.work;
+      setGlobalWorkCounter(globalCopy);
+    } else {
+      //copy it to react
+      let docCopy = databaseUserDocument;
+      docCopy.work = databaseUserDocument?.work + prompt.work;
+      setDatabaseUserDocument(docCopy);
+
+      let globalCopy = globalWorkCounter;
+      globalCopy = globalWorkCounter + prompt.work;
+      setGlobalWorkCounter(globalCopy);
     }
 
     setLoadingMessage("");
@@ -135,15 +173,23 @@ export const ChatGPT = ({
         loadingStates={loadingStates}
         chatGptResponse={chatGptResponse}
         patreonObject={patreonObject}
+        isDemo={isDemo}
       />
       <br />
       {/* prompts */}
       <Prompts
+        //roxana
         loadingMessage={loadingMessage}
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
         chatGptResponse={chatGptResponse}
         isSpanishActive={isSpanishActive}
+        displayName={displayName}
+        databaseUserDocument={databaseUserDocument}
+        computePercentage={computePercentage}
+        globalWorkCounter={globalWorkCounter}
+
+        //pow
       />
       <br />
     </div>

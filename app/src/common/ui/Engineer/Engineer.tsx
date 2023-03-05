@@ -30,7 +30,7 @@ export const Engineer = {
       hasCode: true,
       new: true,
       highValue: false,
-      underConstruction: true,
+      underConstruction: false,
       completed: false,
       needsImprovement: false,
       tooltip: ``,
@@ -41,7 +41,7 @@ export const Engineer = {
       fileSource: L1,
       prompts: {
         patreon: {
-          premiumContent: true,
+          premiumContent: false,
           completed: false,
           work: 1000,
           action: `generate`,
@@ -54,7 +54,7 @@ export const Engineer = {
           tooltip: ``,
         },
         inspire: {
-          humanTouch: true,
+          humanTouch: false,
           completed: false,
           work: 100,
           action: `inspire`,
@@ -114,7 +114,7 @@ export const Engineer = {
             "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
           spanish: ``,
           tooltip: ``,
-          dynamicContent: true,
+          dynamicContent: false,
         },
         define: {
           completed: false,
@@ -143,7 +143,7 @@ export const Engineer = {
         },
         shop: {
           completed: false,
-          sponsoredContent: true,
+          sponsoredContent: false,
           work: 250,
           action: `shop`,
           icon: `🛍️`,
@@ -1658,8 +1658,8 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `14. Creating Fintech`, // may not need - `name`
-      header: `14. Creating Fintech`,
+      button: `14. Programming Money`, // may not need - `name`
+      header: `14. Programming Money`,
       fileSource: L14, // may not need
 
       prompts: {

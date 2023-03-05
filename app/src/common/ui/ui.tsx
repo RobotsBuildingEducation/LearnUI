@@ -39,32 +39,29 @@ export let ultimateEffeciencyJutsu = (key) => {
     ["Abraham Lincoln"]: "Abraham Lincoln and his views on divine providence",
     ["Philosophy"]: "Critical Race Theory and machine learning algorithms",
     ["Bitcoin, Automa & the Drug War"]:
-      "the relationship between bitcoin, automation and the drug war",
+      "the relationship between bitcoin, automation, universal basic income and the drug war",
     ["Bitcoin x Social Technology"]:
       "the relationship between decentralized identities, civil liberties and our experience on the internet",
     ["Tech Recession Investing"]: "the benefits of investing in recessions",
     ["Tech Recession Investing x Real Estate II"]:
       "the benefits of using IRA exceptions and FHA loans to purchase your first home with $10,000",
     ["Tech Recession Investing x Real Estate III"]:
-      "How investing in a home is a safer way than options to leverage money",
+      "how real estate is tied to the overall market and is a safe way to leverage money",
     ["Learn Coding"]:
-      "how computer science is intersectional with any subject of interest like medicine, sports or clean energy",
+      "how computer science is intersectional with any subject of interest",
     ["Creating Competitive Entry Level Resumes"]:
-      "The benefits of building a good one-page resume",
-    ["Options Trading Advice"]:
-      "why options trading may be worthwhile during earnings reports when focus investing is the main investing strategy",
+      "how to write and effective one-page resume",
+    ["Options Trading Advice"]: "Charlie Munger's views on focus investing",
     ["Financial Technology Investing"]:
-      "the pros and cons of investing in financial technology organizations like Cash App and Bitcoin",
-    ["Social Media Investing"]:
-      "the pros and cons of investing in social media organizations like Pinterest",
-    ["Metaverse Investing"]:
-      "the pros and cons of investing in metaverse organizations like Meta or Roblox",
-    ["Mexican-American Trade Investing"]:
-      "the pros and cons of investing strong Mexican-American railroads like Canadian Pacific and Kansas City Southern",
-    ["Infrastructure Investing"]:
-      "the pros and cons of investing in industrial technology companies like Autodesk",
-    ["Cloud Investing"]:
-      "the pros and cons of investing in cloud software like Cloudflare",
+      "the pros and cons of investing in financial technology",
+    ["Social Media Investing"]: "incentives behind social media",
+    ["Metaverse Investing"]: "incentives behind the metaverse",
+    // ["Mexican-American Trade Investing"]:
+    //   "the pros and cons of investing strong Mexican-American railroads",
+    // ["Infrastructure Investing"]:
+    //   "the pros and cons of investing in AEC technology",
+    // ["Cloud Investing"]:
+    //   "the pros and cons of investing in cloud software like Cloudflare",
     ["Little Village"]: "Little Village, Chicago",
   };
   return map[key] || "null";

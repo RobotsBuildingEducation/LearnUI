@@ -30,6 +30,7 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { ProgressBar, Spinner } from "react-bootstrap";
+import { ProofOfWork } from "./ProofOfWork/ProofOfWork";
 
 export const reducer = (state, action) => {
   if (action.type === "incremented_age") {
@@ -44,11 +45,22 @@ function App() {
   // const [state, dispatch] = useReducer(reducer, { age: 42 });
   const [isSignedIn, setIsSignedIn] = useState("start"); // Local signed-in state.
   const [isZeroKnowledgeUser, setIsZeroKnowledgeUser] = useState(false);
+
+  // this is the data inside a user document
   const [databaseUserDocument, setDatabaseUserDocument] = useState({});
+
+  // this is a document object reference for a user collection
   const [userDocumentReference, setUserDocumentReference] = useState({});
+  const [globalDocumentReference, setGlobalDocumentReference] = useState({});
+
+  // used to count total global count. used to get all work done before this global counter was implemented.
+  const [globalWorkCounter, setGlobalWorkCounter] = useState(0);
 
   const [patreonObject, setPatreonObject] = useState<Record<string, any>>({});
   const [currentPath, setCurrentPath] = useState("");
+  const [proofOfWorkFromModules, setProofOfWorkFromModules] = useState(0);
+
+  const [isDemo, setIsDemo] = useState(true);
 
   const [visibilityMap, setVisibilityMap] = useState({
     Engineer: false,
@@ -100,8 +112,10 @@ function App() {
       //probably a better option than displayName.
       if (user?.displayName) {
         setIsSignedIn(true);
+        setIsDemo(false);
         const docRef = doc(database, "users", user.uid);
 
+        const globalWorkDocRef = doc(database, "global", "work");
         getDoc(docRef).then((res) => {
           if (!res?.data()) {
             // first time user logs in. set up proof of work in their user document
@@ -119,22 +133,69 @@ function App() {
           }
         });
 
+        getDoc(globalWorkDocRef).then((res) =>
+          setGlobalWorkCounter(res.data().total)
+        );
+
         setUserDocumentReference(docRef);
+        setGlobalDocumentReference(globalWorkDocRef);
+
+        // used to count total global count. used to get all work done before this global counter was implemented.
+        // getDocs(collection(database, "users")).then((querySnapshot) => {
+        //   let sum = 0;
+        //   querySnapshot.forEach((doc) => {
+        //     if (doc.data().work) {
+        //       sum = doc.data().work + sum;
+        //     }
+        //   });
+
+        //   setGlobalWorkCounter(sum);
+        // });
       } else {
         setIsSignedIn(false);
+        const docRef = doc(database, "users", "demoUsers");
+        const globalWorkDocRef = doc(database, "global", "work");
+        getDoc(docRef).then((res) => {
+          if (!res?.data()) {
+            // first time user logs in. set up proof of work in their user document
+            setDoc(docRef, {
+              work: 0,
+            })
+              .then(() => {
+                return getDoc(docRef);
+              })
+              .then((response) => {
+                console.log("DATA", response.data());
+                setDatabaseUserDocument(response.data());
+              });
+          } else {
+            console.log("ELSA");
+            setDatabaseUserDocument(res.data());
+          }
+        });
+
+        getDoc(globalWorkDocRef).then((res) =>
+          setGlobalWorkCounter(res.data().total)
+        );
+
+        setUserDocumentReference(docRef);
+        setGlobalDocumentReference(globalWorkDocRef);
+        setIsDemo(true);
       }
     });
+
+    setProofOfWorkFromModules(getGlobalProofOfWork());
   }, []);
 
   //
-  let computePercentage =
-    (databaseUserDocument.work || 0) / getGlobalProofOfWork();
 
-  console.log("PERCENTAGE", Math.floor(computePercentage * 100));
+  let computePercentage =
+    (databaseUserDocument.work || 0) / (proofOfWorkFromModules || 77500);
 
   if (typeof isSignedIn == "string") {
     return <Spinner animation="grow" variant="light" />;
   }
+
   return (
     <div className="App">
       {/* <button onClick={() => dispatch({ type: "incremented_age" })}>
@@ -144,7 +205,8 @@ function App() {
       {/*  */}
       <Header />
 
-      {typeof isSignedIn === "string" || !isSignedIn ? (
+      {typeof isSignedIn === "string" ||
+      (!isSignedIn && isZeroKnowledgeUser) ? (
         <div
           style={{
             border: "1px solid #1C1C1E",
@@ -160,73 +222,32 @@ function App() {
             firebaseAuth={auth}
           />
         </div>
-      ) : (
-        <div
-          style={{
-            border: "1px solid #1C1C1E",
-            width: "fit-content",
-            margin: "auto",
-            backgroundColor: "#1C1C1E",
-            marginBottom: "48px",
-            maxWidth: "600px",
-            minWidth: "300px",
-          }}
-        >
-          <p>🤖 {auth.currentUser.displayName}</p>
-          {renderWithTooltip(
-            <div>
-              🏦: {databaseUserDocument?.work || 0}{" "}
-              <div>
-                <ProgressBar
-                  style={{
-                    backgroundColor: "black",
-                    borderRadius: "0px",
-                    margin: 12,
-                  }}
-                  variant="success"
-                  now={Math.floor(computePercentage * 100)}
-                />
-              </div>
-            </div>,
-            <div>
-              <h6>Proof of Work</h6>
-              <p>
-                work: {databaseUserDocument?.work || 0} /{" "}
-                {getGlobalProofOfWork()}
-              </p>
-              <p>Scholarships created: 5</p>
-              <p style={{ textAlign: "left" }}>
-                Proof of work (PoW) is a system in which the worker proves to
-                verifiers that a certain amount of effort has been expended.
-                Verifiers can be machines, like those found with Bitcoin, or
-                they can be people like teachers grading your homework!
-              </p>
-            </div>,
-            "bottom",
-            {
-              border: "1px solid #F2D466",
-              marginBottom: "6px",
-              borderRadius: "10px",
+      ) : null}
 
-              backgroundColor: "#f2a900",
-            }
-          )}
-          {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
-        </div>
-      )}
-
-      <br />
-      <br />
+      {/* {isSignedIn !== "start" && isSignedIn && isZeroKnowledgeUser ? (
+        <ProofOfWork
+          displayName={auth?.currentUser?.displayName || "Demo Robots"}
+          databaseUserDocument={databaseUserDocument}
+          computePercentage={computePercentage}
+          globalWorkCounter={globalWorkCounter}
+        />
+      ) : null} */}
 
       {!isZeroKnowledgeUser ? (
-        <Passcode handleZeroKnowledgePassword={handleZeroKnowledgePassword} />
+        <Passcode
+          handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+          userDocumentReference={userDocumentReference}
+          databaseUserDocument={databaseUserDocument}
+          setDatabaseUserDocument={setDatabaseUserDocument}
+          globalDocumentReference={globalDocumentReference}
+          globalWorkCounter={globalWorkCounter}
+          setGlobalWorkCounter={setGlobalWorkCounter}
+          computePercentage={computePercentage}
+        />
       ) : null}
       {isZeroKnowledgeUser ? (
         <>
-          <div>
-            ⚠️ OpenAI's chatGPT feature is currently disabled. Everything is
-            being rebuilt to be more awesome.
-          </div>
+          <div>ms. roxana is being fine-tuned to be even more awesome 😊</div>
 
           {/* <div>My Accoun</div> */}
           {/* navigate */}
@@ -252,12 +273,22 @@ function App() {
           <div style={{ width: "100%" }}>
             <div>
               {isEmpty(patreonObject) ? null : (
-                <ChatGPT
-                  patreonObject={patreonObject}
-                  userDocumentReference={userDocumentReference}
-                  databaseUserDocument={databaseUserDocument}
-                  setDatabaseUserDocument={setDatabaseUserDocument}
-                />
+                <>
+                  <ChatGPT
+                    patreonObject={patreonObject}
+                    userDocumentReference={userDocumentReference}
+                    databaseUserDocument={databaseUserDocument}
+                    setDatabaseUserDocument={setDatabaseUserDocument}
+                    globalDocumentReference={globalDocumentReference}
+                    globalWorkCounter={globalWorkCounter}
+                    setGlobalWorkCounter={setGlobalWorkCounter}
+                    displayName={
+                      auth?.currentUser?.displayName || "Demo Robots"
+                    }
+                    computePercentage={computePercentage}
+                    isDemo={isDemo}
+                  />
+                </>
               )}
             </div>
           </div>

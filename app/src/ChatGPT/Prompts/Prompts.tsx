@@ -3,15 +3,23 @@ import { Button, Modal } from "react-bootstrap";
 import { CodeBlock, dracula } from "react-code-blocks";
 import ReactJson from "react-json-view";
 import { renderWithTooltip } from "../../common/uiSchema";
+import { ProofOfWork } from "../../ProofOfWork/ProofOfWork";
 import { StyledPromptButton } from "../../styles/lazyStyles";
 import { DiscordButton } from "./DiscordButton/DiscordButton";
 
 export const Prompts = ({
+  //roxana
   loadingMessage,
   patreonObject,
   handleSubmit,
   chatGptResponse,
   isSpanishActive,
+
+  //pow
+  displayName,
+  databaseUserDocument,
+  computePercentage,
+  globalWorkCounter,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   let promptKeys = Object.keys(patreonObject.prompts);
@@ -147,6 +155,12 @@ export const Prompts = ({
         flexDirection: "column",
       }}
     >
+      <ProofOfWork
+        displayName={displayName}
+        databaseUserDocument={databaseUserDocument}
+        computePercentage={computePercentage}
+        globalWorkCounter={globalWorkCounter}
+      />
       <Button variant="primary" onClick={() => setIsModalOpen(true)}>
         {patreonObject?.header === "Indocumentadofy"
           ? "💗 Ver Roxana"
@@ -187,12 +201,13 @@ export const Prompts = ({
           </Button>
         </Modal.Footer>
       </Modal>
-      {renderWithTooltip(<div>🏦: 0</div>, "Proof of work", "left", {
+
+      {/* {renderWithTooltip(<div>🏦: 0</div>, "Proof of work", "left", {
         border: "1px solid #F2D466",
         marginBottom: "6px",
         borderRadius: "10px",
         backgroundColor: "#f2a900",
-      })}
+      })} */}
       {promptMap}
       {/* Spanish is disabled atm. */}
 

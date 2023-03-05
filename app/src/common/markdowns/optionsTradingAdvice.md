@@ -20,6 +20,8 @@ If you do this, you will find success with options because you limit the rate of
 
 2. Expectations being exceeded or well-managed end-to-end during quarterly earnings reports.
 
+3. Investor sentiment and confidence
+
 You may have heard of the famous stories of options traders gambling during earnings. "The company did so well! But the stock sold off?!?! This market is rigged!!!" This is the voice of someone who is unaware of how options trading works. You must respect the complexity of mathematics, human behaviors, and economic forces in order to utilize options for overall life-time gains.
 
 In short, if you really take these guidelines to heart, you will find more success than failure while trading options. It's almost never a way to build the majority of your wealth, only a way to optimize your already well-researched investments. You can try as hard as you want to reject this advice, but you will find that what I'm telling you here is true.
