@@ -1,5 +1,5 @@
 import { doc } from "firebase/firestore";
-import { ProgressBar } from "react-bootstrap";
+import { Button, ProgressBar } from "react-bootstrap";
 import { getGlobalProofOfWork, renderWithTooltip } from "../common/uiSchema";
 import { database } from "../database/firebaseResources";
 
@@ -31,7 +31,8 @@ export const ProofOfWork = ({
         <p>🤖 {displayName}</p>
         {renderWithTooltip(
           <div>
-            🏦: {databaseUserDocument?.work || 0}{" "}
+            <Button variant="success">🏦</Button>&nbsp;{" "}
+            {databaseUserDocument?.work || 0}{" "}
             <div>
               <ProgressBar
                 style={{
@@ -77,7 +78,7 @@ export const ProofOfWork = ({
               can be people like teachers grading your homework!
             </p>
           </div>,
-          "left",
+          "bottom",
           {
             border: "1px solid #F2D466",
             marginBottom: "6px",
@@ -106,7 +107,8 @@ export const ProofOfWork = ({
       <p>🤖 {displayName}</p>
       {renderWithTooltip(
         <div>
-          🏦: {databaseUserDocument?.work || 0}{" "}
+          <Button variant="secondary">🏦</Button>&nbsp;{" "}
+          {databaseUserDocument?.work || 0}{" "}
           <div>
             <ProgressBar
               style={{
@@ -152,7 +154,7 @@ export const ProofOfWork = ({
             can be people like teachers grading your homework!
           </p>
         </div>,
-        "left",
+        "bottom",
         {
           border: "1px solid #F2D466",
           marginBottom: "6px",

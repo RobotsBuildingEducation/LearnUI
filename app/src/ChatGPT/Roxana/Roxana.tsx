@@ -61,7 +61,7 @@ export const Roxana = ({
               }}
             >
               <img
-                src="/../../../public/snowthaproduct.jpeg"
+                src="https://i.scdn.co/image/ab67616d0000b2736e34d6d419d3de687e27c929"
                 style={{
                   boxShadow:
                     "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",

@@ -164,6 +164,7 @@ export let renderWithTooltip = (
 ) => {
   return (
     <OverlayTrigger
+      trigger="click"
       placement={renderingDirection}
       overlay={<Tooltip style={style}>{tooltip}</Tooltip>}
     >
