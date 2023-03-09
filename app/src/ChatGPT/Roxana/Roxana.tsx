@@ -28,8 +28,6 @@ export const Roxana = ({
     );
   };
 
-  console.log("patr", patreonObject);
-
   let RoxanaIntroText = () => {
     if (isDemo) {
       return (
@@ -38,40 +36,75 @@ export const Roxana = ({
           RO.B.E by helping you learn more with useful prompts 😊
           <br />
           <br />
-          Advertisting slots are available to all subscribers. RO.B.E is an
-          education app that's carefully built with banking and community in
-          mind. Check out my friend Claudia's music!
-          <br />
-          <br />
-          <div
-            style={{
-              width: "100%",
-              textAlign: "center",
-            }}
-          >
-            <a
-              onClick={() => {
-                window.open("https://www.snowthaproduct.com/");
-              }}
-              target="_blank"
+          Advertisting slots are available to all subscribers. I'm creating an
+          education service that's carefully built with banking and community in
+          mind.{" "}
+          {isDemo ? (
+            <div>
+              <br />
+              The following advertisement has no affiliation with RO.B.E. The
+              community has mentioned his work to me on multiple occasions. His
+              values are aligned with mine.
+              <br />
+              <br />I recommend it if you want to spend more time on each lesson
+              and want a{" "}
+              <b>
+                <i>much stronger</i>
+              </b>{" "}
+              employment network. It's free. Robots Building Education is a
+              financial technology company meant to decentralize finance for
+              schools.
+              <br />
+              <br />
+            </div>
+          ) : (
+            ""
+          )}
+          {isDemo ? (
+            <div
               style={{
-                color: "white",
-                textDecoration: "underline",
-                cursor: "grab",
+                width: "100%",
+                textAlign: "center",
               }}
             >
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b2736e34d6d419d3de687e27c929"
-                style={{
-                  boxShadow:
-                    "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",
-                  height: 250,
-                  width: 250,
-                  borderRadius: "12px",
+              <a
+                onClick={() => {
+                  window.open("https://leonnoel.com/100devs/");
                 }}
-              />
-            </a>
-          </div>
+                target="_blank"
+                style={{
+                  color: "white",
+                  textDecoration: "underline",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                }}
+              >
+                https://leonnoel.com/100devs/
+                <img
+                  src="https://leonnoel.com/photo2.png"
+                  style={{
+                    boxShadow:
+                      "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",
+                    height: 150,
+                    width: 150,
+                    borderRadius: "12px",
+                    marginTop: 12,
+                  }}
+                />
+              </a>
+            </div>
+          ) : (
+            <span>
+              If you want to advertise on RO.B.E, please contact me in
+              <a href="https://www.patreon.com/RobotsBuildingEducation">
+                Patreon
+              </a>
+            </span>
+          )}
+          <br />
+          <br />
         </div>
       );
     }

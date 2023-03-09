@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import khanac from "./media/khanac.jpeg";
+import snow from "./media/snow.jpeg";
+import phillyd from "./media/phillyd.jpeg";
+import { borderRadius } from "@mui/system";
 
 export const About = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,95 +15,100 @@ export const About = () => {
       <br />
       <br />
 
-      <Modal
-        centered
-        show={isModalOpen}
-        fullscreen
-        onHide={() => setIsModalOpen(false)}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>About</Modal.Title>
+      <Modal centered show={isModalOpen} fullscreen>
+        <Modal.Header
+          closeButton
+          style={{ backgroundColor: "black", color: "white" }}
+        >
+          <Modal.Title> Robots Building Education Creates Impact</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          {/* <div style={{ border: "1px solid red" }}>
-            <div style={{ border: "1px solid green" }}>
-              <h2>Who</h2>
-            </div>
-            <div style={{ border: "1px solid green" }}>
-              <h2>What</h2>
-            </div>
-            <div style={{ border: "1px solid green" }}>
-              <h2>Where</h2>
-            </div>
-            <div style={{ border: "1px solid green" }}>
-              <h2>When</h2>
-            </div>
-            <div style={{ border: "1px solid green" }}>
-              {" "}
-              <h2>Why</h2>
-            </div>
-          </div> */}
-          <h3>What is this?</h3>
+        <Modal.Body
+          onHide={() => setIsModalOpen(false)}
+          style={{ backgroundColor: "black", color: "white" }}
+        >
+          <h2>Robots Building Education</h2>
           <p>
-            The goal is to create the best possible first hour of learning to
-            encourage you to believe that you can accomplish whatever you want.
-            <br />
-            <br />
-            Robots Building Education is an education platform where
-            subscriptions are pooled to create $1,000 scholarships. Subscription
-            costs are kept down while the value of content increases over time.
-            We want to increase access to important Creator Economy skills like
-            writing code, growing on social media or understanding business
-            while also maximizing the impact of our digital learning.
-            <br />
-            <br />
-            Think of it like another way to fund schools. Our digital space is
-            shared no differently than communities are with their property
-            values. It creates a more fair system.
-            <br />
-            <br />
-            To find the passcode to enter the app, subscribe to the Patreon.
-            Refunds are available. $1, $3, $50, $1000 all have access to the
-            same features.
+            Robots Building Education is a system that believes your digital
+            learning should create immediate impact for another student or
+            teacher. It uses a "proof of work" to share how often RO.B.E is used
+            collectively. Proof of work creates a protocol called <b>Impact</b>,
+            which distributes subscription or user deposits to a student or
+            teacher in a school underserved by its regulators. The current
+            version of this generates and distributes $1,000 scholarships.
           </p>
-          <hr />
-          <br />I haven't finished this "Getting Started" because I'm still
-          building a lot of things. The Patreon has all the content
-          sequentially, so it makes most sense to start from the beginning and
-          scroll upward. However, the content on Patreon is "discovery" mode.
-          There is no order.{" "}
-          <b>Improvements to content will happen on Patreon first</b> while
-          updates here will be "production". Currently, most things are kind of
-          messy because of construction. Things to look forward to:
-          <br />
-          <br />
+          <p>
+            The goal is to create a powerful first hour of learning in order to
+            embolden your ambitions by showing you how quickly you can
+            accomplish a challenging goal with the right help.
+          </p>
+          <h2>Testimonials</h2>
+          <p>
+            I have not collected testimonials. I'm sure the right ones will come
+            in due time. Here are some relationships I'm proud to have created
+            organically through media. Khan Academy was what inspired me many
+            years ago, so I'm happy to be here how I am today. You might notice
+            that energy here!
+            <br />
+            <br />
+            <img width={300} src={khanac} />
+            <br />
+            <br />
+            <img width={300} src={snow} />
+            <br />
+            <br />
+            <img width={300} src={phillyd} />
+            &nbsp;&nbsp;
+          </p>
+          <h2>Content</h2>
+          <p>
+            You're going to find a collection of various materials here. The
+            idea is to illustrate a story of information that is valuable to you
+            and likely harder to achieve if you come from a disadvantaged
+            background. Many people have used it to get encouraged to complete a
+            college education or to unlearn things that set one back.
+          </p>
           <ol>
-            <li>A stronger introduction and ability to onboard.</li>
-            <li>
-              Proof of Work point system to monitor progress and eventually
-              introduce global payments and credentialing. Work should
-              eventually produce meaningful discovery and reward outside of
-              scholarship generation that is{" "}
-              <b>
-                strictly not Pavlovian or mouse-wheeling mechanics into the
-                system
-              </b>
-            </li>
-            <li>
-              Ranked modules (new, high value, rare value) to incentivize
-              growing in a path or exploring different topics
-            </li>
-            <li>Improved essay formatting</li>
-            <li>Fine-tuned, fast and humanized chatGPT prompts</li>
-            <li>
-              Meaningful and tightly curated advertising to improve communal
-              growth
-            </li>
+            <li>Coding & App Building Crash Course</li>
+            <li>Critical Race Theory</li>
+            <li>User Interface & User Experience Research</li>
+            <li>Social Media Growth</li>
+            <li>Philosophy</li>
+            <li>Real Estate</li>
+            <li>Computer Science</li>
+            <li>Stock Market</li>
+            <li>Resume Development</li>
+            <li>Bitcoin</li>
+            <li>Entrepeneurialism</li>
+            <li>Daily Open Office Live Streams</li>
+            <li>Daily Discord Checkins</li>
           </ol>
+          <p>
+            In a nutshell, you're learning a few principle skills for effective
+            creativity. Engineering, communication and finance. If you want to
+            support this application, please join the patreon for $1 for full
+            access!
+          </p>
+          <br />
+          <a
+            href="https://www.patreon.com/RobotsBuildingEducation"
+            target={"_blank"}
+            style={{
+              width: "150px",
+              border: "1px solid white",
+              padding: 24,
+              marginTop: 100,
+              color: "white",
+              borderRadius: "6px",
+            }}
+          >
+            RO.B.E Patreon
+          </a>
+          <br />
+          <br /> <br />
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
-            Thanks!
+            Okay Bye!
           </Button>
         </Modal.Footer>
       </Modal>

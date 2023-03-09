@@ -1,7 +1,9 @@
 import { doc } from "firebase/firestore";
+import { useState } from "react";
 import { Button, ProgressBar } from "react-bootstrap";
 import { getGlobalProofOfWork, renderWithTooltip } from "../common/uiSchema";
 import { database } from "../database/firebaseResources";
+import { ImpactWallet } from "./ImpactWallet/ImpactWallet";
 
 export const ProofOfWork = ({
   displayName,
@@ -12,6 +14,9 @@ export const ProofOfWork = ({
 }) => {
   console.log("PRC", computePercentage);
   console.log("sss", Math.floor(computePercentage * 100));
+
+  const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
+
   if (displayName === "Demo Robots") {
     // const globalDemoUsersRef = doc(database, "global", "demoUsers");
     // console.log("GLOBAL", globalDemoUsersRef);
@@ -26,68 +31,25 @@ export const ProofOfWork = ({
           marginBottom: "48px",
           maxWidth: "600px",
           minWidth: "300px",
+          padding: 12,
         }}
       >
         <p>🤖 {displayName}</p>
-        {renderWithTooltip(
-          <div>
-            <Button variant="secondary">🏦</Button>&nbsp;{" "}
-            {databaseUserDocument?.work || 0}{" "}
-            <div>
-              <ProgressBar
-                style={{
-                  backgroundColor: "black",
-                  borderRadius: "0px",
-                  margin: 12,
-                }}
-                variant="success"
-                now={Math.floor(computePercentage * 100)}
-              />
-            </div>
-          </div>,
-          <div>
-            <h6>Proof of Work</h6>
-            <p>
-              <hr />
-              work done
-              <br />
-              {databaseUserDocument?.work || 0} / {getGlobalProofOfWork()}
-              <hr />
-              work done by everyone
-              <br />
-              <b>{globalWorkCounter}</b>
-              <br />
-              <br />
-              You are <br />
-              <b>
-                {(
-                  ((databaseUserDocument?.work || 0) / globalWorkCounter) *
-                  100
-                ).toFixed(2)}
-              </b>
-              %
-              <br />
-              of the work 😳
-              <hr />
-            </p>
-            <p>Scholarships created: 5</p>
-            <p style={{ textAlign: "left" }}>
-              Proof of work (PoW) is a system in which the worker proves to
-              verifiers that a certain amount of effort has been expended.
-              Verifiers can be machines, like those found with Bitcoin, or they
-              can be people like teachers grading your homework!
-            </p>
-          </div>,
-          "bottom",
-          {
+        <ImpactWallet
+          databaseUserDocument={databaseUserDocument}
+          computePercentage={computePercentage}
+          globalWorkCounter={globalWorkCounter}
+          isImpactWalletOpen={isImpactWalletOpen}
+          setIsImpactWalletOpen={setIsImpactWalletOpen}
+        />
+
+        {/* {
             border: "1px solid #F2D466",
             marginBottom: "6px",
             borderRadius: "10px",
 
             backgroundColor: "#f2a900",
-          }
-        )}
-        {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
+          } */}
       </div>
     );
   }
@@ -97,7 +59,7 @@ export const ProofOfWork = ({
       style={{
         border: "1px solid #1C1C1E",
         width: "fit-content",
-
+        padding: 12,
         backgroundColor: "#1C1C1E",
         marginBottom: "48px",
         maxWidth: "600px",
@@ -105,64 +67,13 @@ export const ProofOfWork = ({
       }}
     >
       <p>🤖 {displayName}</p>
-      {renderWithTooltip(
-        <div>
-          <Button variant="secondary">🏦</Button>&nbsp;{" "}
-          {databaseUserDocument?.work || 0}{" "}
-          <div>
-            <ProgressBar
-              style={{
-                backgroundColor: "black",
-                borderRadius: "0px",
-                margin: 12,
-              }}
-              variant="success"
-              now={Math.floor(computePercentage * 100)}
-            />
-          </div>
-        </div>,
-        <div>
-          <h6>Proof of Work</h6>
-          <p>
-            <hr />
-            work done
-            <br />
-            {databaseUserDocument?.work || 0} / {getGlobalProofOfWork()}
-            <hr />
-            work done by everyone
-            <br />
-            <b>{globalWorkCounter}</b>
-            <br />
-            <br />
-            You are <br />
-            <b>
-              {(
-                ((databaseUserDocument?.work || 0) / globalWorkCounter) *
-                100
-              ).toFixed(2)}
-            </b>
-            %
-            <br />
-            of the work 😳
-            <hr />
-          </p>
-          <p>Scholarships created: 5</p>
-          <p style={{ textAlign: "left" }}>
-            Proof of work (PoW) is a system in which the worker proves to
-            verifiers that a certain amount of effort has been expended.
-            Verifiers can be machines, like those found with Bitcoin, or they
-            can be people like teachers grading your homework!
-          </p>
-        </div>,
-        "bottom",
-        {
-          border: "1px solid #F2D466",
-          marginBottom: "6px",
-          borderRadius: "10px",
-
-          backgroundColor: "#f2a900",
-        }
-      )}
+      <ImpactWallet
+        databaseUserDocument={databaseUserDocument}
+        computePercentage={computePercentage}
+        globalWorkCounter={globalWorkCounter}
+        isImpactWalletOpen={isImpactWalletOpen}
+        setIsImpactWalletOpen={setIsImpactWalletOpen}
+      />
       {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>
   );
